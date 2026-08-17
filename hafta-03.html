@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3. Hafta — Standartlaşmanın Anatomisi ve İKY Sistem Standartları · İnsan Kaynakları Standartları</title>
+<meta name="description" content="Standart geliştirme süreçleri; ilke, değer ve uyum gerilimi">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">İçeriğe geç</a>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">İKS</span>
+      <span class="brand-txt"><strong>İnsan Kaynakları Standartları</strong><em>Yüksek Lisans · Ders Notları</em></span>
+    </a>
+    <nav class="topnav">
+      <a href="index.html">İzlence</a>
+      <a href="donem-projesi.html">Dönem Projesi</a>
+      <button class="wk-toggle" id="wkToggle" aria-expanded="false" aria-controls="wkMenu">Haftalar ▾</button>
+    </nav>
+  </div>
+  <div class="wk-menu" id="wkMenu" hidden><a class="wk" href="hafta-01.html">1. Hafta</a><a class="wk" href="hafta-02.html">2. Hafta</a><a class="wk on" href="hafta-03.html">3. Hafta</a><a class="wk" href="hafta-04.html">4. Hafta</a><a class="wk" href="hafta-05.html">5. Hafta</a><a class="wk" href="hafta-06.html">6. Hafta</a><span class="wk off">7. Hafta</span><a class="wk" href="hafta-08.html">8. Hafta</a><a class="wk" href="hafta-09.html">9. Hafta</a><a class="wk" href="hafta-10.html">10. Hafta</a><a class="wk" href="hafta-11.html">11. Hafta</a><a class="wk" href="hafta-12.html">12. Hafta</a><a class="wk" href="hafta-13.html">13. Hafta</a><a class="wk" href="hafta-14.html">14. Hafta</a><a class="wk" href="donem-projesi.html">Dönem Projesi</a></div>
+</header>
+
+<section class="hero">
+  <div class="hero-in">
+    <p class="kicker">3. Hafta</p>
+    <h1>Standartlaşmanın Anatomisi ve İKY Sistem Standartları</h1>
+    <p class="hero-sub">Standart geliştirme süreçleri; ilke, değer ve uyum gerilimi</p>
+    <div class="tags"><span class="tag">Böl. 2 — Bond</span><span class="tag">ISO 30435:2023</span></div>
+  </div>
+</section>
+
+
+
+<div class="shell">
+
+      <aside class="toc" aria-label="Sayfa içindekiler">
+        <details class="toc-inner" id="tocBox">
+          <summary class="toc-title">Bu sayfada</summary>
+          <ul><li class="t2"><a href="#bu-haftanin-ogrenim-kazanimlari">Bu haftanın öğrenim kazanımları</a></li>
+<li class="t2"><a href="#1-bu-haftanin-konumu-ve-amaci">1. Bu haftanın konumu ve amacı</a></li>
+<li class="t2"><a href="#2-temel-kavramlar">2. Temel kavramlar</a></li>
+<li class="t2"><a href="#3-hcmd-alaninda-onemli-standartlar">3. HCMD alanında önemli standartlar</a></li>
+<li class="t2"><a href="#4-standartlar-kuruluslari-komite-yapilari-ve-uzmanlarin-rolu">4. Standartlar kuruluşları, komite yapıları ve uzmanların rolü</a></li>
+<li class="t2"><a href="#5-gelistirme-sureci-ve-zaman-cizelgesi">5. Geliştirme süreci ve zaman çizelgesi</a></li>
+<li class="t2"><a href="#6-standart-turleri">6. Standart türleri</a></li>
+<li class="t2"><a href="#7-ilke-mi-uyum-mu-iki-yaklasimin-gerilimi">7. İlke mi, uyum mu? İki yaklaşımın gerilimi</a></li>
+<li class="t2"><a href="#8-ilkeler-ve-hcm-standartlari-bs-76000-cercevesi">8. İlkeler ve HCM standartları: BS 76000 çerçevesi</a></li>
+<li class="t2"><a href="#9-standartlarin-orgutlere-degeri-kim-kullanir-ne-onemlidir">9. Standartların örgütlere değeri: kim kullanır, ne önemlidir?</a></li>
+<li class="t2"><a href="#10-yonetisim-risk-guvenlik-ve-surdurulebilirlik-boyutlari">10. Yönetişim, risk, güvenlik ve sürdürülebilirlik boyutları</a></li>
+<li class="t2"><a href="#11-insanlar-onemlidir-tekci-ve-cogulcu-bakis">11. İnsanlar önemlidir: tekçi ve çoğulcu bakış</a></li>
+<li class="t2"><a href="#12-incelenen-standart-iso-30435-2023-is-gucu-veri-kalitesi">12. İncelenen standart — ISO 30435:2023: İş gücü veri kalitesi</a></li>
+<li class="t3"><a href="#is-gucu-veri-kalitesinin-bes-boyutu-iso-30435-madde-4">İş gücü veri kalitesinin beş boyutu (ISO 30435, Madde 4)</a></li>
+<li class="t3"><a href="#iso-30435-2023-tablo-4-ten-uyarlanmis-ornek-secili-satirlar-">ISO 30435:2023, Tablo 4&#x27;ten uyarlanmış örnek (seçili satırlar): her veri noktası için önerilen gözden geçirme zamanı, örneklem hacmi ve doğruluk düzeyi.</a></li>
+<li class="t2"><a href="#13-bolum-ozeti">13. Bölüm özeti</a></li>
+<li class="t2"><a href="#okuma-ve-tartisma-sorulari">Okuma ve tartışma soruları</a></li>
+<li class="t2"><a href="#kaynakca">Kaynakça</a></li></ul>
+        </details>
+      </aside>
+  <main id="main" class="prose">
+    <div class="lead">Temel okuma: Bond, H., &quot;It&#x27;s all a matter of standards&quot; (Anderson, V. (Ed.), Human Capital Management Standards: A Complete Guide, 2. Bölüm). İncelenen standart: ISO 30435:2023 — İnsan kaynakları yönetimi: İş gücü veri kalitesi (BS ISO 30435:2023). İlişkili: ISO/AWI 30201 (İKY Sistem — Şartlar), ISO 30400:2016 (Sözlük), BS 76000:2015.</div>
+    <h2 id="bu-haftanin-ogrenim-kazanimlari">Bu haftanın öğrenim kazanımları</h2>
+<ul>
+<li><blockquote>
+<p>Standart geliştirme sürecinin aşamalarını (öneri, hazırlık, komite, sorgu, onay, yayın, gözden geçirme) açıklar.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Standartlaşmada ilke (principles-led), değer ve uyum (compliance-based) arasındaki gerilimleri tartışır.</p>
+</blockquote></li>
+<li><blockquote>
+<p>İş gücü veri kalitesinin (ISO 30435:2023) raporlama güvenilirliğindeki rolünü değerlendirir.</p>
+</blockquote></li>
+</ul>
+<h2 id="1-bu-haftanin-konumu-ve-amaci">1. Bu haftanın konumu ve amacı</h2>
+<p>İlk iki haftada standartlaşmanın genel çerçevesini (1. hafta) ve yönetişim ile kültür bağlamını (2. hafta) kurduk. Bu hafta perdeyi aralayıp standardın <em>kendisinin</em> nasıl yapıldığına bakıyoruz: kim, nasıl, hangi aşamalarla bir standardı geliştirir; standartlar kaç türdür ve bu tür farkı ne anlama gelir; ve belki en önemlisi, bir İK standardının "ilke-güdümlü" mü yoksa "uyum-temelli" mi olması gerektiği tartışması. Heather Bond'un bölümü, standart geliştirme sürecinin yinelemeli (iterative) doğasını ortaya koyar ve standartların neden önemli olduğunu; benimsenmelerinin gerekçelerini, olası fayda, fırsat ve güçlükleri ile iyi örgütsel uygulamaya işaret eden noktaları inceler.</p>
+<p>Haftanın ikinci yarısında, izlencede bu haftaya bağlanan somut standardı — ISO 30435:2023 İş gücü veri kalitesi'ni — ayrıntılı ele alacağız. Bu standart, tüm insan sermayesi raporlamasının görünmez temelini oluşturur: veri kalitesi zayıfsa, üzerine kurulan her ölçüt, her rapor ve her karar da kırılgan olur. Bond'un bölümü "standartların anatomisini", ISO 30435 ise "iyi bir standardın somut bir örneğini ve verinin standartlaşmasını" verir; ikisi birlikte 3. haftanın bütününü oluşturur.</p>
+<p>Bu iki kaynak arasındaki ilişki, dersin yöntemsel mantığını da özetler: bir yandan standartların nasıl yapıldığına ve hangi felsefi tercihlerle (ilke mi, uyum mu) tasarlandığına dair üst düzey bir kavrayış; öte yandan tek bir standardın maddelerini yakından okuyarak bu kavrayışı somutlaştırma. İzlencenin 4. haftadan itibaren başlayan öğrenci seminerlerinde her öğrenci bir standardı sunacaktır; bu hafta edinilen 'standart okuma' becerisi — türünü, dilini, kapsamını, atıf ağını ve tasarım felsefesini çözümleme — o sunumların temelini oluşturur.</p>
+<p>Bu bölümde 'insan sermayesi yönetimi' (HCM) ve 'insan kaynakları yönetimi' (HRM) terimleri, ulusal ve uluslararası düzeyde geliştirilen standartların odağını yansıtacak biçimde birbirinin yerine kullanılır. Terimlerin çoğu kitabın sonundaki sözlükte de yer alır; ancak farklı ulusal bağlamlarda farklı tanımlanıp anlaşılabildikleri için, burada özellikle ISO 30400:2016 (Sözlük) ve BS 76000:2015'te tanımlandıkları biçimleriyle sunulurlar.</p>
+<h2 id="2-temel-kavramlar">2. Temel kavramlar</h2>
+<p>Bu haftanın diline hâkim olmak için, standart geliştirme ve değerlendirme sürecinde tekrar tekrar karşılaşacağımız terimleri (çoğunlukla ISO 30400 numaralandırmasıyla) netleştirmek gerekir.</p>
+<ul>
+<li><blockquote>
+<p><strong>Denetim (audit):</strong> Denetim ölçütlerinin ne ölçüde karşılandığını belirlemek amacıyla, denetim kanıtı elde etmek ve bunu nesnel biçimde değerlendirmek için yürütülen sistematik, bağımsız ve belgelendirilmiş süreç.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Kıyaslama (benchmarking):</strong> Örgütler arasında nitelik, süreç ya da performansın karşılaştırılması.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Uygunluk (compliance):</strong> Belirlenmiş bir gerekliliği karşılamak için gerekeni yapma eylemi. <strong>Uygunluk/uyum (conformity):</strong> Bir gerekliliğin yerine getirilmesi.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Yönetişim (governance):</strong> Bir örgütün bütününün yönetilme, yönlendirilme, kontrol edilme ve hesap verebilir kılınma biçimi. <strong>İnsan yönetişimi (human governance):</strong> Bir örgütün, paydaşları ile insani ve toplumsal etkenleri her karar düzeyinde göz önünde bulundurarak yönlendirilip kontrol edildiği sistem.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>İnsan sermayesi (human capital):</strong> Bir örgütün insanlarının kolektif bilgi, beceri ve yeteneklerinin değeri.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Önemlilik (materiality):</strong> Bir öğenin örgütsel sonuçlar açısından taşıdığı önemin ölçüsü.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>İlke (principle):</strong> Karar alma ya da davranış için temel bir dayanak. <strong>Gereklilik (requirement):</strong> Belirtilen, genellikle ima edilen ya da zorunlu olan bir ihtiyaç ya da beklenti.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Değer (value — BS 76000):</strong> İnsanların benzersiz bilgi, beceri ve yetenekleri nedeniyle taşıdıkları liyakat ve değer. <em>İçkin değer</em> (inherent value), insanların salt parasal değer ürettikleri için değil, oldukları için değerli olmaları ilkesine işaret eder.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Örgüt kültürü (30400:3.2):</strong> İnsanların ve örgütlerin tutum ve davranışını etkileyen değerler, inançlar ve uygulamalar. <strong>İnsan riski (people risk):</strong> İnsanların davranış ve etkinliklerinin sonucu olarak doğabilecek olası olumsuz çıktılar.</p>
+</blockquote></li>
+</ul>
+<h2 id="3-hcmd-alaninda-onemli-standartlar">3. HCMD alanında önemli standartlar</h2>
+<p>HCMD alanına sağlam biçimde yerleşmiş, sayısı giderek artan İngiliz ve uluslararası standart vardır; bunlar insanların içkin değeri ve örgütsel performansa katkısı önermesine dayanır. Başlıcaları: <strong>BS 76000:2015</strong> (İnsan kaynağı — İnsanlara değer verme — Yönetim sistemi), örgütlerde insan değeri yönetimine yapılandırılmış ve düşünülmüş bir yaklaşımın ilkelerini kurar; <strong>BS 76005:2017</strong> (Çeşitlilik ve kapsayıcılık yoluyla insanlara değer verme); <strong>PD 76006:2017</strong> (Öğrenme ve gelişim kılavuzu); <strong>ISO 30400:2016</strong> (Sözlük); <strong>ISO 30408:2016</strong> (İnsan yönetişimi kılavuzu); <strong>ISO/TR 30406:2017</strong> (Sürdürülebilir istihdam edilebilirlik); <strong>ISO 30409:2016</strong> (İş gücü planlaması); ve <strong>ISO 30414:2018</strong> (İç ve dış insan sermayesi raporlaması kılavuzu).</p>
+<p>Birleşik Krallık'ta ayrıca işyerindeki insanlara odaklanan kamuya açık spesifikasyonlar (PAS) vardır: <strong>PAS 3000:2015</strong> (Akıllı çalışma), <strong>PAS 3001:2016</strong> (İş için seyahat — sağlık, güvenlik ve emniyet sorumlulukları) ve <strong>PAS 3002:2018</strong> (Örgüt içinde sağlık ve refahı iyileştirme). Bunların ötesinde, insan-değeri ya da insan-riski boyutu taşıyan; yönetişim, güvenlik ve dayanıklılık, sürdürülebilirlik ve kalite yönetimi komitelerinin programlarında yer alan uluslararası standartlar da vardır: <strong>ISO 37000</strong> (Örgütlerin yönetişimi kılavuzu), <strong>ISO 37001:2016</strong> (Rüşvetle mücadele yönetim sistemleri), <strong>ISO 37002</strong> (İhbar/whistleblowing yönetim sistemleri — geliştirilme aşamasında), <strong>ISO 26000:2010</strong> (Sosyal sorumluluk kılavuzu), <strong>ISO 22330:2018</strong> (İş sürekliliğinin insan boyutları), <strong>ISO 27500:2016</strong> (İnsan-merkezli örgüt) ve kalite yönetimi bağlamında <strong>ISO 10015</strong> (yetkinlik yönetimi) ile <strong>ISO 10018</strong> (insanların bağlılığı). Yayımlanan ve geliştirilme aşamasındaki bu artan standart sayısı, insan sermayesi katkısının örgütsel performansa önemine ilişkin büyüyen farkındalığın kanıtıdır.</p>
+<h2 id="4-standartlar-kuruluslari-komite-yapilari-ve-uzmanlarin-rolu">4. Standartlar kuruluşları, komite yapıları ve uzmanların rolü</h2>
+<p>Standartlar genel olarak uzlaşılmış kural ya da uygulamaları ortaya koyar; ürünlerin nasıl yapıldığını, hizmetlerin nasıl sunulduğunu ya da süreçlerin nasıl yönetilip kalite güvencesine alındığını biçimlendirir. Standartlaşmanın birincil amacı tutarlılık, güvenilirlik ve hem örgütlere hem paydaşlarına yarar sağlayabilecek paylaşılmış kalite çıktılarıdır. Ne var ki daha az anlaşılan konu, akredite standartlaşma kuruluşları aracılığıyla gerçekleşen ulusal ve uluslararası standart geliştirme sürecine kimin ve neyin dâhil olduğudur.</p>
+<p>İngiliz ve uluslararası standartlar, ulusal standartlar kuruluşlarının (NSB) — İngiltere'de BSI, uluslararası düzeyde ISO — bir araya getirdiği teknik uzmanların iş birliğiyle geliştirilir. Bu kuruluşlar ve topladıkları uzman çalışma grupları (WG); devlet kurumlarını, sanayiyi, akademiyi, özel çıkar ve kullanıcı gruplarını, sektör ve işveren kuruluşlarını temsil eder. Bazı İngiliz ulusal standartları önce BSI komitelerince geliştirilip sonra uluslararası standarda dönüşmüştür; örneğin tanınmış ISO 9001:2015 (Kalite yönetim sistemleri) ilk olarak bir BSI geliştirme süreciyle başlatılmıştı. Diğerleri önce uluslararası standart olarak geliştirilir ama çoğu zaman kayda değer İngiliz katılımıyla.</p>
+<p><strong>BSI</strong>, İngiltere'nin tanınmış NSB'sidir; hükümetle bir Mutabakat Muhtırası kapsamında bu konumu kabul edilir. Kraliyet Beratı uyarınca kâr amacı gütmeyen bir kuruluş olarak, standart yapan komitelerinin geniş bir çıkar yelpazesini temsil etmesini ve kilit paydaş gruplarını (ticaret dernekleri, sendikalar, meslek kuruluşları, tüketici ve kamu yararı örgütleri, akademi, kamu ve özel sektör işverenleri) içermesini sağlamak zorundadır. Çok sayıdaki BSI komitesi içinde iki tanesi insan sermayesi standartlarına odaklanır: <strong>HCS1/1</strong>, İngiltere ulusal standartlarına odaklanır ve CIPD, Chartered Management Institute, Institute for Employment Studies gibi kuruluşları temsil eden uzmanlardan yararlanır; <strong>HCS1/2</strong> ise İngiltere'nin ISO/TC 260'taki 'ayna' komitesidir ve yalnızca uluslararası İKY standartlarının geliştirilmesiyle ilgilenir.</p>
+<p><strong>ISO</strong>, 1947'de kurulmuş, üyeliği NSB temsilcilerinden oluşan bağımsız, hükümet-dışı uluslararası bir kuruluştur; 160'tan fazla ülke küresel ISO ağını oluşturur. Yaklaşık 120 ülke, ISO stratejisinin geliştirilmesine tam katılan, teknik ve politika konularında oy hakkı olan <em>tam üye</em>dir; yaklaşık 60 ülke gözlemci sıfatıyla katılan <em>muhabir üye</em>dir. Uluslararası standart yapımı, standartların geliştirilme kurallarını (ISO Yönergeleri) belirleyen ISO Teknik Yönetim Kurulu (TMB) tarafından yönetilir; TMB teknik komiteleri (TC) kurar ve yaklaşık 300 ISO TC vardır. <strong>TC 260 (İnsan kaynakları yönetimi)</strong> 2011'de kurulmuştur; şu anda 28 ülke, 10 farklı WG'de uzman temsilcileriyle katılır ve 23 ülke daha gözlemci statüsündedir.</p>
+<p>Standartlar bu komite ağı içinde geliştirilir ve uzmanların bilgilerini ve uzmanlıklarını gönüllü olarak paylaşmasını gerektirir. Bireysel uzmanlar, hem ulusal hem uluslararası komitelerde NSB'leri adına katılabilmek için bir ulusal komiteye üye olmalıdır; bu, onları aday gösteren bir kuruluşun (ticaret derneği, meslek kuruluşu ya da akademik kurum) desteğini gerektirir. Şu anda 2.000 kadar BSI komitesinde 11.000'i aşkın gönüllü uzman, 3.000'den fazla ISO komitesinde ise 50.000'i aşkın uzman görev yapmaktadır. Standart geliştirmedeki bu iş birliğine dayalı süreç, standartların güvenilirliğinin ve otoritesinin — dolayısıyla örgütler ve bireyler tarafından benimsenmesinin — temelidir.</p>
+<h2 id="5-gelistirme-sureci-ve-zaman-cizelgesi">5. Geliştirme süreci ve zaman çizelgesi</h2>
+<p>Standart yapımının temel bileşenleri şunlardır: <strong>uzman komiteleri</strong> (geniş coğrafi ve sektörel yelpazeden, içeriği iş birliğiyle geliştiren); <strong>uzlaşı</strong> (biçim ve içerik üzerinde çoğunluk oyuyla değil, olabildiğince çok üyenin genel mutabakatıyla varılan karar); ve <strong>istişare/danışma</strong> (taslak standartların, içeriğiyle ilgilenebilecek ya da etkilenebilecek herkesin incelemesine ve yorumuna açılması). Bu çalışma, farklı zaman dilimlerinde ve dağınık coğrafyalarda yürütüldüğü için güçlüklerden yoksun değildir; ISO'nun 2017 verilerine göre o yıl 56 ülkede 2.784 teknik toplantı yapılmış, çalışılan her gün ortalama 21 teknik toplantı gerçekleşmiştir.</p>
+<p>Zaman çizelgeleri ve geliştirme protokolleri de standartlaştırılmıştır. İngiltere'de ulusal standart geliştirme BS 0:2016 (Standartlar için bir standart), uluslararası geliştirme ise ISO Yönergeleri (Bölüm 1 ve 2) tarafından yönetilir. Aşamalar büyük ölçüde ortaktır:</p>
+<ul>
+<li><blockquote>
+<p><strong>Öneri (proposal):</strong> Gerekçe, kapsam ve iş gerekçesini ayrıntılandıran yeni bir çalışma önerisi; komite oyuna sunulur. Geliştirme süresi bu aşamada 18, 24, 36 ya da 48 ay olarak onaylanır ve buna uyulmalıdır.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Hazırlık (preparation):</strong> Bir uzman WG, gerekli özeni ve araştırmayı yürütür ve çalışma taslağını (WD) geliştirir.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Komite (committee):</strong> WD, inceleme, yorum ve oylama için komite taslağı olarak paylaşılır; teknik içerikte uzlaşı sağlanana kadar tekrarlanır.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Sorgu (enquiry):</strong> Taslak uluslararası standart tüm ISO üyelerine dağıtılır; herkesin 12 hafta içinde inceleyip yorum yapması sağlanır ve kamu incelemesine açılır. İlerlemek için, katılımcı komite üyelerinin üçte ikisinin onayı gerekir ve kullanılan oyların en çok dörtte biri olumsuz olabilir.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Onay (approval):</strong> Nihai taslak, sekiz haftalık son oylama için tüm ISO üyelerine dağıtılır; yayımlanması için TC'nin katılımcı üyelerinin üçte iki çoğunluğu lehte olmalı ve olumsuz oylar dörtte biri geçmemelidir.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Yayın (publish):</strong> Bu aşamada yalnızca editoryal değişiklikler yapılır. Yayından sonra standartlar beş yıllık dönemde en az iki kez gözden geçirilir; ya revize edilip yeniden yayımlanır ya da geri çekilir.</p>
+</blockquote></li>
+</ul>
+<p>Bu ayrıntılı süreç, standartların neden görece yavaş ama sağlam biçimde ortaya çıktığını açıklar. Uzlaşıya ve kamu istişaresine dayanması, bir standardı tek bir otoritenin dayatmasından ayırır ve ona meşruiyet kazandırır. Aynı zamanda standartların 'yaşayan belgeler' olduğunu — düzenli olarak gözden geçirilip güncellendiğini — bir kez daha gösterir.</p>
+<p>Sürecin yinelemeli (iterative) doğasına dikkat etmek gerekir: özellikle komite ve sorgu aşamaları, uzlaşı sağlanana kadar tekrarlanır. Bu tekrar, bir zayıflık değil, standardın gücünün kaynağıdır; her tur, farklı ülkelerin, sektörlerin ve çıkar gruplarının itirazlarının ve katkılarının metne işlenmesini sağlar. Oylama eşiklerinin özenle tasarlanmış olması da anlamlıdır: bir standardın ilerlemesi için yalnızca basit çoğunluk yetmez; üçte iki lehte oy ve dörtte birden az olumsuz oy koşulu, geniş ve güçlü bir mutabakatı zorunlu kılar. Bu, azınlıkta kalan güçlü itirazların standardı bloke edebileceği anlamına gelir; dolayısıyla standart yapımı, çıkarların uzlaştırılmasına dayalı bir müzakere sürecidir. Uzmanların gönüllü ve büyük ölçüde karşılıksız katkısı ise sürecin hem gücü hem de kırılganlığıdır: standartlar, bir konuda dünyanın en bilgili uygulayıcılarının ortak emeğini damıtır, ama bu emeğin sürekliliği aday gösteren kuruluşların desteğine bağlıdır.</p>
+<p>Bu süreç bilgisi, dersin dönem projesi için de doğrudan yararlıdır: bir standardı okurken yalnızca 'ne diyor' sorusunu değil, 'hangi tür bir standarttır (shall mı should mu), hangi aşamadadır (yayımlanmış, taslak, geri çekilmiş) ve hangi uzlaşı sürecinden geçmiştir' sorularını da sormak, onu eleştirel biçimde değerlendirmenin anahtarıdır.</p>
+<h2 id="6-standart-turleri">6. Standart türleri</h2>
+<p>2017'de ISO 1.500'den fazla standart yayımlamış ve toplam yayımlanan standart sayısını yaklaşık 22.000'e taşımıştır; BSI ise yaklaşık 2.500 yeni ya da revize standart yayımlarken 1.700 standardı geri çekmiştir. Standartlar gönüllüdür; belirli bir kapsam ve odağa sahip olsalar da ortak bir üst amacı paylaşır, benzer yapısal özellikler taşır ve benzer geliştirme protokollerini izler. Başlıca türler şöyle özetlenebilir:</p>
+<ul>
+<li><blockquote>
+<p><strong>Spesifikasyon (şartname):</strong> Ürün, hizmet ya da sistemler için nesnel olarak doğrulanabilir ve mutlak gereklilikleri; öncelikle eşik performans ölçütlerini ortaya koyar. En yaygın türdür ve güvenlik, kesinlik ve güvence esas olduğunda 'shall' (yapılmalıdır) ifadeleriyle yazılır.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Yönetim sistemi standardı (meta-standart):</strong> Bir spesifikasyon üslubuyla yazılır; örgüt geneli bir yönetim sistemi kurmak ve sürdürmek için planla-uygula-kontrol et-önlem al (PDCA) modeli sunar. Tüm uluslararası yönetim sistemi standartları ISO Yönergeleri'ndeki Annex SL yapısını kullanır.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Uygulama kodu (code of practice):</strong> Yetkin ve özenli profesyonel uygulama için iyi uygulamayı tavsiye ve destekleyici kılavuz biçiminde yansıtır; bağlama göre bir uygunluk iddiasını destekleyebilir.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Kılavuz (guide):</strong> Daha az yönlendirici; güncel kuram ve uygulamayı yansıtan tavsiye sunar, ama zorunlu olarak bir uygunluk iddiasını desteklemez.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Teknik Spesifikasyon (TS) ve Teknik Rapor (TR):</strong> TS başka bir standardın teknik yönlerini destekler; TR belirli bir konuya ilişkin bilgi ve olası anket verisi içerir.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Kamuya Açık Spesifikasyon (PAS):</strong> Belirlenmiş bir pazar ihtiyacına yanıt olarak hemen kullanım için yayımlanır; İngiltere bağlamında her zaman dış sponsor kuruluşlarca finanse edilir.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Sözlük (vocabulary):</strong> Belirli bir standart alanındaki terim ve tanımları derleyerek dilin tutarlı kullanımını destekler (ISO 30400 gibi).</p>
+</blockquote></li>
+<li><blockquote>
+<p>Ayrıca <strong>yayımlanmış doküman (PD)</strong>, <strong>Uluslararası Çalıştay Anlaşması (IWA)</strong>, <strong>test yöntemi</strong>, <strong>belirtme yöntemi</strong> ve <strong>sınıflandırma</strong> türleri vardır.</p>
+</blockquote></li>
+</ul>
+<p>HCMD standartları, farklı konu ve hedef kullanıcıların farklı standartlaşma ihtiyaçlarını yansıtır; genel olarak tasarım gereği daha az yönlendiricidir ve örgütlerin yaklaşımlarını iyileştirmesi için geniş, kanıta dayalı kılavuzluk sunar. Amaçları, bireysel ve örgütsel çıktıları en iyilemek; ölçme, karşılaştırılabilirlik ve tutarlılığı kolaylaştırmak; sürekli iyileştirme ve şeffaf kıyaslamayı sağlamaktır.</p>
+<h2 id="7-ilke-mi-uyum-mu-iki-yaklasimin-gerilimi">7. İlke mi, uyum mu? İki yaklaşımın gerilimi</h2>
+<p>Standartlaşmayı İK için bir 'yeni sınır' olarak gören Anderson (2017), HCMD alanında ilke-güdümlü yaklaşımlar için savlar öne sürer; aynı zamanda gereklilik-temelli uyum yaklaşımını, örgütlerdeki farklı çıkar ve önceliklere ilişkin çoğulcu (pluralist) değil tekçi (unitarist) bir bakışa dayandığı için eleştirir. Bu tartışma, standartlarla ilgilenen herkes için önemli bir meseledir; iki farklı 'üst düzey' yaklaşımın pratik farkları şöyle özetlenebilir.</p>
+<p><strong>Uyum-temelli (compliance-based) standartlar</strong>, benimseyen örgütlerin 'karşılamak zorunda olduğu' (shall) gereklilikleri belirtir. Şu özelliklerle tanımlanır: izlenecek ayrıntılı kural ve gereklilikler; belgesel kanıt; istikrar; daha kısa vadeli ufuk; uygunluk; uygunluk denetimleri; ve belgelendirme. Bu kural-ve-gereklilik temelli standartlar (yönetim sistemleri ve spesifikasyonlar) bir PDCA çerçevesi benimser; hiyerarşik 'üst yönetim' yapılarına, etkililikten çok süreç verimliliğine ve eşik gerekliliklerin karşılanıp karşılanmadığını ölçmek için düzenli denetim varsayımına odaklanır. Bu, bazı standartların (örneğin ISO 9001) içeriğine tümüyle uygun olabilir. Ancak öngörülen etkinliklere ilişkin bir 'kontrol listesi' (checklist) yaklaşımı gelişebilir ve bu, standardın <em>sembolik</em> biçimde benimsenmesine ('kutu doldurma') yol açabilir. Ayrıca hibrit ya da sanal, ulus-aşırı çalışan değişen örgüt türleri, tekçi bir yaklaşımın etkinliğini zorlar.</p>
+<p><strong>İlke-güdümlü (principles-led) standartlar</strong> ise, kullanan örgütlerin 'karşılaması gereken' (should) yol gösterici bir ilkeler çerçevesi sunar. Şu özelliklerle tanımlanır: değerlere, kılavuza ve uygulama tavsiyelerine bağlılık; içerik ve yaklaşımın bütünleşmesi; esneklik; daha uzun vadeli ufuk; sürekli iyileştirme aracı olarak öz-değerlendirme; kıyaslama; ve belgelendirme seçenekleri. Uyum-temelli yaklaşımların verimlilik ve en iyi birlikte çalışabilirlik savları geçerli olsa da, kural ve usullere aşırı vurgu, insanların ve onların yönetim ve gelişiminin çıkarları pahasına olabilir; bu ise güçlü bir etik temel gerektirir. İşyerindeki insanlara odaklanan standartlar, kontrol ile esnekliği dengelemeli; etkili ve etkisi olabilmeleri için insanlara sorumluluk alma ve inisiyatif kullanma fırsatı vermelidir — özellikle sürekli iyileştirme gündemleri ve dış çevrenin oynaklığı bağlamında.</p>
+<p>Burada dersin analitik omurgasına — Anderson'ın 'ayrıntı düzeyi' ikilemine — geri dönüyoruz: bir standart çok ayrıntılı olursa katı bir reçeteye dönüşüp bağlama uymayabilir; çok genel olursa yol gösterici olmaktan çıkar. İnsan yönetiminin bağlama duyarlı doğası, çoğu HCMD standardının neden ilke-güdümlü bir yol seçtiğini açıklar.</p>
+<p>İki yaklaşım arasındaki ayrım, standartlardaki dil düzeyinde de kristalleşir. 'Shall' (yapılmalıdır) ifadesi bir uygunluk iddiasının neyi gerektirdiğini kesinleştirir ve güvenlik, kesinlik ve güvencenin öncelikli olduğu yerlerde kullanılır; 'should' (yapılması önerilir) ise izlenecek tavsiyeleri dile getirir ve kıyaslamaya ile esnekliğe alan bırakır. Bu tek sözcüklük fark, bir standardın örgütten neyi 'talep' ettiğini kökten değiştirir ve bir standardı okurken ilk bakılması gereken şeydir. Örneğin ISO 30435, hem 'shall' hem 'should' ifadelerini bir arada kullanır: kimi gereklilikleri (sorumlulukların atanması, belgeleme, asgari gözden geçirme sıklığı) zorunlu kılarken, kimi konuları (tarihsel veri saklama süresi, örneklem hacmi) örgütün bağlamına bırakır. Bu karma yapı, saf bir uyum ya da saf bir ilke standardından çok, ikisini dengeleyen çağdaş HCMD standartlarının tipik tasarımını gösterir.</p>
+<p>Uyum-temelli yaklaşımın gizli bir riski daha vardır: ölçülen ve denetlenen şeyin, ölçülmeyen ama önemli olanın önüne geçmesi. Bir örgüt bir standardın gerekliliklerini kâğıt üzerinde eksiksiz karşılayıp belge alabilir, ama bunu gerçek bir kültürel değişim olmadan, biçimsel bir 'kutu doldurma' egzersizi olarak yapabilir. Bu 'sembolik benimseme' riski, tüm yönetim sistemi standartlarının ortak zaafıdır ve tam da bu nedenle ilke-güdümlü yaklaşım, öz-değerlendirmeyi ve sürekli iyileştirmeyi merkeze alır: amaç bir kez 'geçmek' değil, sürekli daha iyi olmaktır.</p>
+<h2 id="8-ilkeler-ve-hcm-standartlari-bs-76000-cercevesi">8. İlkeler ve HCM standartları: BS 76000 çerçevesi</h2>
+<p>İlkeler söz konusu olduğunda Birleşik Krallık, BS 76000 insan sermayesi ailesiyle standartlaşmada yol göstermiştir. BSI'nin HCS1/1 komitesince geliştirilip yayımlanan bu çerçeve, örgütsel bağlamda insanlara değer verme, çeşitlilik-kapsayıcılık ve öğrenme-gelişim için ilkeleri kurar ve paylaşır:</p>
+<ul>
+<li><blockquote>
+<p>Örgüt adına çalışan insanlar, yasal ya da düzenleyici korumalarına ek olarak, saygı gösterilmesi gereken içkin bir değere sahiptir.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Paydaşlar ve çıkarları, örgütün en iyi çıkarlarının ayrılmaz bir parçasıdır.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Her örgüt, geniş toplumun bir parçasıdır; kurumsal bir yurttaş olarak toplumsal sözleşmesine saygı gösterme ve sürdürülebilir bir biçimde faaliyet gösterme sorumluluğu taşır.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Örgüt adına çalışan insanlara değer verme ve standardın gerekliliklerini karşılama taahhüdü, en üst düzeyde verilir ve desteklenir.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Her ilke eşit derecede önemlidir.</p>
+</blockquote></li>
+</ul>
+<p>Bu ilkeler UK CIPD'den bağımsız geliştirilmiş olsa da, meslek kuruluşunun 'daha iyi iş ve çalışma yaşamını savunma' amacıyla uyumludur ve İK mesleği için önemli ilkeleri açıkça dile getirir: <strong>İş (work):</strong> iyi iş amaçlı, güvenli ve kapsayıcı biçimde tasarlandığında insanların bilgi, beceri ve yeteneklerini kullanmalarını sağlar ve katkılarının adil biçimde tanınmasını destekler. <strong>İnsanlar (people):</strong> insanlar benzersiz bireyler ve örgütler için temel olarak görülmeli; refah ve gelişimlerine yapılan yatırımı paylaşma fırsatına, iş konularında anlamlı bir sese sahip olmalı ve yasal haklarına uygun, adil muamele görmelidir. <strong>Profesyonellik (professionalism):</strong> insanlar, özellikle 'insan mesleğinde' olanlar, dürüstlükle davranmalı; değer- ve kanıt-temelli kararlar alırken örgütsel risk ve fırsatları dengelemeli ve kararlarının bireyler, örgütler ve geniş toplum üzerindeki sonuçlarını anlamalıdır.</p>
+<p>BS 76000 ailesinin yayımından bu yana, ilkelerin bir çerçeve olarak kullanımına — hatta yönetim sistemi ve uyum-temelli standartlarda bile — ilgi artmıştır. Bu, ilke-güdümlü yaklaşımın değerli olduğunu ve gelecekteki standartların, örgütlerin işyeri ve iş gücü geleceklerine ilişkin karar ve uygulamalarda düşünerek yol almasını sağlamak için bu rotaya daha yatkın olabileceğini düşündürür. İlke-güdümlü yaklaşıma artan ilgi, işin geleceğinin — belirsiz olsa da — daha insan-odaklı olacağının ve işyerindeki insanların içkin liyakatleri için uygun biçimde tanınıp değer göreceğinin olumlu bir işareti olarak yorumlanır.</p>
+<h2 id="9-standartlarin-orgutlere-degeri-kim-kullanir-ne-onemlidir">9. Standartların örgütlere değeri: kim kullanır, ne önemlidir?</h2>
+<p>Standartları kim kullanır? Yanıt basittir: her tür, boy ve sektörden, coğrafi sınırlar ötesindeki örgütler — hükümetler ve bakanlıkları, son derece rekabetçi pazarlarda faaliyet gösteren çok uluslu şirketler, özel, kamu ve üçüncü sektör kuruluşları ve niş pazarlardaki küçük işletmeler. Örgütler, standartlaşma etkinliklerinin kapsamını kendi özel koşullarına göre belirler; bir standart tüm örgütçe ya da yalnızca kilit bileşen grupları/işlevlerince benimsenebilir. Her şey bağlama, faaliyet ortamına ve neyin en çok önem taşıdığına (materiality) bağlıdır.</p>
+<p><strong>Önemlilik (materiality)</strong>, muhasebe profesyonellerine tanıdık bir kavramdır ama HCMD için de anahtardır; burada "bir öğenin örgütsel sonuçlar açısından taşıdığı önemin ölçüsü" — özellikle insanların örgüte değeri, maliyet kavramının ötesinde, ve bunun nasıl yakalanıp raporlandığı — olarak tanımlanır. Bu, finans ve strateji alanlarında ferahlatıcı bir yaklaşımı yansıtır; 'insanların önemli olduğunu' ve strateji, yönetişim, risk, dayanıklılık, güvenlik ve performansa — ve BM Sürdürülebilir Kalkınma Amaçları gibi diğer önemli boyutlara — bütünleşik bir yaklaşımın merkezinde yer alması gerektiğini vurgular.</p>
+<p>Önemlilik kavramı, bu haftanın iki yarısını da birbirine bağlar. Bond'un bölümünde önemlilik, hangi standardın hangi örgüt için değerli olduğunu belirleyen bir süzgeçtir; ISO 30435'te ise hangi verinin yakalanmaya ve kaliteli tutulmaya değer olduğunu belirleyen bir ölçüttür. Her iki düzeyde de mantık aynıdır: sınırlı dikkat ve kaynak, en çok fark yaratan yere yöneltilmelidir. Bir örgüt için kritik olan (örneğin sağlık sektöründe hekim kimlik bilgileri, ileri teknolojide beceri envanterleri) başka biri için ikincil olabilir; bu yüzden hem standart seçimi hem veri önceliklendirmesi bağlama duyarlı, yargı gerektiren kararlardır. Standartların örgütlere değeri, tam da bu yargıya sistematik ve savunulabilir bir zemin sağlamalarında yatar.</p>
+<h2 id="10-yonetisim-risk-guvenlik-ve-surdurulebilirlik-boyutlari">10. Yönetişim, risk, güvenlik ve sürdürülebilirlik boyutları</h2>
+<p>Örgütsel davranış ve performansa ilişkin toplumsal beklentiler, son dönemdeki yüksek profilli yönetişim başarısızlıkları ışığında değişmiştir; daha iyi yönetişim standartları için çağrılar artmıştır. İyi yönetişimin göstergeleri arasında liderleri hesap verebilir kılan ilkeli gözetim, ücret ve teşviklerin yönetimi, etik karar almayı yönlendiren şeffaf tartışma, ihbar ve rüşvet karşıtı mekanizmalara dikkat, finansal ve insan sermayesi konularının bütünleşik izlenip raporlanması ve paydaş katılımı vardır. Bu talepler doğrultusunda <strong>ISO 37000</strong> (Örgütlerin yönetişimi kılavuzu) geliştirilmiştir; amacı örgütsel etkinlik, sürdürülebilirlik, hesap verebilirlik ve adaleti desteklemektir.</p>
+<p>İyi yönetişimin yokluğunun göstergeleri arasında yetki suistimalleri, olumsuz olaylar ve rüşvet ile yolsuzluk sayılır. <strong>ISO 37001:2016</strong> (Rüşvetle mücadele yönetim sistemleri), örgütlere rüşvetle mücadelede ve etik bir kültür kurmada yardımcı olmayı amaçlar; rüşveti önlemeye, saptamaya ve ele almaya yönelik önlem ve kontroller sunar. Bu konular ayrıca sağlam ihbar yaklaşımlarının önemini vurgular; geliştirilme aşamasındaki <strong>ISO 37002</strong> (İhbar yönetim sistemleri), üç ilkeyi merkezine alacaktır: güven, tarafsızlık ve koruma.</p>
+<p>9. bölümde belirtildiği gibi örgütler giderek karmaşık ve oynak bağlamlarda faaliyet gösterir; küreselleşme ve iş gücü hareketliliği, örgütsel, toplumsal ve bireysel güvenlik ile dayanıklılığa yönelik tehditlerin erişimini artırır. <strong>ISO/TS 22330:2018</strong> (İş sürekliliğinin insan boyutları), iş kesintilerine hazırlık ve yanıt ile bunların insan sermayesi boyutlarına odaklanır; dört aşamada insan riskinin yönetimine ilişkin kılavuz sunar: farkındalığı artırmak için hazırlık ve öğrenme-gelişim; bir olayın anlık etkisine yanıt verme; kesinti sırasında insanların yönetimi ve kurtarma operasyonları; ve normale dönüş ile iş gücünün sürekli desteklenmesi.</p>
+<p>Sürdürülebilirlik de standart kullanımının önemli bir gerekçesidir. <strong>ISO 26000:2010</strong> (Sosyal sorumluluk kılavuzu), bir yönetim sistemi ya da belgelendirme aracı olarak tasarlanmamıştır; sosyal sorumluluğu ve örgütlerin sürdürülebilir kalkınmaya katkısını teşvik eder ve yasal uyumun ötesine geçmeyi önerir. BM'nin 2015'te kabul ettiği 2030 Gündemi ve 17 Sürdürülebilir Kalkınma Amacı (SDG), sürdürülebilirlik gündeminin önemine bir başka göstergedir; ISO, yeni standart önerilerinin iş gerekçesinde belirli SDG'lerle ilişkisini göstermesini zorunlu kılmıştır. Bu stratejilerle uyumlu olarak <strong>ISO/TR 30406:2017</strong> (Sürdürülebilir istihdam edilebilirlik), örgütsel kapasiteyi ve geniş paydaş değeri yaratma taahhüdünü teşvik eder.</p>
+<h2 id="11-insanlar-onemlidir-tekci-ve-cogulcu-bakis">11. İnsanlar önemlidir: tekçi ve çoğulcu bakış</h2>
+<p>Bu kitabın önermesi, insanların bir örgütün amacını gerçekleştirmede kritik olduğu ve örgüt stratejisinin merkezinde yer alması gerektiğidir. Örgütsel sistemler, süreçler ve İK uygulama demetleri; bilgi, beceri ve yeteneklerin geliştirilmesini ve paylaşılmasını, birey, örgüt ve toplum için değer yaratımını desteklemelidir. Bunun gerçekleşmesinde farklı varsayımlar yönetsel karar alma ve felsefeyi biçimlendirir. <strong>Tekçi (unitarist) bakış</strong>, insanların örgütsel amaçları ve yönetsel uygulamaları eleştirmeksizin kabul ettiğini varsayar. <strong>Çoğulcu (pluralist) bakış</strong> ise işyerinde farklı ve rekabet hâlindeki çıkarların bulunabileceğini kabul eder. Yönetimin bu konudaki bakışı ve örgütsel bağlam, İK'nın farklı örgütlerde ve tedarik zincirleri boyunca nasıl uygulandığını etkiler; bu koşullarda insanların iyi İK uygulamasından yararlanmama tehlikesi vardır.</p>
+<p>Bölümün argümanı, standartların iş ve çalışma yaşamı kalitesinin sorgulanmasını teşvik etmek için elzem olduğudur. BS 76000 ailesi, örgütlerin esnek, yenilikçi ve sürdürülebilir İK uygulamaları için yönetsel hesap verebilirlik kurmasını sağlayan ilkeli bir çerçeve sunar. Bu standartlar yalnızca iyi İK uygulamasını teşvik ettikleri için değil; modern işyerindeki ve işin geleceğindeki değişimlerin farkında oldukları ve örgütleri, insanların içkin değerini tanıyan, iyi işi destekleyen bir işyeri kültürü geliştirmeye çağırdıkları için önemlidir.</p>
+<p>Tekçi ve çoğulcu bakış arasındaki ayrım, bu haftanın ilke–uyum tartışmasıyla da doğrudan bağlantılıdır. Uyum-temelli, kural-yoğun standartlar örtük biçimde tekçi bir varsayıma yaslanma eğilimindedir: örgütün belirlediği hedefler ve kurallar herkesçe paylaşılır ve sorgulanmadan uygulanır. İlke-güdümlü standartlar ise çoğulcu gerçekliği — çalışanların, yöneticilerin, hissedarların ve toplumun çıkarlarının her zaman örtüşmediğini — daha iyi barındırır; çünkü katı kurallar yerine, farklı bağlamlarda yorumlanıp dengelenebilecek değerler ve ilkeler sunar. Bond'un bölümü, insan yönetimi gibi doğası gereği çoğulcu bir alanda, ilke-güdümlü yaklaşımın neden daha uygun olduğunu bu zeminde savunur. Küreselleşme, uzayan tedarik zincirleri, teknolojinin hızlı ilerleyişi ve mobil bir iş gücünün talepleri, örgütleri kendilerine ve sınırlarının ötesine 'önemli olanı' düşünmeye zorlar; işte standartlar bu düşünmeye ortak bir dil ve sağlam bir zemin sağlar.</p>
+<h2 id="12-incelenen-standart-iso-30435-2023-is-gucu-veri-kalitesi">12. İncelenen standart — ISO 30435:2023: İş gücü veri kalitesi</h2>
+<p>Bond'un bölümü standardın anatomisini verirken, bu haftaya bağlanan somut standart olan ISO 30435:2023 (BS ISO 30435:2023 olarak İngiltere'de uygulanmaktadır), bir standardın nasıl yapılandırıldığının ve verinin neden standartlaştırılması gerektiğinin örnek bir çalışmasıdır. ISO/TC 260 tarafından hazırlanan bu standart, iş gücü verisinin kalitesine odaklanır ve <em>kanıta dayalı karar almayı</em> destekleyen kaliteli iş gücü verisiyle örgütsel iyileştirmenin temelini kurar.</p>
+<p><strong>Kapsam ve odak.</strong> ISO 30435, iş gücü veri kalitesini dört süreçle tanımlar: (a) iş gücü verisinin belirlenmesi; (b) veri yakalama; (c) veri bakımı; (d) veri gözden geçirme süreçleri. Standardın odağı, verinin <em>kendisinin</em> kalitesidir — kişisel verinin gizliliği ve güvenliği, verinin analizi ve raporlanması ya da teknoloji kullanımı gibi konuları kapsamaz (bunlar başka standartların, örneğin ISO/IEC 27001 ve ISO 30414'ün alanıdır). İnsan kaynakları bilgi sistemleri, veri tabanları ve elektronik tablolar gibi teknoloji platformları veri yakalama ve yönetim sürecini iyileştirebilir; ancak bu standardın odağı verinin kendisidir. Standart her tür ve boydaki örgüte, tüm sektör ve bölgelerde uygulanabilir.</p>
+<p>Bu kapsam tercihi bilinçli ve önemlidir. ISO 30435, veriyi analiz etmenin, raporlamanın ya da güvenli tutmanın <em>öncesindeki</em> katmana — verinin ham kalitesine — odaklanarak, çoğu zaman atlanan bir boşluğu doldurur. Uygulamada örgütler analitik araçlara ve gösterge panolarına yatırım yaparken, bu araçların beslendiği verinin doğruluğunu ve tutarlılığını güvence altına almayı ihmal edebilir; sonuçta şık ama yanıltıcı raporlar üretilir. Standardın 'verinin kendisi' üzerindeki ısrarı, tam da bu ihmali hedef alır. Ayrıca standardın gizlilik ve güvenliği kapsam dışı bırakması, bir zayıflık değil, standart ailesi içinde iş bölümünün bir örneğidir: her standart dar ve iyi tanımlı bir alanda derinleşir, komşu alanları ilgili standartlara bırakır.</p>
+<p><strong>Kanıta dayalı karar alma.</strong> Standardın Giriş'i, yüksek düzeyde iş gücü veri kalitesinin, örgütsel performansı ve sürekli iyileştirmeyi desteklemek için kanıta dayalı karar almanın temelini oluşturduğunu vurgular. Örgüt, amacına ve stratejik hedeflerine hangi verinin 'önemli' (material) olduğunu belirlemeli; hangi verinin yakalanacağını düşünürken ilgili ulusal ve uluslararası İK standartlarına başvurmalıdır. Bu, 2. haftada gördüğümüz önemlilik (materiality) kavramının veri düzeyindeki yansımasıdır: her veri değerli değildir; örgüt sınırlı kaynağını, kararlarını gerçekten etkileyen veriye yöneltmelidir. Böylece ISO 30435, veri kalitesini bir 'ne kadar çok veri, o kadar iyi' meselesi değil, bir 'doğru veriyi, doğru kalitede' meselesi olarak çerçeveler.</p>
+<h3 id="is-gucu-veri-kalitesinin-bes-boyutu-iso-30435-madde-4">İş gücü veri kalitesinin beş boyutu (ISO 30435, Madde 4)</h3>
+<p>ISO 30435'in bir başka önemli özelliği, terim ve tanım ya da normatif atıf listelememesidir; bunun yerine ISO 30400 (Sözlük) ve genel veri kalitesi için ISO 8000 serisine yaslanır. Bu, dersin 1. haftasında konuştuğumuz standart ailesi mantığının somut bir örneğidir: her standart tekerleği yeniden icat etmez, ortak sözlüğe ve komşu standartlara atıfla iç tutarlılığı korur. ISO 30435 ayrıca ISO 30414'e (Şekil 2) açıkça atıf yaparak, iç ve/veya dış raporlama için önerilen ölçütlerle bağını kurar; böylece 'veri kalitesi' standardı ile 'raporlama' standardı bir zincirin halkaları olarak birbirini tamamlar.</p>
+<p><strong>İş gücü yaşam döngüsü çerçevesi (Madde 5).</strong> İş gücü yaşam döngüsü çerçevesi, bir örgütün iş gücü yönetimiyle ilgili gördüğü tüm etkinlikleri içeren bir tablodur ve planla–uygula–kontrol et–önlem al (PDCA) üst çerçevesini izler. Çerçevenin genişletilmesi, hangi verinin yakalanması gerektiğini belirleme yeteneğini artırır; örneğin devir (turnover), uygulayıcının daha derin içgörü kazanması için gönüllü, gönülsüz ve/veya kritik pozisyon devri olarak ayrıştırılabilir. Çerçevenin içeriği sektöre ve örgüt büyüklüğüne göre değişir; her örgüt neyin ilgili olduğunu kendisi belirler, ancak sektörler ve büyüklükler arası benzerlikler farklılıklardan çoğu zaman fazladır. İlgili İK bilgisi, veri kalitesi için bir güvence rejiminin parçası olmalıdır; zaman çizelgelerinin belirlenmesi, örneklenecek veri hacmi ve doğruluk gereklilikleri gibi sorumluluklar atanmalıdır. Mevcut ulusal ve uluslararası İKY standartları (işe alım, öğrenme-gelişim, iş gücü planlaması gibi) yakalanacak en uygun ölçüt ve veri noktalarını gösterir.</p>
+<p><strong>Veri yakalama ve bakım gereklilikleri (Madde 6).</strong> İş gücü verisi sorumluluğunun sahipliği, kilit paydaş gruplarındaki kişilerin belirlenmesi ve sorumlulukların atanmasıyla kurulmalıdır; sorumluluk örgütün hiyerarşik yapısına hizalanabilir (ör. takım liderleri, yöneticiler ve yöneticiler kendi doğrudan bağlıları için). Veri kalitesinin önemi, iş gücü veri kalitesi performans ölçümünün bireysel performans değerlendirmelerinin bir bileşeni yapılmasıyla pekiştirilebilir. İlk giriş, sürekli güncelleme ve bakım prosedürleri belgelenmelidir. İş gücü üyeleri katıldığında, geçiş yaptığında ya da ayrıldığında ilgili veri belgelenmiş prosedürlere uygun olarak yakalanmalı/güncellenmelidir.</p>
+<p><strong>Tarihsel veri temizleme (Madde 6.3).</strong> Zayıf kaliteli tarihsel veri, çoğu zaman zayıf kaliteli iş gücü raporlamasının nedenidir. Doğru tarihsel veri; tarihsel raporlama, eğilim analizi, kök neden analizi, alumni yönetimi, pazarlama ve 'işveren markası' konumlandırması, proaktif iş gücü yönetimi, çatışma çözümü ve iş gücü müzakeresi için değerlidir. Tarihsel verinin değeri büyük ölçüde sektöre ve örgüte özgüdür; bir örgüt 6 aylık veriyi değersiz sayarken bir diğeri 5 yıllık veriyi hâlâ yararlı bulabilir. Tarihsel veri yönetimi kurulduğunda 3–5 yıllık kayan bir geçmiş tutulmalıdır. Etkili veri temizleme teknikleri arasında yinelenenleri kaldırma, ilgisiz veriyi çıkarma, büyük/küçük harf ve biçimi standartlaştırma, veri türlerini dönüştürme, hataları düzeltme ve eksik değerleri ele alma bulunur. Temizleme kararı verildiğinde İK, bordro, çalışan temsilcileri, bilgi teknolojisi ve raporlama/yönetimi içeren özel bir proje ekibi kurulmalıdır.</p>
+<p><strong>Veri bütünlüğü gözden geçirme süreci (Madde 7).</strong> İş gücü veri kalitesi gözden geçirme sürecinin üç parçası vardır: bir veri kalitesi süreç gözden geçirme raporu, yönetim güvencesi ve zaman çizelgelerinin belirlenmesi. Değerlendirme ve rapor en az yılda bir kez (kullanıcı tanımına göre daha sık) yapılmalıdır. <strong>Yönetim güvencesi</strong>, rutin raporlama mekanizmaları ve yanıt-eylem kanıtları aracılığıyla sağlanır; veri kalitesinin ölçülmesi ve analizi, sürekli iyileştirme ve açık hesap verebilirlik gereklidir. Bu raporlar denetim incelemesine, testine ve doğrulamasına açık olmalıdır; kritik stratejiler ve büyük riskler daha fazla denetim dikkati gerektirir. Zorunlu belgeler, lisanslar ve vizeler gibi gerekli kimlik bilgileri için veri güvence gerekliliği daha katı olmalı, bazı durumlarda mutlak (%100) olmalıdır — örneğin bir hekimin kimlik bilgileri ya da uzun yol sürücü ehliyeti. Standart, her kilit veri noktası için asgari kabul edilen hata oranını ve örneklenecek asgari veri hacmini belirleyen bir gözden geçirme süreci geliştirilmesini şart koşar (bkz. aşağıdaki örnek tablo).</p>
+<div class="table-wrap">
+<table>
+<tbody>
+<tr class="odd">
+</tr>
+<tr class="even">
+</tr>
+<tr class="odd">
+</tr>
+<tr class="even">
+</tr>
+<tr class="odd">
+</tr>
+<tr class="even">
+</tr>
+<tr class="odd">
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="iso-30435-2023-tablo-4-ten-uyarlanmis-ornek-secili-satirlar-">ISO 30435:2023, Tablo 4'ten uyarlanmış örnek (seçili satırlar): her veri noktası için önerilen gözden geçirme zamanı, örneklem hacmi ve doğruluk düzeyi.</h3>
+<p><strong>Zayıf veri kalitesinin etkileri (Annex A).</strong> Standardın bilgilendirici eki, zayıf veri kalitesinin çarpıcı sonuçlarını ortaya koyar: zayıf veri kalitesi, tüm iş girişimlerinin hedeflenen faydalara ulaşamamasının %40'ının başlıca nedenidir ve genel işgücü verimliliğini %20'ye varan oranda etkileyebilir. İş gücü verisi çoğu zaman kötü düzenlenir ve sahipliği ayrı işlevlere dağılmıştır (İK bazı verilerden, finans başka verilerden sorumlu olabilir). Değişen çalışma biçimleri ve konumları (uzaktan/hibrit çalışma) verinin doğru kaydını daha da kritik kılar. Buna karşın kaliteli iş gücü verisinin toplanması ve kullanımı; ekonomi, verimlilik, etkililik ve iş gücü verimliliği iyileştirmelerinin temelidir. Ekonomik faydalar (kanıta dayalı karar alma, yetenek ve arz açıklarının daha etkili belirlenmesi, riskin azaltılması), çalışan faydaları (daha istikrarlı iş gücü) ve toplumsal faydalar (istikrarlı işin bağlılık, verimlilik ve refah üzerindeki etkisi; çeşitli bir iş gücünün geliştirilmesi) standardın vaadidir. ISO 30435, diğer İK standartlarının veri kalitesi gerekliliklerinin altını doldurur ve İK standartlarının tüm faydalarını destekler.</p>
+<p><strong>Veri sahipliği ve sorumluluğun dağılımı.</strong> Annex A'nın altını çizdiği kritik bir sorun, iş gücü verisinin çoğu zaman kötü düzenlenmesi ve sahipliğinin ayrı işlev ya da birimlere parçalanmasıdır: İK bazı kalıcı iş gücü verisinden, finans departmanı başka verilerden sorumlu olabilir; yöneticiler geçici/yarı zamanlı çalışanları ve yüklenicileri yönetebilirken, dış hizmet sağlayıcılar finans ya da satın almanın, gönüllüler ise güvenlik ya da resepsiyonun sorumluluğunda olabilir. Bu parçalanma, verinin tutarsız, eksik ve çelişkili olmasının başlıca nedenidir. ISO 30435, bu yüzden sahipliğin açıkça atanmasını ve hiyerarşiye hizalanmasını şart koşar; ayrıca iş gücü veri kalitesini bireysel performans değerlendirmelerinin bir bileşeni yaparak sorumluluğu somutlaştırmayı önerir. Bu, veri kalitesini 'İK'nın teknik bir işi' olmaktan çıkarıp her yöneticinin sorumluluğuna dönüştüren önemli bir tasarım tercihidir.</p>
+<p><strong>Değişen çalışma biçimlerinin etkisi.</strong> Annex A ayrıca çalışma biçim ve konumlarının köklü biçimde değiştiğine dikkat çeker: işyerinde, uzaktan ya da hibrit çalışma; hatta işvereniyle hiç yüz yüze gelmeyen çalışanlar. Bu, doğru ve güncel veri kaydını — örneğin acil durum iletişimi için evden çalışma konumunu — daha da kritik kılar. Bu gözlem, ISO 30435'in neden 2023'te (pandemi sonrası) yayımlandığını ve neden veri kalitesinin çağdaş, dağıtık iş gücü için bu kadar önemli olduğunu bağlamsallaştırır.</p>
+<p>Bu haftanın üçüncü öğrenim kazanımı buradadır: iş gücü veri kalitesi, insan sermayesi raporlamasının güvenilirliğinin ön koşuludur. ISO 30414 ne kadar iyi bir raporlama çerçevesi olursa olsun, altındaki veri doğru, zamanında, tam, tutarlı ve ilgili değilse, ürettiği ölçütler yanıltıcı olur. Çöp girer, çöp çıkar (garbage in, garbage out) ilkesi insan sermayesi raporlaması için de geçerlidir. 2. haftada gördüğümüz 'veri körlüğü' tehlikesi — verinin varlığının yanlış bir güven duygusu yaratması — tam da burada, veri kalitesi standardıyla ele alınır. Dolayısıyla ISO 30435, dersin ilerleyen haftalarındaki (özellikle 10.–11. hafta insan sermayesi raporlaması) çekirdek modülün sessiz ama vazgeçilmez temelidir. Dönem projenizde bir kurum için ISO 30414 uyumlu bir rapor taslağı hazırlarken, kullandığınız verinin bu beş kalite boyutunu karşılayıp karşılamadığını sorgulamak, raporunuzun güvenilirliğini doğrudan belirleyecektir.</p>
+<h2 id="13-bolum-ozeti">13. Bölüm özeti</h2>
+<p>Her tür, boy ve sektörden örgütler, operasyonel sorumluluklarını yerine getirmek için İngiliz ve uluslararası standartları kullanır. Standart kullanımı bazı sektörlerde ya da satın alma amaçlı gönüllü olsa da, belirli bir standarda göre belgelendirme yasal ya da sözleşmesel bir zorunluluk olabilir. Bir örgütün özel bir İK işlevi olsun olmasın, HCMD'ye ilişkin güvenilir kılavuzluk — özellikle küçük örgütlerde ve İKY uygulamalarının daha az yerleşik olduğu ülkelerde — tutarlı ve uyumlu bir uygulama temeli sağlar. Bu hafta; standart geliştirme sürecinin aşamalarını (öneri, hazırlık, komite, sorgu, onay, yayın, gözden geçirme), standartların uzman komitelerince uzlaşı ve istişareye dayalı olarak nasıl geliştirildiğini, uyum-temelli ile ilke-güdümlü yaklaşımların gerilimini ve HCM standartları için ilke-güdümlü savı ele aldık. Ardından ISO 30435:2023 üzerinden iş gücü veri kalitesinin beş boyutunu, yaşam döngüsü çerçevesini, veri yakalama-bakım ve bütünlük gözden geçirme süreçlerini ve zayıf veri kalitesinin etkilerini inceledik. Sonuç olarak insanlar, iyi iş, sürdürülebilirlik, standartlar — ve bunların dayandığı veri kalitesi — performansını en iyilemek ve tercih edilen işveren olarak farklılaşmak isteyen tüm örgütler için önemli olmalıdır.</p>
+<h2 id="okuma-ve-tartisma-sorulari">Okuma ve tartışma soruları</h2>
+<ol type="1">
+<li><blockquote>
+<p>Bir İK standardında ne düzeyde ayrıntı uygundur (Anderson'ın 'ayrıntı düzeyi' sorusu)? Çok ayrıntılı ile çok genel bir standart arasındaki ödünleşimi bir örnek üzerinden tartışın.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Standartlar esneklik ve yeniliği kısıtlar mı yoksa mümkün mü kılar? Uyum-temelli ve ilke-güdümlü yaklaşımların bu soruya verdiği farklı yanıtları karşılaştırın.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Düşük veri kalitesi hangi raporlama ve karar risklerini doğurur? ISO 30435'in beş boyutundan (doğruluk, zamanındalık, tamlık, tutarlılık, ilgililik) hangisinin ihlali sizce en yıkıcı sonuçları verir; neden?</p>
+</blockquote></li>
+</ol>
+<h2 id="kaynakca">Kaynakça</h2>
+<p>Anderson, V. (2017). HRD standards and standardization: where now for human resource development? <em>Human Resource Development International, 20</em>(4), 327–345.</p>
+<p>Bond, H. It's all a matter of standards. Anderson, V. (Ed.), <em>Human Capital Management Standards: A Complete Guide</em> içinde (2. Bölüm). Kogan Page.</p>
+<p>BSI (2015). <em>BS 76000:2015 Human resource — Valuing people — Management system — Requirements and guidance</em>. British Standards Institution.</p>
+<p>BSI (2016). <em>BS 0:2016 A standard for standards — Principles of standardization</em>. British Standards Institution.</p>
+<p>BSI (2017). <em>BS 76005:2017 Valuing people through diversity and inclusion</em>. British Standards Institution.</p>
+<p>CIPD. <em>HR and standards factsheet</em>. Chartered Institute of Personnel and Development.</p>
+<p>ISO (2016). <em>ISO 30400:2016 Human resource management — Vocabulary</em>. International Organization for Standardization.</p>
+<p>ISO (2016). <em>ISO 30408:2016 Human resource management — Guidelines on human governance</em>. International Organization for Standardization.</p>
+<p>ISO (2018). <em>ISO 30414:2018 Human resource management — Guidelines for internal and external human capital reporting</em>. International Organization for Standardization.</p>
+<p>ISO (2023). <em>ISO 30435:2023 Human resource management — Workforce data quality</em> (BS ISO 30435:2023). International Organization for Standardization / British Standards Institution.</p>
+<p>ISO. <em>ISO 8000 series — Data quality</em>. International Organization for Standardization.</p>
+<p>Friedman, T. ve Smith, M. (2011). <em>Measuring the Business Value of Data Quality</em>. Gartner Inc.</p>
+    <nav class="pager"><a class="pg prev" href="hafta-02.html"><span>← Önceki</span><strong>2. Hafta — Yönetişim, İnsan Sermayesi ve Kültür</strong></a><a class="pg next" href="hafta-04.html"><span>Sonraki →</span><strong>4. Hafta — İş Gücü Planlama</strong></a></nav>
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="foot-in">
+    <p class="foot-title">İnsan Kaynakları Standartları</p>
+    <p class="foot-sub">BSI ve ISO/TC 260 İnsan Sermayesi Yönetimi ve Gelişimi (HCMD) Çerçevesi</p>
+    <div class="foot-links">
+      <a href="index.html">Ders İzlencesi</a>
+      <a href="hafta-01.html">1. Hafta</a>
+      <a href="hafta-10.html">10. Hafta</a>
+      <a href="donem-projesi.html">Dönem Projesi</a>
+    </div>
+    <p class="foot-note">Ders notları eğitim amaçlıdır. ISO ve BSI standart metinleri telife tabidir; burada yalnızca kavramsal çerçeve ve öğretim amaçlı özetler yer alır.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var t = document.getElementById('tocBox');
+  if (t && window.matchMedia('(min-width:961px)').matches) t.open = true;
+  var b = document.getElementById('wkToggle'), m = document.getElementById('wkMenu');
+  if (b && m) b.addEventListener('click', function () {
+    var open = !m.hasAttribute('hidden');
+    if (open) { m.setAttribute('hidden',''); b.setAttribute('aria-expanded','false'); }
+    else { m.removeAttribute('hidden'); b.setAttribute('aria-expanded','true'); }
+  });
+  var links = [].slice.call(document.querySelectorAll('.toc a'));
+  var heads = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+  if ('IntersectionObserver' in window && heads.length) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) { a.classList.remove('active'); });
+        var i = heads.indexOf(e.target);
+        if (i > -1) links[i].classList.add('active');
+      });
+    }, { rootMargin: '-72px 0px -70% 0px' });
+    heads.forEach(function (h) { if (h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

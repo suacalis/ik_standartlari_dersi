@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>11. Hafta — İnsan Sermayesi Raporlaması II — Metrik Kümeleri · İnsan Kaynakları Standartları</title>
+<meta name="description" content="Dokuz teknik spesifikasyon ve çözümlü hesaplama örnekleri">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">İçeriğe geç</a>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">İKS</span>
+      <span class="brand-txt"><strong>İnsan Kaynakları Standartları</strong><em>Yüksek Lisans · Ders Notları</em></span>
+    </a>
+    <nav class="topnav">
+      <a href="index.html">İzlence</a>
+      <a href="donem-projesi.html">Dönem Projesi</a>
+      <button class="wk-toggle" id="wkToggle" aria-expanded="false" aria-controls="wkMenu">Haftalar ▾</button>
+    </nav>
+  </div>
+  <div class="wk-menu" id="wkMenu" hidden><a class="wk" href="hafta-01.html">1. Hafta</a><a class="wk" href="hafta-02.html">2. Hafta</a><a class="wk" href="hafta-03.html">3. Hafta</a><a class="wk" href="hafta-04.html">4. Hafta</a><a class="wk" href="hafta-05.html">5. Hafta</a><a class="wk" href="hafta-06.html">6. Hafta</a><span class="wk off">7. Hafta</span><a class="wk" href="hafta-08.html">8. Hafta</a><a class="wk" href="hafta-09.html">9. Hafta</a><a class="wk" href="hafta-10.html">10. Hafta</a><a class="wk on" href="hafta-11.html">11. Hafta</a><a class="wk" href="hafta-12.html">12. Hafta</a><a class="wk" href="hafta-13.html">13. Hafta</a><a class="wk" href="hafta-14.html">14. Hafta</a><a class="wk" href="donem-projesi.html">Dönem Projesi</a></div>
+</header>
+
+<section class="hero">
+  <div class="hero-in">
+    <p class="kicker">11. Hafta</p>
+    <h1>İnsan Sermayesi Raporlaması II — Metrik Kümeleri</h1>
+    <p class="hero-sub">Dokuz teknik spesifikasyon ve çözümlü hesaplama örnekleri</p>
+    <div class="tags"><span class="tag">ISO/TS 30421-30433</span><span class="tag">ISO/TS 24178</span></div>
+  </div>
+</section>
+
+
+
+<div class="shell">
+
+      <aside class="toc" aria-label="Sayfa içindekiler">
+        <details class="toc-inner" id="tocBox">
+          <summary class="toc-title">Bu sayfada</summary>
+          <ul><li class="t2"><a href="#1-giris-cerceveden-hesaplamaya">1. Giriş: Çerçeveden Hesaplamaya</a></li>
+<li class="t2"><a href="#bolum-ogrenme-ciktilari">Bölüm Öğrenme Çıktıları</a></li>
+<li class="t2"><a href="#2-metrik-kumesi-belgesinin-anatomisi">2. Metrik Kümesi Belgesinin Anatomisi</a></li>
+<li class="t3"><a href="#2-1-anahtar-terimler">2.1 Anahtar Terimler</a></li>
+<li class="t2"><a href="#3-bulunabilirlik-kumesi-iso-ts-30425">3. Bulunabilirlik Kümesi — ISO/TS 30425</a></li>
+<li class="t3"><a href="#fte-tam-zaman-esdegeri">FTE — Tam zaman eşdeğeri</a></li>
+<li class="t3"><a href="#devamsizlik-orani">Devamsızlık oranı</a></li>
+<li class="t3"><a href="#cozumlu-ornek-departman-bazli-fte">Çözümlü örnek — departman bazlı FTE</a></li>
+<li class="t2"><a href="#4-maliyet-kumesi-iso-ts-30427">4. Maliyet Kümesi — ISO/TS 30427</a></li>
+<li class="t3"><a href="#toplam-isgucu-maliyeti">Toplam işgücü maliyeti</a></li>
+<li class="t3"><a href="#ucret-ve-odul-orani-esitlik-gostergesi">Ücret ve ödül oranı (eşitlik göstergesi)</a></li>
+<li class="t3"><a href="#kisi-basi-ise-alim-maliyeti-iso-ts-30407">Kişi başı işe alım maliyeti (ISO/TS 30407)</a></li>
+<li class="t3"><a href="#cozumlu-ornek-toplam-isgucu-maliyeti-bilesenleri">Çözümlü örnek — toplam işgücü maliyeti bileşenleri</a></li>
+<li class="t2"><a href="#5-verimlilik-kumesi-iso-ts-30432">5. Verimlilik Kümesi — ISO/TS 30432</a></li>
+<li class="t3"><a href="#kisi-basi-ciro-kar-ve-ebit">Kişi başı ciro, kâr ve EBIT</a></li>
+<li class="t3"><a href="#hcroi-insan-sermayesi-yatirim-getirisi">HCROI — İnsan sermayesi yatırım getirisi</a></li>
+<li class="t3"><a href="#cozumlu-ornek-hcroi">Çözümlü örnek — HCROI</a></li>
+<li class="t3"><a href="#cozumlu-ornek-fte-basina-ciro-egilimi">Çözümlü örnek — FTE başına ciro eğilimi</a></li>
+<li class="t2"><a href="#6-devir-ve-elde-tutma-kumesi-iso-ts-30421">6. Devir ve Elde Tutma Kümesi — ISO/TS 30421</a></li>
+<li class="t3"><a href="#devir-orani-ve-elde-tutma-orani">Devir oranı ve elde tutma oranı</a></li>
+<li class="t3"><a href="#cozumlu-ornek-devir-maliyeti">Çözümlü örnek — devir maliyeti</a></li>
+<li class="t2"><a href="#7-yedekleme-planlamasi-kumesi-iso-ts-30433">7. Yedekleme Planlaması Kümesi — ISO/TS 30433</a></li>
+<li class="t3"><a href="#yedekleme-etkinlik-ve-kapsam-oranlari">Yedekleme etkinlik ve kapsam oranları</a></li>
+<li class="t3"><a href="#yedekleme-hazirlik-derinlik-orani">Yedekleme hazırlık (derinlik) oranı</a></li>
+<li class="t3"><a href="#cozumlu-ornek-hazirlik-derinligi">Çözümlü örnek — hazırlık derinliği</a></li>
+<li class="t2"><a href="#8-beceri-ve-yetkinlik-kumesi-iso-ts-30428">8. Beceri ve Yetkinlik Kümesi — ISO/TS 30428</a></li>
+<li class="t3"><a href="#egitim-yatirimi-metrikleri">Eğitim yatırımı metrikleri</a></li>
+<li class="t3"><a href="#program-bazli-egitim-maliyeti-kucuk-orgutler-icin">Program bazlı eğitim maliyeti (küçük örgütler için)</a></li>
+<li class="t3"><a href="#cozumlu-ornek-derinlik-ve-genislik-karsilastirmasi">Çözümlü örnek — derinlik ve genişlik karşılaştırması</a></li>
+<li class="t2"><a href="#9-liderlik-kumesi-iso-ts-30431">9. Liderlik Kümesi — ISO/TS 30431</a></li>
+<li class="t3"><a href="#kontrol-alani-span-of-control">Kontrol alanı (span of control)</a></li>
+<li class="t3"><a href="#cozumlu-ornek-kontrol-alaninin-iki-yontemi">Çözümlü örnek — kontrol alanının iki yöntemi</a></li>
+<li class="t2"><a href="#10-uyum-ve-etik-kumesi-iso-ts-30423">10. Uyum ve Etik Kümesi — ISO/TS 30423</a></li>
+<li class="t3"><a href="#sikayet-ve-egitim-metrikleri">Şikâyet ve eğitim metrikleri</a></li>
+<li class="t3"><a href="#cozumlu-ornek-sikayetlerin-yildan-bugune-toplami">Çözümlü örnek — şikâyetlerin yıldan-bugüne toplamı</a></li>
+<li class="t2"><a href="#11-orgut-kulturu-kumesi-iso-ts-24178">11. Örgüt Kültürü Kümesi — ISO/TS 24178</a></li>
+<li class="t3"><a href="#baglilik-endeksi-ve-kulturel-olgunluk">Bağlılık endeksi ve kültürel olgunluk</a></li>
+<li class="t3"><a href="#cozumlu-ornek-bolgesel-baglilik-endeksi">Çözümlü örnek — bölgesel bağlılık endeksi</a></li>
+<li class="t2"><a href="#12-uygulama-butunlesik-hesaplama">12. Uygulama: Bütünleşik Hesaplama</a></li>
+<li class="t3"><a href="#senaryo-anadolu-teknoloji-a-s">Senaryo — &quot;Anadolu Teknoloji A.Ş.&quot;</a></li>
+<li class="t2"><a href="#13-metrikleri-yorumlarken-bes-ilke">13. Metrikleri Yorumlarken Beş İlke</a></li>
+<li class="t3"><a href="#ek-alistirma-kendiniz-hesaplayin">Ek alıştırma — kendiniz hesaplayın</a></li>
+<li class="t2"><a href="#14-kumeler-ve-iso-30414-metriklerin-kaynagi">14. Kümeler ve ISO 30414: Metriklerin Kaynağı</a></li>
+<li class="t2"><a href="#15-veri-toplama-kalite-ve-yapay-zeka">15. Veri Toplama, Kalite ve Yapay Zekâ</a></li>
+<li class="t2"><a href="#16-butunlesik-okuma-dokuz-kumeden-tek-panoya">16. Bütünleşik Okuma: Dokuz Kümeden Tek Panoya</a></li>
+<li class="t2"><a href="#17-sektorel-kulturel-ve-uluslararasi-uyarlama">17. Sektörel, Kültürel ve Uluslararası Uyarlama</a></li>
+<li class="t2"><a href="#18-uygulama-yol-haritasi">18. Uygulama Yol Haritası</a></li>
+<li class="t2"><a href="#tartisma-sorulari">Tartışma soruları</a></li>
+<li class="t2"><a href="#19-bolum-ozeti">19. Bölüm Özeti</a></li>
+<li class="t2"><a href="#kaynaklar">Kaynaklar</a></li></ul>
+        </details>
+      </aside>
+  <main id="main" class="prose">
+    <div class="lead">ISO 30414 çerçevesinin metriklerini besleyen dokuz teknik spesifikasyon (metrics cluster): tanım, amaç, formül ve yorumlama; FTE, HCROI, devir oranı ve kişi başı işe alım maliyeti üzerine uygulamalı bir yüksek lisans ders notu. Kümeler: ISO/TS 30425 (bulunabilirlik) · 30427 (maliyet) · 30432 (verimlilik) · 30421 (devir/elde tutma) · 30433 (yedekleme) · 30428 (beceri/yetkinlik) · 30431 (liderlik) · 30423 (uyum/etik) · 24178 (örgüt kültürü)</div>
+    <h2 id="1-giris-cerceveden-hesaplamaya">1. Giriş: Çerçeveden Hesaplamaya</h2>
+<p class="deck"><span class="smallcaps">Metrik kümesi mantığı</span></p>
+<p>Önceki bölümde ISO 30414:2025'in insan sermayesi raporlaması ve açıklaması (HCRD) çerçevesini; yönetişim–strateji–risk–metrik formatını, TML düzeylerini, materiality ilkesini ve gerekli 14 metriği inceledik. O çerçevenin metriklerinin nasıl <em>tanımlandığı, hesaplandığı ve yorumlandığı</em> ise ayrı, birbirini tamamlayan bir teknik spesifikasyon ailesinde ayrıntılandırılmıştır. ISO 30414, hangi metriğin raporlanacağını söyleyen "anayasa"dır; <strong>metrik kümeleri (metrics clusters)</strong> ise her metriğin operasyonel tanımını, formülünü ve kullanım rehberini veren "uygulama yönetmelikleri"dir.</p>
+<p>Her küme belgesi (ör. ISO/TS 30432 Verimlilik) belirli bir insan sermayesi alanına (HCA) odaklanır ve o alandaki metriklerin iç ve dış raporlama için karşılaştırılabilir ölçümlerini sağlayan formülleri sunar. Bu bölümde dokuz kümeyi tek tek ele alacak; her birinin çekirdek metriklerini formülleriyle ve çözümlü örnekleriyle çalışacak; ardından FTE, HCROI, devir oranı ve kişi başı işe alım maliyetini uçtan uca hesaplayan bir uygulama ile bölümü kapatacağız.</p>
+<p>Bu ayrımı kavramak, insan sermayesi ölçümünü yüzeysel bir "gösterge tablosu doldurma" alıştırmasından, kanıta dayalı bir yönetim disiplinine dönüştürür. Bir yöneticinin "devir oranımız %12" demesi ile "gönüllü, pişmanlık verici devir oranımız kritik pozisyonlarda %18'e çıktı ve bu, sektör ortalamasının iki katı" demesi arasındaki fark, tam da metrik kümelerinin sağladığı operasyonel kesinlikten doğar. Kümeler, üç soruyu aynı anda yanıtlar: <em>Neyi</em> sayıyoruz (tanım), <em>nasıl</em> hesaplıyoruz (formül) ve sonucu <em>hangi bağlamda</em> yorumluyoruz (bağlamsal ve öngörücü faktörler). Bu üçlü olmadan, aynı ada sahip iki metrik iki farklı örgütte tamamen farklı şeyler ölçebilir; karşılaştırma anlamını yitirir.</p>
+<p>Kümelerin çoğu 2021 yılında ISO/TS (teknik spesifikasyon) olarak yayımlanmıştır ve ISO 30414'ün 2018 baskısına atıfla geliştirilmiştir. 2025 baskısı, bu kümeleri gerekli ve önerilen metrik tablolarına referans olarak bağlar; böylece çerçeve ile hesaplama katmanı arasında tutarlı bir zincir kurulur. Öğrenci açısından bu, tek bir metriği doğru raporlamak için hem üst çerçeveyi (ISO 30414) hem de ilgili kümeyi (ör. devir için ISO/TS 30421) birlikte okumanın gerektiği anlamına gelir.</p>
+<p>Metrik kümelerinin doğuşu, insan kaynakları yönetiminin uzun süredir taşıdığı bir zayıflığa yanıttır: niteliksel güçlü, niceliksel kırılgan olma eğilimi. İK, çalışan ilişkileri, kültür ve gelişim gibi alanlarda derin bir niteliksel bilgi biriktirmiş; ancak finansın paydaşlara sunduğu türden tutarlı, karşılaştırılabilir niceliksel raporlamayı üretmekte zorlanmıştır. Farklı örgütlerin, hatta aynı örgütün farklı birimlerinin "devir", "verimlilik" ya da "bağlılık"ı farklı biçimde tanımlaması, bu verilerin bir araya getirilmesini ve kıyaslanmasını imkânsız kılmıştır. Metrik kümeleri, tam da bu Babil kulesini yıkmak; herkesin aynı metriği aynı biçimde ölçmesini sağlamak için tasarlanmıştır.</p>
+<p>Bu standartlaşma, üç paydaş grubuna doğrudan değer üretir. <strong>Yöneticiler</strong> için, kararların sezgi yerine karşılaştırılabilir kanıta dayanmasını sağlar. <strong>Yatırımcılar ve derecelendirme kuruluşları</strong> için, insan sermayesini maddi olmayan bir varlık yatırımı olarak değerlendirmeyi ve örgütler arası kıyaslamayı mümkün kılar. <strong>Düzenleyiciler</strong> için ise, sürdürülebilirlik ve sosyal sorumluluk açıklamalarının tutarlı bir temele oturmasını sağlar. Metrik kümelerini öğrenmek, dolayısıyla yalnızca formül ezberlemek değil; insan sermayesini kurumsal değerin ölçülebilir bir sürükleyicisi olarak konuşabilmenin dilini edinmektir.</p>
+<h2 id="bolum-ogrenme-ciktilari"><span class="smallcaps">Bölüm Öğrenme Çıktıları</span></h2>
+<p>Bu bölümü tamamlayan öğrenci aşağıdakileri yapabilir:</p>
+<p>Metrik kümesi belgesinin ortak anatomisini açıklamak</p>
+<p>Dokuz kümenin çekirdek metriklerini tanımak</p>
+<p>Headcount ile FTE'yi ayırt edip FTE'yi hesaplamak</p>
+<p>HCROI, verimlilik ve maliyet metriklerini hesaplamak</p>
+<p>Devir ve elde tutma oranını, yedekleme oranlarını hesaplamak</p>
+<p>Bağlamsal ve öngörücü faktörleri metrik yorumuna katmak</p>
+<h2 id="2-metrik-kumesi-belgesinin-anatomisi">2. Metrik Kümesi Belgesinin Anatomisi</h2>
+<p class="deck"><span class="smallcaps">Ortak yapı</span></p>
+<p>Metrik kümesi belgeleri tutarlı bir şablona uyar; bu tutarlılık, farklı örgütlerin aynı metriği aynı biçimde ölçüp raporlamasını sağlar. Her metrik için tipik olarak şu bileşenler verilir:</p>
+<p><strong>Genel / Tanım</strong><br />
+Metriğin ne olduğu ve neyi ölçtüğü.</p>
+<p><strong>Amaç</strong><br />
+Hangi karar veya içgörü için kullanıldığı.</p>
+<p><strong>Formül</strong><br />
+Karşılaştırılabilir hesaplama yöntemi.</p>
+<p><strong>Nasıl kullanılır</strong><br />
+İç ve dış raporlamada uygulama.</p>
+<p><strong>Bağlamsal faktörler</strong><br />
+Sonucu etkileyen dış koşullar (sektör, ekonomi).</p>
+<p><strong>Öngörücü faktörler</strong><br />
+Metriğin geleceğe dair işaret ettiği eğilimler.</p>
+<p><strong>Bağlamsal (contextual)</strong> faktörler, bir metriğin değerini "olduğu gibi" yorumlamanın neden yanıltıcı olabileceğini açıklar: sektör, coğrafya, işgücü piyasası, ekonomik döngü ve mevzuat. <strong>Öngörücü (predictive)</strong> faktörler ise metriğin gecikmeli (lagging) mi yoksa öncü (leading) gösterge mi olduğunu ve gelecekteki hangi sonuçlara işaret ettiğini belirtir. Bu iki katman, ISO 30414'ün "nicelenmiş ama nitelenmiş" ilkesinin küme düzeyindeki karşılığıdır: her sayı, bir anlatı ile birlikte sunulmalıdır.</p>
+<p><strong>Gecikmeli ve öncü gösterge ayrımı</strong> metrik yorumunun kalbindedir. Gecikmeli göstergeler geçmişte olmuş bir sonucu ölçer: devir oranı, kişi başı ciro, işe alım maliyeti geriye bakan fotoğraflardır. Öncü göstergeler ise gelecekteki sonuçları önceden haber verir: bağlılık endeksindeki düşüş, gönüllü devirdeki artışın habercisidir; halef kapsam oranındaki zayıflık, gelecekteki liderlik boşluklarının işaretidir. Olgun bir raporlama, gecikmeli sonuçları öncü göstergelerle birlikte sunar ki karar vericiler sadece "ne oldu" değil "ne olacak" sorusuna da yanıt bulabilsin.</p>
+<p><strong>Segmentasyon</strong>, kümelerin ortak bir gücüdür. Bir metrik toplulaştırılmış (aggregate) haliyle yanıltıcı olabilir: örgüt genelinde %10 devir sağlıklı görünürken, kritik bir mühendislik biriminde %30'a çıkmış olabilir. ISO 30414'ün önerdiği TML düzeyleri (üst-orta-alt), işlev, coğrafya, kıdem ve performans kategorileri boyunca segmentasyon, her kümede metriğin gerçek hikâyesini açığa çıkarır. Bu nedenle her formülün yanında "nasıl kullanılır" bölümü, hangi boyutlarda ayrıştırmanın en çok içgörü sağladığını belirtir.</p>
+<p><strong>Karşılaştırılabilirlik ve zaman senkronizasyonu</strong> da ortak ilkelerdir. Metrikler, örgütün mali yılı, bütçe döngüsü veya her ikisiyle hizalı ölçülmeli; ölçüm noktası her dönemin sonunda (ay sonu, çeyrek sonu, yıl sonu) sabitlenmelidir. Anlamlı bir eğilim için tipik olarak 3–5 yıllık bir seri; kıyaslama (benchmarking) için ise aynı sektör, benzer büyüklük ve benzer coğrafyadaki örgütler seçilmelidir. Yöntem değiştiğinde, karşılaştırılabilirliği korumak için değişiklik geriye dönük uygulanmalı ve niteliksel olarak açıklanmalıdır.</p>
+<h3 id="2-1-anahtar-terimler">2.1 Anahtar Terimler</h3>
+<p>Kümeler boyunca tekrar eden birkaç terimin net tanımı, formüllerin doğru uygulanması için gereklidir.</p>
+<p><strong>Headcount (baş sayısı)</strong><br />
+Çalışma süresine bakmaksızın her bireyi bir sayan ölçü.</p>
+<p><strong>FTE (tam zaman eşdeğeri)</strong><br />
+Bir tam zamanlı çalışanın iş yüküne karşılık gelen standart birim.</p>
+<p><strong>Contingent işgücü</strong><br />
+Bağımsız yükleniciler ve geçici/kiralık çalışanlar; çekirdek kadro dışı.</p>
+<p><strong>Kritik pozisyon</strong><br />
+Örgütsel sonuçlara doğrudan ve önemli etkisi olan iş rolü.</p>
+<p><strong>Gecikmeli gösterge</strong><br />
+Geçmişte olmuş bir sonucu ölçen metrik (ör. devir).</p>
+<p><strong>Öncü gösterge</strong><br />
+Gelecekteki sonucu önceden haber veren metrik (ör. bağlılık).</p>
+<p><strong>Segmentasyon</strong><br />
+Metriği TML, işlev, coğrafya, kıdem gibi boyutlara ayırma.</p>
+<p><strong>Kıyaslama (benchmark)</strong><br />
+Metriği benzer örgüt, sektör ve dönemle karşılaştırma.</p>
+<p>Bu terimler, dokuz kümenin hepsinde ortak bir zemin oluşturur; bir küme belgesini okurken bu tanımları akılda tutmak, metriğin neyi ölçtüğünü ve neyi ölçmediğini ayırt etmeyi kolaylaştırır.</p>
+<h2 id="3-bulunabilirlik-kumesi-iso-ts-30425">3. Bulunabilirlik Kümesi — ISO/TS 30425</h2>
+<p class="deck"><span class="smallcaps">İşgücünün büyüklüğü ve mevcudiyeti</span></p>
+<p>Bulunabilirlik kümesi, mantıksal olarak tüm insan sermayesi ölçümünün başlangıç noktasıdır: diğer metriklerin çoğu, paydasında bir işgücü sayısı taşır. Kişi başı ciro, kişi başı maliyet, devir oranı, eğitim saati — hepsi "kaç kişi" ya da "kaç FTE" sorusunun yanıtına bağlıdır. Bu yüzden bu kümedeki tanım hataları, tüm rapor boyunca yayılan sistematik yanlışlıklara yol açar. İşgücü sayısını doğru saymak, göründüğünden daha inceliklidir.</p>
+<p>Bulunabilirlik kümesi, örgütün elindeki işgücünün büyüklüğünü ve mevcudiyetini ölçer: baş sayısı (headcount), tam zaman eşdeğeri (FTE), contingent (dış) işgücü ve devamsızlık (absenteeism). <strong>Headcount</strong>, çalışma süresine bakmaksızın her çalışanı bir birey olarak sayar (tam/yarı zamanlı, hatta sıfır saatli). Ancak headcount tek başına yanıltıcı olabilir; çok sayıda yarı zamanlı çalışan toplam sayıyı şişirir. Bu nedenle raporlamada FTE tercih edilir.</p>
+<h3 id="fte-tam-zaman-esdegeri">FTE — Tam zaman eşdeğeri</h3>
+<p><em>D = A + ( B / C )</em></p>
+<p>A: tam zamanlı çalışan sayısı · B: yarı zamanlı çalışanların toplam saati · C: standart tam zamanlı haftalık saat · D: toplam FTE. <em>Örnek (haftalık 40 saat):</em> 100 tam zamanlı + yarı zamanlıların toplam 1.600 saati → D = 100 + (1.600 / 40) = <strong>140 FTE</strong>. Headcount ile FTE arasındaki fark, işgücünün yarı zamanlı yoğunluğunu görünür kılar.</p>
+<p><strong>Contingent işgücü</strong>, bağımsız yüklenicileri (self-employed) ve geçici/kiralık (agency, interim) çalışanları kapsar; örgüte talep dalgalanmalarına göre esneklik sağlar. <strong>Devamsızlık (absenteeism)</strong>, planlanmamış devamsızlık süresinin, planlanan toplam çalışma süresine oranıdır; işgücü mevcudiyetinin ve iyi oluşun bir göstergesidir. Bütçelenen headcount ile gerçekleşen headcount arasındaki açılan fark, ilgili birimde çekme ya da elde tutma sorunlarına işaret edebilir.</p>
+<p><strong>Neden hem headcount hem FTE?</strong> İki ölçü birbirini tamamlar. Headcount, kaç <em>kişiyle</em> ilişki yönetildiğini (yan haklar, iletişim, kültür) gösterirken; FTE, kaç <em>tam iş biriminin</em> gerçekten yürütüldüğünü gösterir. Yüksek yarı zamanlı yoğunluğu olan bir perakende zincirinde headcount 500, FTE ise 320 olabilir; maliyet ve verimlilik metriklerinin paydası FTE alınmazsa, kişi başı üretkenlik yapay olarak düşük görünür. ISO 30414 bu yüzden maliyet ve verimlilik metriklerinin toplam FTE (TFTE) üzerinden hesaplanmasını önerir. Uluslararası bağlamda ise "tam zamanlı" tanımı ülkeden ülkeye değişir (haftalık 35 saat bir yerde %100, 40 saat başka yerde %100); bu nedenle çok uluslu örgütler FTE'yi ortak bir temelde normalize etmelidir.</p>
+<p><strong>Contingent işgücünün ölçülmesi</strong> giderek önem kazanmaktadır; çünkü modern örgütlerde işin önemli bir bölümü çekirdek kadro dışındaki yükleniciler, danışmanlar, serbest çalışanlar ve platform (gig) çalışanları tarafından yürütülür. Bu işgücü, geleneksel headcount'ta görünmez; oysa toplam iş yükünün ve maliyetin gerçek resmini vermek için toplam FTE hesabına dâhil edilmelidir. Bağımsız yüklenici ile geçici (agency) çalışan ayrımı hukuki açıdan da kritiktir: yüklenicinin örgüte bağımlılık derecesi arttıkça, birçok yargı yetkisinde yasal olarak "çalışan" sayılma riski doğar.</p>
+<h3 id="devamsizlik-orani">Devamsızlık oranı</h3>
+<p><em>Devamsızlık oranı (%) = ( Planlanmamış devamsızlık süresi / Planlanan toplam çalışma süresi ) × 100</em></p>
+<p>Devamsızlık, işgücü sağlığı ve bağlılığının öncü bir göstergesidir; artış eğilimi, tükenmişlik, düşük moral veya yönetsel sorunların erken işareti olabilir. Planlı izinler (yıllık izin) bu orana dâhil edilmez; yalnızca planlanmamış (hastalık, izinsiz) devamsızlık sayılır.</p>
+<p><strong>Nasıl kullanılır.</strong> Bulunabilirlik metrikleri en çok departman, ekip ve düzey bazında ayrıştırıldığında değer üretir. Bütçelenen ve gerçekleşen headcount karşılaştırması, işe alım hızının işten ayrılmalara yetişip yetişmediğini gösterir; "benzeriyle benzeri" (like-for-like) kıyas, hangi birimlerin yapısal olarak eksik kadrolu çalıştığını ortaya koyar. Bu metrikler, işgücü planlaması ve bütçeleme süreçlerinin temel girdisidir.</p>
+<h3 id="cozumlu-ornek-departman-bazli-fte">Çözümlü örnek — departman bazlı FTE</h3>
+<p>Bir örgütte merkez fonksiyonlar biriminde 100 tam zamanlı çalışan ve yarı zamanlıların toplam 1.600 haftalık saati vardır (haftalık standart 40 saat). FTE = 100 + (1.600 / 40) = <strong>140</strong>. Aynı hesap tüm departmanlara uygulanıp toplandığında, örgütün gerçek iş yükü kapasitesi ortaya çıkar.</p>
+<p><em>Merkez 140 · Lojistik 6.003 · Üretim 1.292 · Ar-Ge 929 · BT 1.118 · Satış 3.780 → Toplam ≈ 13.262 FTE</em></p>
+<p><strong>Bağlamsal ve öngörücü faktörler.</strong> Headcount ve FTE mevsimsellikten, iş modelinden ve büyüme evresinden etkilenir; perakende ve tarım gibi sektörlerde yıl içinde belirgin dalgalanmalar normaldir. Öngörücü açıdan, bütçelenen ile gerçekleşen arasındaki açılan fark, gelecekte kapasite darlığının ya da tersine atıl kapasitenin habercisidir. Devamsızlık oranındaki artış eğilimi ise, henüz devre yansımadan önce işgücü sağlığı ve moral sorunlarının erken sinyalidir; bu yüzden devamsızlık, bulunabilirlik kümesinin en değerli öncü göstergesidir.</p>
+<h2 id="4-maliyet-kumesi-iso-ts-30427">4. Maliyet Kümesi — ISO/TS 30427</h2>
+<p class="deck"><span class="smallcaps">İşgücüne yapılan finansal yatırım</span></p>
+<p>İnsan sermayesi, çoğu örgütte tek tek en büyük gider kalemidir; toplam giderin dörtte biri ile üçte ikisi arasında bir payı temsil edebilir. Bu büyüklük, maliyet kümesini stratejik açıdan kritik kılar: işgücü maliyetini doğru ölçmeden ne verimlilik (HCROI) hesaplanabilir ne de yatırımın getirisi değerlendirilebilir. Maliyet kümesinin amacı, bu devasa gider kalemini gizli bir "kara kutu" olmaktan çıkarıp, bileşenlerine ayrılmış, izlenebilir ve yönetilebilir bir yatırım profiline dönüştürmektir.</p>
+<p>Maliyet kümesi, örgütün işgücüne yaptığı finansal yatırımın kalemlerini tanımlar. Toplam işgücü maliyeti (TCOW), sektör düzeyinde kıyaslama için hem tarihsel hem öngörücü bir göstergedir. Küme; kişi başı işe alım maliyeti (ISO/TS 30407) ve işe alım/devir maliyetleri (ISO/TS 30421) ile bütünleşir.</p>
+<h3 id="toplam-isgucu-maliyeti">Toplam işgücü maliyeti</h3>
+<p><em>Toplam işgücü maliyeti = Toplam çalışan ücret maliyeti + Toplam yan hak maliyeti + Dış işgücü maliyeti</em></p>
+<p><strong>Dış işgücü maliyeti</strong> = geçici işgücü maliyeti + yüklenici (contractor) işgücü maliyeti. <strong>Toplam istihdam maliyeti</strong> = ücret + yan haklar + diğer istihdam maliyetleri.</p>
+<h3 id="ucret-ve-odul-orani-esitlik-gostergesi">Ücret ve ödül oranı (eşitlik göstergesi)</h3>
+<p><em>Oran = Tanımlı grubun ortalama yıllık toplam ücreti / Tüm çalışanların ortalama toplam ücreti</em></p>
+<p>Bu oran, örgütün fırsat eşitliği politikasını uygulayıp uygulamadığını değerlendirmeye yardımcı olur (ör. cinsiyet, kıdem veya düzey grupları arası ücret farkları).</p>
+<h3 id="kisi-basi-ise-alim-maliyeti-iso-ts-30407">Kişi başı işe alım maliyeti (ISO/TS 30407)</h3>
+<p><em>Kişi başı işe alım maliyeti = ( İç işe alım maliyetleri + Dış işe alım maliyetleri ) / Dönemdeki toplam işe alım sayısı</em></p>
+<p><strong>Dış maliyetler:</strong> ilan, ajans/danışman ücretleri, aday seyahat/değerlendirme. <strong>İç maliyetler:</strong> işe alım ekibinin zamanı, yönlendirme (referral) ödülleri, genel yönetim giderleri. Bölüm 12'deki uygulamada bu formülü sayısal olarak çözeceğiz.</p>
+<p><strong>Neden maliyet raporlanır?</strong> İç ve dış insan sermayesi raporlaması, örgütün insanlarına verdiği değeri ve paydaşlarına sunduğu sürdürülebilir değer önerisini göstermenin anahtarıdır. Toplam işgücü maliyeti tek bir sayıdan çok daha fazlasını anlatır: bileşenlerine ayrıldığında (ücret, prim, yan hak, dış işgücü, işe alım, eğitim), örgütün insana yatırım profilini ortaya koyar. Örneğin dış işgücü maliyetinin toplam içindeki payının hızla artması, çekirdek kadronun aşındığına ve bilgi kaybı riskine işaret edebilir; eğitim maliyetinin payının düşmesi, gelecekteki yetkinlik açıklarının habercisi olabilir.</p>
+<p><strong>Bağlamsal ve öngörücü faktörler.</strong> İşgücü maliyetleri sektöre göre büyük ölçüde değişir; emek-yoğun sektörlerde toplam giderin %60'ına, sermaye-yoğun sektörlerde %20'sinin altına inebilir. Bu nedenle mutlak tutar değil, toplam gidere veya gelire oran daha anlamlıdır. Enflasyon, döviz kuru ve asgari ücret düzenlemeleri gibi dış etkenler, yıllar arası karşılaştırmayı çarpıtabilir; bu yüzden maliyet metrikleri reel bazda ve bağlam açıklamasıyla sunulmalıdır. Öngörücü açıdan, ücret maliyetindeki artış hızının verimlilik artışını geçmesi, gelecekte kâr marjı baskısının habercisidir.</p>
+<p><strong>Ücret eşitliği oranı</strong>, giderek daha çok düzenleyici ilgi çeken bir alandır. Cinsiyet ücret oranı, çeşitlilik ücret oranları ve CEO-medyan çalışan ücret oranı gibi türevleri, ESRS S1 ve çeşitli ülke mevzuatlarında zorunlu açıklama kapsamına girmektedir. Bu oranlar, örgütün fırsat eşitliği taahhüdünün somut kanıtıdır ve itibar ile yatırımcı algısı üzerinde doğrudan etkilidir.</p>
+<h3 id="cozumlu-ornek-toplam-isgucu-maliyeti-bilesenleri">Çözümlü örnek — toplam işgücü maliyeti bileşenleri</h3>
+<p>Bir örgütün cari yıl kalemleri (bin $): çalışan ücreti 460.000, prim ve teşvik 75.000, yan haklar 150.000, diğer tazminat 21.000, işe alım 8.000, eğitim-gelişim 42.000. Toplam istihdam maliyeti = <strong>756.000</strong>. Dış işgücü maliyeti (ajans, seyahat vb.) 54.000 eklendiğinde toplam işgücü maliyeti ≈ <strong>810.000 bin $</strong>. Kalemlerin yıllar arası yüzde değişimi, hangi maliyet kaleminin hızla arttığını (ör. yan haklar %15) görünür kılar.</p>
+<p><em>TCOW = 756.000 (istihdam) + 54.000 (dış işgücü) = 810.000 bin $</em></p>
+<p><strong>Dış işgücü oranı bir uyarı sinyalidir.</strong> Toplam işgücü maliyeti içinde dış (contingent) işgücünün payının hızla yükselmesi iki yönlü okunur: bir yandan esneklik ve maliyet kontrolü sağlar, öte yandan çekirdek yetkinliğin dışarıya kayması ve bilgi kaybı riskini büyütür. Bu yüzden maliyet kümesi, dış işgücü maliyetini ayrı bir kalem olarak izlemeyi zorunlu kılar. Maliyet metrikleri, verimlilik (30432) ve devir (30421) kümeleriyle birlikte okunduğunda, "maliyeti düşürdük" iddiasının gerçekten değer yarattığını mı yoksa yalnızca gideri ötelediğini mi gösterdiği anlaşılır.</p>
+<h2 id="5-verimlilik-kumesi-iso-ts-30432">5. Verimlilik Kümesi — ISO/TS 30432</h2>
+<p class="deck"><span class="smallcaps">İşgücünün ürettiği değer</span></p>
+<p>Maliyet kümesi "ne kadar harcadık" sorusunu yanıtlarken, verimlilik kümesi "bu harcamadan ne kadar değer ürettik" sorusunu sorar. İkisi birlikte, insan sermayesi yatırımının getiri hesabını oluşturur. Verimlilik kümesi, insan sermayesini bir maliyet merkezinden bir değer üreticisine dönüştüren bakış açısının niceliksel karşılığıdır; yatırımcıların ve üst yönetimin en çok ilgilendiği metrikler bu kümeden gelir.</p>
+<p>Verimlilik kümesi, işgücü yatırımının ne kadar değer ürettiğini ölçer. Kişi başı ciro veya kâr gibi oranlar, örgütün pazardaki verimliliğini kıyaslamak ve performansa dayalı ücret sistemleri kurmak için kullanılır. Bu oranlar sektöre göre büyük ölçüde değiştiğinden, en anlamlı karşılaştırma aynı sektör içinde yapılır.</p>
+<h3 id="kisi-basi-ciro-kar-ve-ebit">Kişi başı ciro, kâr ve EBIT</h3>
+<p><em>Kişi başı ciro = Toplam net gelir / Ortalama çalışan (veya FTE)</em><br />
+<em>Kişi başı kâr = Net faaliyet kârı / Ortalama çalışan</em><br />
+<em>Kişi başı EBIT = Faiz ve vergi öncesi kâr / Ortalama çalışan</em></p>
+<p>FTE bazında hesaplama, yarı zamanlı ve esnek çalışmayı standardize eder. Yüksek değerler yüksek verimliliğe; düşük değerler eğitim veya teknoloji yatırımı ihtiyacına işaret edebilir.</p>
+<h3 id="hcroi-insan-sermayesi-yatirim-getirisi">HCROI — İnsan sermayesi yatırım getirisi</h3>
+<p><em>HCROI = [ ( Gelir − ( Toplam gider − Toplam işgücü maliyeti ) ) / Toplam işgücü maliyeti ] − 1</em></p>
+<p>İnsan sermayesine yatırılan her birim paranın kaç birim vergi öncesi kâr ürettiğini gösterir. Sonuç genellikle 100 ile çarpılarak yüzde olarak raporlanır. Kâr amacı gütmeyen sektörde gelir yerine bütçe, işgücü maliyeti yerine personel maliyeti konur.</p>
+<p><strong>HCROI'yi doğru okumak.</strong> HCROI, ISO 30414'ün verimlilik alanında raporlanmasını önerdiği tercih edilen metriktir; çünkü hem verimliliği (efficiency) hem etkililiği (effectiveness) yakalar. Formülün mantığı şudur: gelirden, işgücü dışındaki tüm giderler çıkarılır; kalan tutar, işgücü maliyetine bölünür ve 1 çıkarılır. Böylece "işgücüne harcanan para dışındaki her şey sabitken, işgücü yatırımı ne kadar net değer üretti" sorusu yanıtlanır. İşgücü maliyetleri tipik olarak toplam giderlerin %25–60'ını oluşturduğundan, bu ölçü yatırımın ne kadar iyi kullanıldığına dair güçlü bir sinyal verir. Veriye erişim kısıtlıysa, basitleştirilmiş bir alternatif olan <em>faaliyet geliri / toplam işgücü maliyeti</em> oranı kullanılabilir; ancak hangi metriğin kullanıldığı raporda açıkça belirtilmelidir.</p>
+<h3 id="cozumlu-ornek-hcroi">Çözümlü örnek — HCROI</h3>
+<p>Gelir 4,5 milyon $, toplam gider 3,75 milyon $, toplam işgücü maliyeti 1,5 milyon $. HCROI = [(4.500.000 − (3.750.000 − 1.500.000)) / 1.500.000] − 1 = [(4.500.000 − 2.250.000) / 1.500.000] − 1 = (2.250.000 / 1.500.000) − 1 = 1,5 − 1 = 0,5 → <strong>%50</strong>. Yorum: işgücüne yatırılan her 1 dolar, orijinal doları artı 50 sent vergi öncesi kâr olarak geri döner. HCROI yükseldikçe işgücü yatırımının etkinliği artar.</p>
+<p><strong>Bağlamsal ve öngörücü faktörler.</strong> Kişi başı verimlilik oranları sektöre son derece bağımlıdır; bir yazılım şirketinde kişi başı ciro, bir çağrı merkezinden kat kat yüksektir. Bu yüzden bu metrikler sektör-içi kıyaslama için anlamlıdır, sektörler arası değil. Ekonomik döngüler, teknoloji yatırımları, otomasyon düzeyi ve iş modeli değişiklikleri sonucu ciddi biçimde etkiler. Öngörücü açıdan, HCROI çalışan verimliliği, performans, devir ve gelecekteki işgücü değişiklikleriyle birlikte analiz edildiğinde en güçlü içgörüyü sağlar; tek başına bir dönemin HCROI değeri, bir eğilim serisi kadar bilgilendirici değildir.</p>
+<p>Kâr amacı gütmeyen ve kamu sektörü örgütleri için verimlilik, kârla değil, ayrılan bütçenin ürettiği çıktı ve etkiyle ölçülür. ISO 30414, bu sektörler için eşdeğer metrikler tanımlar: FTE başına bütçe, toplam personel gideri / toplam harcama gibi. Böylece kâr güdüsü olmayan örgütler de insan sermayesi verimliliğini standart bir dille raporlayabilir.</p>
+<h3 id="cozumlu-ornek-fte-basina-ciro-egilimi">Çözümlü örnek — FTE başına ciro eğilimi</h3>
+<p>Bir örgütün üç yıllık verisi: 2023'te 100 çalışan / 50M ciro → kişi başı <strong>500.000</strong>; 2024'te 250 çalışan / 75M → <strong>300.000</strong>; 2025'te 400 çalışan / 80M → <strong>200.000</strong>. Ciro artarken kişi başı ciro düştü: örgüt hızla büyüdü ama işgücü verimliliği geriledi. Bu, ya aşırı işe alımın ya da yeni çalışanların henüz verimli hale gelmediğinin işaretidir; tek dönemlik bir değer bu hikâyeyi anlatamaz, ancak eğilim serisi anlatır.</p>
+<p><strong>Kişi başı ciro, kâr ve EBIT birlikte.</strong> Bu üç oran birbirini tamamlar. Kişi başı ciro üretilen hacmi; kişi başı kâr, bu hacmin ne kadarının değere dönüştüğünü; kişi başı EBIT ise faiz ve vergi etkisinden arındırılmış saf operasyonel verimliliği gösterir. Bir örgütte kişi başı ciro yüksek ama kişi başı kâr düşükse, sorun işgücü verimliliğinde değil, maliyet yapısında ya da fiyatlamadadır. Bu nedenle verimlilik metrikleri, maliyet kümesiyle (30427) birlikte tanısal bir çift oluşturur.</p>
+<h2 id="6-devir-ve-elde-tutma-kumesi-iso-ts-30421">6. Devir ve Elde Tutma Kümesi — ISO/TS 30421</h2>
+<p class="deck"><span class="smallcaps">Kırılganlık ve istikrar</span></p>
+<p>Devir ve elde tutma, insan sermayesi metrikleri arasında en çok konuşulan ama en sık yanlış yorumlananlardan biridir. Bir dönemin devir oranı, örgütün sağlığına dair güçlü bir sinyal taşır; ancak bu sinyalin anlamı, devrin türüne, kimin ayrıldığına ve hangi bağlamda gerçekleştiğine bağlıdır. Bu küme, ham bir "kaç kişi ayrıldı" sayısını, yönetsel eyleme dönüştürülebilir bir tanıya çeviren araçları sunar.</p>
+<p>İşgücü devri (turnover), bir dönemde örgütten ayrılan çalışan, yüklenici ve geçici işgücünün toplam işgücüne oranıdır ve yüzde olarak ifade edilir. Devir; <strong>gönüllü</strong> (çalışanın kendi kararı) ve <strong>gönülsüz</strong> (işten çıkarma, yeniden yapılanma) olarak ayrışır. Gönüllü devir, işverenleri karşılaştırmakta en çok kullanılan ölçüdür ve doğrudan ilk kademe yöneticilerden etkilenir. Gönüllü devir ayrıca <strong>pişmanlık verici (regrettable)</strong> ve <strong>pişmanlık vermeyen</strong> olarak da segmentlenir.</p>
+<h3 id="devir-orani-ve-elde-tutma-orani">Devir oranı ve elde tutma oranı</h3>
+<p><em>Devir oranı (%) = ( Dönemdeki ayrılma sayısı / Ortalama işgücü ) × 100</em><br />
+<em>Basit elde tutma oranı = 1,0 − Yıllık devir oranı</em></p>
+<p><em>Örnek:</em> Yıl başı 100 pozisyon dolu, yıl sonu 76 dolu → devir 0,24, elde tutma = 1,0 − 0,24 = <strong>0,76 (%76)</strong>. Devir çok yüksek ya da pozisyonlar hızlı dönüyorsa, basit oran yetersiz kalır; kohort ve istikrar (stability) oranları eklenir. <strong>Devir maliyeti</strong> = net ayrılma × ilgili doğrudan ve dolaylı maliyetler; gönüllü/gönülsüz ayrımına göre kalemler farklılaşır (kıdem tazminatı yalnızca gönülsüz devirde).</p>
+<p><strong>Neden devir bu kadar önemli?</strong> Devir, işgücünün kırılganlığının en görünür göstergesidir ve doğrudan maliyet, bilgi kaybı ve moral etkisi taşır. Ancak "yüksek devir kötü, düşük devir iyi" biçimindeki basit okuma yanıltıcıdır. Bir miktar devir sağlıklıdır: düşük performanslıların ayrılması (işlevsel devir) örgütü güçlendirir; oysa yüksek performanslıların, kritik yetkinlik sahiplerinin ayrılması (işlevsiz/pişmanlık verici devir) ciddi bir kayıptır. Bu yüzden başlıkdaki toplam devir oranı, mutlaka bileşenlerine ayrıştırılmalıdır.</p>
+<p><strong>Gönüllü devir</strong><br />
+Çalışanın kendi kararıyla ayrılması. İşverenleri kıyaslamada en çok kullanılan ölçü; en çok ilk kademe yöneticiden etkilenir.</p>
+<p><strong>Gönülsüz devir</strong><br />
+İşten çıkarma, küçülme, yeniden yapılanma. Uzun vadede yüksek gönüllü devrin sonucu olabilir.</p>
+<p><strong>Pişmanlık verici (regrettable)</strong><br />
+Örgütün kaybetmek istemediği kişilerin ayrılması. Genellikle kritik personelle örtüşür.</p>
+<p><strong>Pişmanlık vermeyen</strong><br />
+Ayrılması örgüt için sorun yaratmayan, hatta olumlu olabilen çıkışlar.</p>
+<p><strong>Devir maliyetinin bileşenleri.</strong> Devrin gerçek maliyeti, yalnızca kıdem tazminatından ibaret değildir. Gönülsüz (işlevsel) ayrılmalarda maliyet; idari işlemler, kıdem tazminatı, kullanılmamış izin ödemesi ve hukuki masraflardan oluşur. Gönüllü ayrılmalarda ise çıkış mülakatı ve idari maliyetler öne çıkar; pişmanlık verici ayrılmalarda ise buna işe alım, değerlendirme, oryantasyon ve yeni kişinin verimli hale gelene kadarki "ısınma" maliyeti eklenir. Bu son kalem çoğu zaman en büyük ama en görünmez maliyettir. ISO/TS 30421, bu ayrımı yaparak devir maliyetini gerçekçi biçimde hesaplamayı önerir.</p>
+<p><strong>Elde tutma ve istikrar.</strong> Elde tutma oranı, devrin ayna görüntüsüdür; ancak devir çok yüksek olduğunda basit "1 − devir" formülü yetersiz kalır. Bu durumlarda <em>istikrar oranı</em> (belirli bir kıdemi aşan çalışanların oranı) ve <em>kohort analizi</em> (belirli bir grubun zaman içinde ne kadar kaldığının izlenmesi) devreye girer. Örneğin yıl içinde bazı pozisyonlar birçok kez dönüyorsa, başlangıç kadrosunun ne kadarının yıl sonuna dek kaldığı, ham devir oranından çok daha bilgilendiricidir. Elde tutma oranı, kritik iş rolü, performans düzeyi ve bağlılık düzeyiyle birleştirildiğinde, işgücü planlaması için güçlü bir öngörü aracına dönüşür.</p>
+<h3 id="cozumlu-ornek-devir-maliyeti">Çözümlü örnek — devir maliyeti</h3>
+<p>Ortalama 100 kişilik bir işgücünde yıl içinde 21 ayrılma yaşandı; yalnızca 1'i gönülsüz (küçülme), 20'si gönüllü ve pişmanlık verici. Devir oranı = (21 / 100) × 100 = <strong>%21</strong>. Pişmanlık verici 20 ayrılmanın her biri; işe alım, değerlendirme, oryantasyon ve verimliliğe ulaşma maliyetiyle birlikte kişi başı ortalama 25.000 ₺'ye mal oluyorsa, yalnızca bu segmentin devir maliyeti ≈ <strong>500.000 ₺</strong>'dir. Bu hesap, "devir oranımız kabul edilebilir" cümlesini "kaybettiğimiz değer yarım milyon lira" cümlesine dönüştürerek yönetsel dikkati harekete geçirir.</p>
+<p><strong>Neden ayrıldıklarını anlamak.</strong> Devir oranı ne olduğunu söyler, nedenini değil. Bu yüzden küme; çıkış mülakatları, kalanların anketi (stayer survey) ve son iş değişikliği analizleri gibi niteliksel yöntemlerle desteklenmelidir. Gönüllü devrin en güçlü tek belirleyicisi çalışanın doğrudan yöneticisidir; bu yüzden ilk kademe yöneticilerin eğitimi ve desteklenmesi, devri azaltmanın en etkili kaldıracıdır. Devir, liderlik (30431) ve kültür (24178) kümeleriyle birlikte okunduğunda nedensel bir hikâye kurulabilir.</p>
+<h2 id="7-yedekleme-planlamasi-kumesi-iso-ts-30433">7. Yedekleme Planlaması Kümesi — ISO/TS 30433</h2>
+<p class="deck"><span class="smallcaps">Kritik rollerde süreklilik</span></p>
+<p>Yedekleme planlaması, örgütün geleceğe hazırlığının en somut sınavıdır: bugün kritik bir lider ayrıldığında, yerini kim, ne kadar hazır olarak dolduracak? Bu soru yanıtsızsa, örgüt görünürde sağlıklı olsa bile stratejik olarak kırılgandır. Yedekleme kümesi, bu kırılganlığı ya da dayanıklılığı ölçülebilir kılar; süreklilik planlamasını sezgisel bir "kimin adı var" listesinden, veriye dayalı bir kapasite değerlendirmesine dönüştürür.</p>
+<p>Yedekleme kümesi, örgütün kritik pozisyonları geleceğe taşıyabilme dayanıklılığını ölçer. Metrikler kritik pozisyon tanımına dayanır: örgütsel sonuçlar üzerinde doğrudan ve önemli etkisi olan roller.</p>
+<h3 id="yedekleme-etkinlik-ve-kapsam-oranlari">Yedekleme etkinlik ve kapsam oranları</h3>
+<p><em>Yedekleme etkinlik oranı = ( İçeriden doldurulan kritik pozisyon / Doldurulan toplam kritik pozisyon ) × 100</em><br />
+<em>Halef kapsam oranı = ( Liderlik yedek havuzundaki çalışan / Toplam lider sayısı ) × 100</em></p>
+<p><em>Örnek (etkinlik):</em> 23 içeriden atama / 31 kritik pozisyon ≈ <strong>%74</strong> — %70–80 bandı sağlıklı bir yedekleme sinyali sayılır. <em>Örnek (kapsam):</em> 132 potansiyel lider / 44 lider pozisyonu × 100 = <strong>%300</strong>, yani her pozisyon için üç aday.</p>
+<h3 id="yedekleme-hazirlik-derinlik-orani">Yedekleme hazırlık (derinlik) oranı</h3>
+<p><em>Hazırlık oranı = ( İlgili hazırlık düzeyindeki aday sayısı / Kritik pozisyon sayısı ) × 100</em></p>
+<p>Üç düzeyde ölçülür: <em>şimdi hazır</em>, <em>1–3 yılda hazır</em>, <em>4–5 yılda hazır</em>. <em>Örnek:</em> 82 "şimdi hazır" aday / 102 kritik pozisyon × 100 = <strong>%80</strong>. Bu üçlü, yedekleme hattının derinliğini ve zaman içindeki dayanıklılığını gösterir.</p>
+<p><strong>Yorumlama inceliği.</strong> Yedekleme metrikleri, kritik pozisyonların doğru tanımlanmasına bağlıdır; yanlış tanımlanmış kritik pozisyon listesi, tüm oranları anlamsız kılar. Halef kapsam oranının %300 çıkması (her pozisyon için üç aday) ilk bakışta güçlü görünür; ancak geniş bir yedek havuzu, adayların gerçekten hazır olduğunu garanti etmez. Bu nedenle kapsam oranı, mutlaka hazırlık (derinlik) oranıyla birlikte okunmalıdır: 100 aday olması ama hiçbirinin "şimdi hazır" olmaması, güçlü değil kırılgan bir yedekleme hattıdır. Yedekleme etkinlik oranının %70–80 bandında olması, sağlıklı bir iç geliştirme kültürünün işaretidir; çok yüksek olması dış yetenek girişinin (ve tazeliğin) azaldığını, çok düşük olması ise iç geliştirmenin zayıf olduğunu gösterebilir.</p>
+<p><strong>Bench strength (yedek gücü)</strong>, kümenin daha ileri bir metriğidir: yedek havuzundaki adaylardan, birden çok performans ve değerlendirme alanında asgari yetkinlik eşiğini karşılayanların sayısıdır. Bu metrik, kapsam (kaç aday) ve hazırlık (ne zaman hazır) boyutlarına bir üçüncü boyut ekler: kalite. Ayrıca <em>uyum yüzdesi (match percentage)</em> = mevcut ağırlıklı ortalama puan / gelecek gereksinim × 100 formülüyle, adayların gelecekteki rol gereksinimlerine ne kadar uyduğu ölçülebilir. Yedekleme metrikleri, işgücü hareketliliği (mobilite) metrikleriyle birlikte, örgütün değişime ve büyümeye hazırlığının bütünsel bir resmini verir.</p>
+<h3 id="cozumlu-ornek-hazirlik-derinligi">Çözümlü örnek — hazırlık derinliği</h3>
+<p>102 kritik pozisyon için tanımlanan adaylar: 82 "şimdi hazır", 76 "1–3 yılda hazır", 24 "4–5 yılda hazır". Hazırlık oranları: şimdi = 82/102 × 100 = <strong>%80</strong>; 1–3 yıl = 76/102 × 100 = <strong>%75</strong>; 4–5 yıl = 24/102 × 100 = <strong>%23</strong>. Yorum: örgütün kısa vadeli yedekleme hattı güçlü (%80 şimdi hazır); orta vade sağlam; ancak uzun vadeli hat (%23) zayıf ve gelecekteki liderlik boşlukları için yatırım gerektiriyor.</p>
+<p><strong>Yedekleme etkinliği ve dış tazelik dengesi.</strong> Yedekleme etkinlik oranının %70–80 bandında olması sağlıklı sayılır: bu, kritik pozisyonların çoğunun içeriden geliştirilerek doldurulduğunu, ama örgütün tamamen içe kapanmadığını gösterir. Oranın %95'e çıkması, dış yetenek ve yeni bakış açısı girişinin durduğu, örgütün "akraba evliliği" riskine düştüğü anlamına gelebilir. Tersine %40'a düşmesi, iç geliştirme ve yedekleme planlamasının zayıf olduğunu; kritik rollerin sürekli dışarıdan, yüksek maliyetle ve uyum riskiyle doldurulduğunu gösterir. İdeal denge, güçlü bir iç hattı stratejik dış girişlerle beslemektir.</p>
+<h2 id="8-beceri-ve-yetkinlik-kumesi-iso-ts-30428">8. Beceri ve Yetkinlik Kümesi — ISO/TS 30428</h2>
+<p class="deck"><span class="smallcaps">İşgücünün sağlamlığı</span></p>
+<p>Beceri ve yetkinlik gelişimi, örgüt sürdürülebilirliği için en etkili insan sermayesi alanlarından biri olarak gösterilir; çünkü işgücünün gelecekteki zorluklara ve teknoloji kaymalarına uyum kapasitesini doğrudan belirler. Yapay zekânın işi hızla dönüştürdüğü bir çağda, beceri açıklarını proaktif biçimde kapatmak yalnızca bir gelişim faaliyeti değil, stratejik bir hayatta kalma meselesidir. Bu küme, örgütün "insanına yatırım yapıyorum" iddiasını somut sayılara bağlar.</p>
+<p>Beceri ve yetkinlik kümesi, örgütün işgücünü geliştirme taahhüdünün <strong>derinliğini</strong> (kişi başı yatırım/saat) ve <strong>genişliğini</strong> (katılım kapsamı) birlikte ölçer. Beş metrik yer alır: toplam gelişim/eğitim maliyeti, eğitime katılan çalışan yüzdesi, kişi başı ortalama eğitim saati, kategoriye göre katılım yüzdesi ve işgücü yetkinlik oranı.</p>
+<h3 id="egitim-yatirimi-metrikleri">Eğitim yatırımı metrikleri</h3>
+<p><em>Kişi başı ortalama eğitim saati = Tüm çalışanların toplam formal eğitim saati / Çalışan (FTE) sayısı</em><br />
+<em>Eğitime katılım oranı = En az bir formal eğitime katılan çalışan / Toplam çalışan</em><br />
+<em>Kişi başı eğitim harcaması = Toplam gelişim/eğitim maliyeti / Çalışan sayısı</em></p>
+<p><em>Örnek:</em> 100.000 $ eğitim maliyeti / 50 çalışan = kişi başı <strong>2.000 $</strong>. Az saat ama yüksek harcama, daha nitelikli/etkili eğitime işaret edebilir; bu yüzden metrikler birlikte okunur. <strong>İşgücü yetkinlik oranı</strong>, çalışanlara atanan ortalama yetkinlik puanıdır.</p>
+<p><strong>Derinlik ve genişlik birlikte.</strong> Bu kümenin en önemli dersi, tek bir metriğin yanıltıcı olabileceğidir. Kişi başı yüksek eğitim harcaması (derinlik) etkileyici görünür; ancak eğer bu harcama işgücünün yalnızca %20'sine ulaşıyorsa (düşük genişlik), örgüt geniş tabanlı bir yetkinlik inşa etmiyor demektir. Tersine, herkesin katıldığı ama saati ve içeriği yetersiz eğitimler, genişlik yüksek olsa da gerçek gelişim sağlamaz. Bu yüzden ISO/TS 30428, beş metriği birlikte okumayı önerir: maliyet ve saat (derinlik), katılım yüzdesi ve kategoriye göre katılım (genişlik) ve yetkinlik oranı (sonuç).</p>
+<h3 id="program-bazli-egitim-maliyeti-kucuk-orgutler-icin">Program bazlı eğitim maliyeti (küçük örgütler için)</h3>
+<p><em>Program maliyeti = ( Personel zamanı × tam yüklü işçilik oranı ) + doğrudan program maliyetleri</em></p>
+<p><em>Örnek:</em> Program 1 = (40 saat × 85 $) + 5.000 $ = 8.400 $; Program 2 = (80 × 90) + 10.000 = 17.200 $; Program 3 = (20 × 100) + 25.000 = 27.000 $. Toplam = <strong>52.600 $</strong>. Toplulaştırılmış veri yoksa, maliyet program düzeyinde hesaplanıp toplanır.</p>
+<p><strong>Nasıl kullanılır ve kimler ilgilenir?</strong> Kişi başı eğitim harcaması yaygın biçimde kıyaslanan bir metriktir; iki örgütü karşılaştırmak kolaydır. Ancak yüksek harcama her zaman daha iyi değildir: hedefleri daha kolay olan ya da işgücü yetkinliği zaten yüksek olan bir örgüt, daha az harcayarak da optimum düzeyde olabilir. Bu yüzden dışarıya raporlarken yönetim, harcamanın bağlamını (hedeflerin zorluğu, işgücünün mevcut yetkinliği, beklenen etki) açıklamalıdır. Potansiyel çalışanlar, kendini geliştiren örgütleri tercih ettiğinden, kişi başı eğitim harcaması ve saati işveren markası açısından da önemli bir dış sinyaldir.</p>
+<h3 id="cozumlu-ornek-derinlik-ve-genislik-karsilastirmasi">Çözümlü örnek — derinlik ve genişlik karşılaştırması</h3>
+<p>İki örgüt: <strong>Örgüt 1</strong> 100.000 $ / 50 çalışan = kişi başı 2.000 $; <strong>Örgüt 2</strong> 200.000 $ / 50 çalışan = kişi başı 4.000 $. Örgüt 2 iki kat fazla harcıyor. Ancak Örgüt 1'in hedefleri daha kolay ve işgücü yetkinliği zaten yüksekse, her iki örgüt de kendi durumu için optimum yatırımda olabilir. Bu yüzden "eğitime katılan çalışan yüzdesi" (genişlik) metriği eklenmeden, harcama tek başına yorumlanamaz: %90 katılımla 2.000 $, %30 katılımla 4.000 $'dan daha etkili olabilir.</p>
+<p><strong>Yetkinlik oranı: sonucu ölçmek.</strong> Eğitim maliyeti ve saati birer <em>girdi</em> metriğidir; işgücü yetkinlik oranı ise bir <em>sonuç</em> metriğidir ve çalışanlara atanan ortalama yetkinlik puanlarını gösterir. İdeal bir okuma, girdilerdeki (harcama, saat, katılım) artışın zaman içinde yetkinlik oranındaki artışa dönüşüp dönüşmediğini izler. Eğer yıllarca artan eğitim yatırımı yetkinlik oranını yükseltmiyorsa, sorun yatırımın miktarında değil, eğitimin içeriğinde, hedeflemesinde veya transferinde olabilir. Beceri kümesi böylece, insan sermayesi gelişiminin yalnızca "ne kadar harcandığını" değil, "ne kadar işe yaradığını" da sorgulamaya davet eder.</p>
+<h2 id="9-liderlik-kumesi-iso-ts-30431">9. Liderlik Kümesi — ISO/TS 30431</h2>
+<p class="deck"><span class="smallcaps">Liderliğin kalitesi ve kapasitesi</span></p>
+<p>Liderliğin kalitesi ve sürdürülebilirliği, örgüt sonuçları üzerinde güçlü bir etki taşır; doğru liderleri belirlemek ve geliştirmek, insan sermayesi yönetiminin en yüksek kaldıraçlı faaliyetlerindendir. Liderlik kümesi, çoğu zaman soyut ve öznel kabul edilen "iyi liderlik" kavramını, izlenebilir ve kıyaslanabilir metriklere indirger. Bu metrikler, liderliğin hem niteliğini (güven) hem yapısını (kontrol alanı) hem de örgütün geleceğe dönük yatırımını (gelişim) yakalar.</p>
+<p>Liderlik kümesi üç metrik içerir: liderlik güveni, kontrol alanı (span of control) ve liderlik gelişimi. <strong>Liderlik güveni</strong>, çalışanların yönetici ve liderlerine duyduğu güveni ölçer; bağlılık anketlerinin liderlik alt kümesi, 0–100 arası bir endekse dönüştürülür (adalet, tutarlılık vb. boyutlar).</p>
+<h3 id="kontrol-alani-span-of-control">Kontrol alanı (span of control)</h3>
+<p><em>Genel kontrol alanı = Toplam işgücü / Toplam yönetim kadrosu</em><br />
+<em>Yönetsel kontrol alanı = Toplam işgücü / Doğrudan bağlısı olan yönetici sayısı</em></p>
+<p><em>Örnek:</em> 10.000 kişilik işgücü, 1.000 yönetici → genel = <strong>10</strong> (yönetici başına 10 çalışan); yalnızca 800'ünün doğrudan bağlısı varsa yönetsel = 10.000 / 800 = <strong>12,5</strong>. Yüksek oran yalın yapıya işaret edebilir; ancak aşırı yüksek değerler yöneticilerin fazla yüklendiğini, iletişim ve gelişimin zayıfladığını gösterebilir. <strong>Liderlik gelişimi</strong> = gelişim programına katılan lider yüzdesi.</p>
+<p><strong>Kontrol alanının iki yüzü.</strong> Genel yöntem, tüm yönetim kadrosunu (doğrudan bağlısı olmayanlar dâhil) paydaya alır; yönetsel yöntem ise yalnızca gerçekten çalışan yöneten yöneticileri sayar. İki değer arasındaki fark, örgütteki "yöneten ama kimseyi yönetmeyen" rollerin (proje, sistem, program yöneticileri) ağırlığını gösterir. Kontrol alanı, işgücü maliyeti yönetiminin gecikmeli, dolaylı bir göstergesi olarak kullanılır: dar kontrol alanı (yönetici başına az çalışan) fazla yönetim katmanına ve yüksek maliyete; aşırı geniş kontrol alanı ise yöneticilerin aşırı yüklenmesine, koçluk ve kariyer gelişiminin zayıflamasına, dolayısıyla artan devir ve düşen bağlılığa işaret edebilir. En anlamlı kullanım, kontrol alanını düzey, işlev ve kritik iş grubuna göre segmentlemektir.</p>
+<p><strong>Liderlik güveni ve gelişimi.</strong> Liderlik güveni, bağlılık anketlerinin liderlik alt kümesinden türetilen 0–100 arası bir endekstir; adalet, tutarlılık, şeffaflık gibi boyutları toplar. Bu, çalışanların yöneticilerine duyduğu güvenin nabzını tutan öncü bir göstergedir ve düşük değerleri, gelecekteki bağlılık ve elde tutma sorunlarının erken uyarısıdır. Liderlik gelişimi ise gecikmeli bir göstergedir: örgütün liderlerini içeriden geliştirme niyetini yansıtır ve gelişim programına ya da eğitime katılan lider yüzdesiyle ölçülür. Liderlik düzeyi, coğrafya, departman ve hizmet süresine göre segmentlendiğinde, gelişim yatırımının nereye yoğunlaştığı ve nerede boşluk kaldığı görünür hale gelir.</p>
+<h3 id="cozumlu-ornek-kontrol-alaninin-iki-yontemi">Çözümlü örnek — kontrol alanının iki yöntemi</h3>
+<p>Bir örgütte toplam işgücü 10.000 (9.000 çalışan + 900 geçici + 100 yüklenici), toplam yönetici 1.000; ancak yalnızca 800'ünün doğrudan bağlısı var. <strong>Genel kontrol alanı</strong> = 10.000 / 1.000 = <strong>10</strong> (yönetici başına 10 kişi). <strong>Yönetsel kontrol alanı</strong> = 10.000 / 800 = <strong>12,5</strong>. İki değer arasındaki fark, 200 yöneticinin proje/sistem yönettiğini ama kimseyi denetlemediğini gösterir. Liderlik gelişimi örneği: 1.000 liderden 200'ü programa katıldıysa katılım = <strong>%20</strong>.</p>
+<p><strong>Kontrol alanını yorumlamak.</strong> "İdeal" bir kontrol alanı yoktur; doğru değer işin niteliğine bağlıdır. Rutin, standartlaşmış işlerde bir yönetici 15–20 kişiyi etkili yönetebilirken; karmaşık, yaratıcı ya da yüksek riskli işlerde 5–7 kişi bile fazla olabilir. Bu yüzden kontrol alanı, işlev, düzey, iş tipi ve otomasyon düzeyine göre segmentlenmeden yorumlanmamalıdır. Aşırı geniş kontrol alanı, düşen liderlik güveni ve artan devirle birlikte görüldüğünde, örgütün yönetsel kapasitesinin işgücünün gerisinde kaldığının güçlü bir sinyalidir.</p>
+<h2 id="10-uyum-ve-etik-kumesi-iso-ts-30423">10. Uyum ve Etik Kümesi — ISO/TS 30423</h2>
+<p class="deck"><span class="smallcaps">Yönetişim ve çalışma ilişkileri</span></p>
+<p>Uyum ve etik, insan sermayesi raporlamasının en hassas ve en çok bağlama bağlı alanıdır. Bir örgütün yasal ve etik yükümlülüklere ne kadar uyduğu, yalnızca hukuki bir zorunluluk değil; itibarının, çalışma ilişkilerinin ve sürdürülebilirliğinin de temelidir. Bu küme, çoğu zaman görünmez kalan ya da yalnızca kriz anında konuşulan çalışma ilişkileri iklimini, düzenli olarak izlenebilir metriklere dönüştürür.</p>
+<p>Uyum ve etik kümesi, örgütün yönetişim bütünlüğünü ve çalışma ilişkileri iklimini ölçer. Dört metrik yer alır: (1) açılan şikâyetlerin (grievance) sayı ve türü, (2) sonuçlanan disiplin işlemlerinin sayı ve türü, (3) uyum/etik eğitimini tamamlayan çalışan yüzdesi, (4) dış taraflara taşınan uyuşmazlıklar. Bu HCA, sektöre ve yargı yetkisine göre en çok değişen alandır.</p>
+<h3 id="sikayet-ve-egitim-metrikleri">Şikâyet ve eğitim metrikleri</h3>
+<p><em>Şikâyet sayısı = Dönem sonunda kayıtlı aktif formal şikâyetlerin yıldan-bugüne toplamı</em><br />
+<em>Uyum eğitimi oranı = Uyum/etik eğitimini tamamlayan çalışan / Toplam çalışan × 100</em></p>
+<p>Şikâyetler türe göre kategorize edilir (taciz, ayrımcılık, sözlü/fiziksel); ayrıca içeride ve dışarıda çözülenler ayrılır. Bir şikâyet, kaydedildiği ya da soruşturma başladığı anda "formal" sayılır. İç çözüm oranındaki artış olumlu bir eğilimdir; karşılaştırma için 3–5 yıllık seri önerilir.</p>
+<p><strong>Sayıları doğru okumak.</strong> Uyum metriklerinde artış her zaman kötüye işaret değildir. Şikâyet sayısındaki artış, örgütte bir bozulmayı gösterebileceği gibi, işgücünün taciz ve ayrımcılığın ne olduğu konusunda artan farkındalığını ve bildirim mekanizmalarına duyduğu güveni de yansıtabilir. Bu ikircikli yorum, tam da bağlamsal açıklamanın (niteliksel anlatı) neden zorunlu olduğunu gösterir. Benzer biçimde, disiplin işlemlerindeki değişim, ya artan ihlalleri ya da daha tutarlı bir uygulama kültürünü gösterebilir. Bu yüzden her sayı, "neden değişti" sorusunun yanıtıyla birlikte sunulmalıdır.</p>
+<p><strong>Örgütün tanımlama sorumluluğu.</strong> Her örgüt, "şikâyet" ve "disiplin işlemi" ile ne kastettiğini kendisi tanımlamalı ve tüm ilgili iç/dış taraflara bunu açıkça duyurmalıdır. Bu tanımsal netlik olmadan, sayılar örgütler arasında karşılaştırılamaz. Şikâyetlerin ve disiplin işlemlerinin sistematik biçimde kaydedilmesi için —küçük örgütlerde basit çizelgeler, büyüklerde özel yazılım çözümleriyle— bir kayıt ve yönetim süreci kurulmalıdır. Dış taraflara taşınan uyuşmazlıklar (dava, arabuluculuk, düzenleyici başvuru) ise örgüt ikliminin ayrı bir göstergesidir: iç çözümün yetersiz kaldığı, ilişkilerin gerildiği durumların sinyalidir. Uyum/etik eğitimini tamamlama oranı ise proaktif bir önlem göstergesidir ve birçok yargı yetkisinde zorunlu raporlama kapsamındadır.</p>
+<h3 id="cozumlu-ornek-sikayetlerin-yildan-bugune-toplami">Çözümlü örnek — şikâyetlerin yıldan-bugüne toplamı</h3>
+<p>Aylık raporlayan bir şirkette şikâyetler kategoriye göre (taciz, ayrımcılık, sözlü, fiziksel) aylık kaydedilir ve yıl içinde birikimli (year-to-date) toplanır. 30-06-2020 itibarıyla altı aylık toplam 32 iken, aynı dönemin 2019 karşılaştırması 38 ise, şikâyet sayısında bir azalma görülür. Ancak bu azalma, gerçek bir iyileşme mi yoksa bildirim güveninin düşmesi mi olduğunu ayırt etmek için niteliksel araştırma gerekir. İç çözülen / dış çözülen ayrımı da ayrıca izlenir; iç çözüm oranındaki artış olumlu bir eğilimdir.</p>
+<p><strong>Yorumun ikircikliliği ve bağlam zorunluluğu.</strong> Uyum kümesi, "iyi" ve "kötü" yönün her zaman açık olmadığı ender metrik alanlarından biridir. Sıfır şikâyet, kusursuz bir işyeri anlamına gelebileceği gibi, çalışanların bildirim mekanizmasına güvenmediği baskıcı bir kültürün de işareti olabilir. Bu yüzden uyum metrikleri, mutlak sayılarla değil; eğilimlerle, kategori dağılımıyla, çözüm sürelerince ve niteliksel açıklamalarla birlikte raporlanmalıdır. Uyum ve etik, sektöre ve yargı yetkisine göre en çok değişen HCA'dır; bu yüzden karşılaştırmalarda bağlam özellikle kritiktir.</p>
+<h2 id="11-orgut-kulturu-kumesi-iso-ts-24178">11. Örgüt Kültürü Kümesi — ISO/TS 24178</h2>
+<p class="deck"><span class="smallcaps">Bağlılık ve istikrar</span></p>
+<p>Örgüt kültürü, çoğu zaman "ölçülemez" kabul edilen bir kavramdır; oysa etkili bir kültürün gözlenebilir çıktıları vardır: bağlılık, katılım, taahhüt, yenilik ve kurumsal amaca hizmet eden davranışlar. Kültür kümesi, bu çıktıları dolaylı ama sistematik biçimde ölçmeye çalışır. Kültür, örgütün "işleri nasıl yaptığının" —amacının ve değerlerinin— bir yansımasıdır ve tüm diğer insan sermayesi metriklerinin arkasındaki görünmez itici güçtür.</p>
+<p>Örgüt kültürü kümesi iki metrik tanımlar: bağlılık-memnuniyet-taahhüt (engagement, satisfaction, commitment) ve elde tutma oranı (retention rate). <strong>Bağlılık</strong>, insan sermayesinin optimum potansiyelinde çalışıp çalışmadığını değerlendirir; kültürün etkinliğinin bir çıktısıdır. En yaygın araç, sonuçları 0–100 arası bir <strong>bağlılık endeksine</strong> dönüştüren çalışan anketleridir.</p>
+<h3 id="baglilik-endeksi-ve-kulturel-olgunluk">Bağlılık endeksi ve kültürel olgunluk</h3>
+<p>Endeks, coğrafya/bölge bazında raporlanabilir (ör. Avrupa 84, Asya-Pasifik 86, Kuzey Amerika 81 → ortalama <strong>84/100</strong>). Uluslararası karşılaştırmalarda anket terimlerinin tüm ülkelerde aynı anlama gelmesi kritiktir; yoksa veri karşılaştırılabilir olmaz. Kültürel olgunluk arttıkça sorular genel memnuniyetten, tanımlı örgütsel değerlere karşı davranış değerlendirmesine evrilir. <strong>Elde tutma oranı</strong> burada "istikrar endeksi" olarak da kullanılır ve genel işgücü memnuniyetini yansıtır.</p>
+<p><strong>Kültürel olgunluk aşamaları.</strong> ISO/TS 24178, örgütlerin kültür ölçümünde olgunlaştıkça anket yaklaşımlarının nasıl evrildiğini tanımlar. İlk aşamada sorular genel çalışan memnuniyetine odaklanır. Daha olgun aşamalarda, arzu edilen kültür tanımlanır ve mevcut gerçeklikle arasındaki boşluk ölçülür; en olgun aşamada ise arzu edilen kültür işe alım, terfi ve ödül sistemlerine gömülür ve anket, tanımlı değerlere karşı fiili davranışı değerlendirir. Bu evrim, bağlılık ölçümünün tek seferlik bir anketten çok, örgütün kendini tanıma ve dönüştürme yolculuğu olduğunu gösterir.</p>
+<p><strong>Bağlılık neden bir öncü göstergedir?</strong> Bağlılık, memnuniyet ve taahhüt; insan sermayesinin optimum potansiyelinde çalışıp çalışmadığının en güçlü öncü göstergelerindendir. Düşen bağlılık endeksi, henüz devir rakamlarına yansımadan önce, gelecekteki gönüllü çıkışların, düşen verimliliğin ve artan devamsızlığın habercisidir. Bu yüzden bağlılık endeksi, devir (30421) ve devamsızlık (30425) gibi gecikmeli göstergelerle birlikte izlendiğinde, örgüte müdahale için zaman kazandırır. Bağlılık ile örgütsel performans arasındaki bağı kurmak için, sorular bilinen davranış sürücülerine (amaç, değerler, iletişim, iş yükü adaleti) bağlanmalıdır. Yönetim güvenilirliği ve mevcut bağlılık düzeyi sonuçları güçlü biçimde etkilediğinden, dengeli sonuç için yüksek katılım oranı hedeflenmelidir.</p>
+<h3 id="cozumlu-ornek-bolgesel-baglilik-endeksi">Çözümlü örnek — bölgesel bağlılık endeksi</h3>
+<p>Bir çok uluslu örgütün üç yıllık bölgesel bağlılık endeksi (0–100): Avrupa 80→83→84, Asya-Pasifik 81→85→86, Kuzey Amerika 76→81→81. Ortalama endeks 79→83→84 ile yükseliş eğiliminde. Bölgeler arası fark (Kuzey Amerika'nın görece düşük seyri) hedefli müdahale gerektiren alanı işaret eder. Endeksin bölge, işlev ve düzey bazında ayrıştırılması, tek bir toplam sayının gizlediği farkları açığa çıkarır.</p>
+<p><strong>Kültür–devir–verimlilik zinciri.</strong> Örgüt kültürü kümesinin nihai değeri, diğer kümelerle kurduğu nedensel zincirde yatar. Yüksek bağlılık → düşük gönüllü devir → düşük devir maliyeti → korunan bilgi ve süreklilik → yüksek verimlilik ve HCROI. Bu zincir, insan sermayesi metriklerinin neden ayrı ayrı değil, birbirini açıklayan bir sistem olarak okunması gerektiğinin en açık örneğidir. Bağlılık, bu zincirin başındaki öncü halkadır; ona yapılan yatırım, zincirin sonundaki finansal sonuçlara aylar hatta yıllar sonra yansır.</p>
+<h2 id="12-uygulama-butunlesik-hesaplama">12. Uygulama: Bütünleşik Hesaplama</h2>
+<p class="deck"><span class="smallcaps">FTE · HCROI · devir oranı · kişi başı işe alım maliyeti</span></p>
+<p>Bu bölüm, dersin sentez etkinliğidir: ISO 30414'ün gerekli metriklerinin çekirdeğini oluşturan dört hesaplamayı —FTE, HCROI, devir oranı ve kişi başı işe alım maliyeti— tek bir örgüt verisi üzerinde uçtan uca çözeceğiz. Bu dört metrik, sırasıyla dört farklı kümeden gelir (bulunabilirlik, verimlilik, devir, maliyet) ve birlikte hesaplandığında, örgütün işgücü büyüklüğü, verimliliği, kırılganlığı ve edinim maliyeti hakkında bütünsel bir başlangıç resmi verir. Hesaplama becerisi, insan sermayesi analistinin en temel donanımıdır; ancak sayıyı üretmek işin yalnızca yarısıdır, diğer yarısı onu doğru yorumlamaktır.</p>
+<p>Aşağıdaki senaryo, kümeler arası dört çekirdek metriği tek bir örgüt verisi üzerinde birleştirir. Önce veriyi okuyun, ardından her metriği adım adım hesaplayın.</p>
+<h3 id="senaryo-anadolu-teknoloji-a-s"><span class="smallcaps">Senaryo — "Anadolu Teknoloji A.Ş."</span></h3>
+<p>Tam zamanlı çalışan: <strong>200</strong> (haftalık 40 saat)</p>
+<p>Yarı zamanlı toplam haftalık saat: <strong>3.200</strong></p>
+<p>Toplam gelir: <strong>90.000.000 ₺</strong></p>
+<p>Toplam gider: <strong>78.000.000 ₺</strong></p>
+<p>Toplam işgücü maliyeti: <strong>30.000.000 ₺</strong></p>
+<p>Ortalama işgücü: <strong>280</strong>, dönemdeki ayrılma: <strong>35</strong></p>
+<p>İşe alım — iç maliyet: <strong>420.000 ₺</strong>, dış maliyet: <strong>680.000 ₺</strong></p>
+<p>Dönemdeki toplam işe alım: <strong>25</strong></p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Metrik</strong></td>
+<td><strong>Hesaplama</strong></td>
+<td><strong>Sonuç</strong></td>
+</tr>
+<tr class="even">
+<td>FTE</td>
+<td>D = 200 + (3.200 / 40) = 200 + 80</td>
+<td>280 FTE</td>
+</tr>
+<tr class="odd">
+<td>HCROI</td>
+<td>[(90M − (78M − 30M)) / 30M] − 1 = [(90M − 48M) / 30M] − 1 = (42M / 30M) − 1 = 1,4 − 1</td>
+<td>0,40 → %40</td>
+</tr>
+<tr class="even">
+<td>Devir oranı</td>
+<td>(35 / 280) × 100 → elde tutma = 1,0 − 0,125</td>
+<td>%12,5 devir / %87,5 elde tutma</td>
+</tr>
+<tr class="odd">
+<td>Kişi başı işe alım maliyeti</td>
+<td>(420.000 + 680.000) / 25 = 1.100.000 / 25</td>
+<td>44.000 ₺</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Yorum.</strong> %40'lık HCROI, işgücüne yatırılan her 1 ₺'nin orijinal tutarını artı 40 kuruş vergi öncesi kâr olarak geri döndürdüğünü gösterir; işgücü maliyetleri toplam giderin yaklaşık %38'ini oluşturduğundan bu makul bir verimlilik düzeyidir. %12,5 devir sektör ortalamasına göre değerlendirilmeli ve gönüllü/pişmanlık verici bileşenine ayrıştırılmalıdır. Kişi başı 44.000 ₺'lik işe alım maliyeti, işe alım kalitesi (quality-of-hire) ve doldurma süresi metrikleriyle birlikte okunduğunda anlam kazanır: düşük maliyet, düşük kaliteli işe alım pahasına elde edildiyse gerçek bir tasarruf değildir. Her metrik, ISO 30414'ün önerdiği gibi TML düzeylerine göre ayrıştırılarak zenginleştirilebilir.</p>
+<h2 id="13-metrikleri-yorumlarken-bes-ilke">13. Metrikleri Yorumlarken Beş İlke</h2>
+<p class="deck"><span class="smallcaps">Sayıdan içgörüye</span></p>
+<p>Metrik kümeleri güçlü araçlardır; ancak yanlış kullanıldıklarında yanıltıcı olabilirler. Aşağıdaki beş ilke, ham sayıları sağlam yönetsel içgörüye dönüştürmenin çerçevesini verir.</p>
+<p><strong>1. Tek metrik yalan söyler, metrik seti gerçeği anlatır.</strong> Düşük işe alım maliyeti tek başına iyi değildir; işe alım kalitesi ve doldurma süresiyle birlikte okunmalıdır. Her metriği en az bir tamamlayıcısıyla eşleştirin.</p>
+<p><strong>2. Bağlam olmadan kıyas olmaz.</strong> Sektör, büyüklük, coğrafya ve ekonomik döngü sabitlenmeden yapılan karşılaştırma yanıltır. "Benzeriyle benzeri" kıyas esastır.</p>
+<p><strong>3. Eğilim, tek noktadan daha bilgilendiricidir.</strong> Bir dönemin değeri az şey söyler; 3–5 yıllık seri, yön ve hız hakkında konuşur. Zaman dönemleri senkronize edilmelidir.</p>
+<p><strong>4. Toplulaştırma gizler, segmentasyon açığa çıkarır.</strong> Örgüt geneli sağlıklı görünen bir metrik, kritik bir segmentte alarm veriyor olabilir. TML, işlev ve kritiklik boyutlarında ayrıştırın.</p>
+<p><strong>5. Öncü göstergeler zaman kazandırır.</strong> Bağlılık ve liderlik güveni gibi öncü göstergeler, devir gibi gecikmeli sonuçlara yansımadan önce müdahale fırsatı sunar.</p>
+<h3 id="ek-alistirma-kendiniz-hesaplayin">Ek alıştırma — kendiniz hesaplayın</h3>
+<p>Bir örgütte 300 tam zamanlı çalışan (haftalık 40 saat) ve yarı zamanlıların toplam 2.400 haftalık saati vardır. Toplam gelir 120 milyon ₺, toplam gider 100 milyon ₺, toplam işgücü maliyeti 40 milyon ₺'dir. Ortalama işgücü 350, dönemdeki ayrılma 42'dir. 90 kritik pozisyonun 30'u "şimdi hazır" adaya sahiptir. Hesaplayın: (a) FTE, (b) HCROI, (c) devir ve elde tutma oranı, (d) yedekleme hazırlık oranı (şimdi hazır). <em>Yanıt:</em> FTE = 300 + (2.400/40) = <strong>360</strong>; HCROI = [(120M − (100M − 40M))/40M] − 1 = (60M/40M) − 1 = <strong>%50</strong>; devir = (42/350)×100 = <strong>%12</strong>, elde tutma = <strong>%88</strong>; hazırlık = (30/90)×100 = <strong>%33</strong>.</p>
+<h2 id="14-kumeler-ve-iso-30414-metriklerin-kaynagi">14. Kümeler ve ISO 30414: Metriklerin Kaynağı</h2>
+<p class="deck"><span class="smallcaps">Çerçeve ile hesaplama katmanı arasındaki bağ</span></p>
+<p>Metrik kümelerinin neden bu kadar önemli olduğunu tam kavramak için, ISO 30414:2025'in gerekli ve önerilen metrik tablolarına geri dönmek gerekir. Çerçeve belgesi, her metriğin yanında bir "çapraz referans" (Annex A alt maddesi) ve bir "kaynak standart" sütunu taşır. İşte bu kaynak sütunu, doğrudan bu bölümde incelediğimiz kümelere işaret eder. Böylece çerçeve, "şu metriği raporla" derken; küme, "işte o metriğin tanımı, formülü ve yorumu" diyerek çemberi tamamlar.</p>
+<p>Aşağıdaki tablo, dokuz kümenin ISO 30414'ün hangi insan sermayesi alanlarını (HCA) ve metriklerini beslediğini özetler. Bu eşleme, bir raporlama uzmanının hangi metriği raporlarken hangi küme belgesine başvuracağını gösteren pratik bir haritadır.</p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Küme</strong></td>
+<td><strong>Beslediği HCA</strong></td>
+<td><strong>Örnek metrikler (gerekli/önerilen)</strong></td>
+</tr>
+<tr class="even">
+<td>ISO/TS 30425</td>
+<td>İşgücü kompozisyonu, sağlık-güvenlik</td>
+<td>Toplam çalışan, FTE, tam/yarı zamanlı, contingent, devamsızlık</td>
+</tr>
+<tr class="odd">
+<td>ISO/TS 30427</td>
+<td>Maliyetler</td>
+<td>Toplam işgücü maliyeti, çalışan maliyeti, CEO-medyan ücret oranı</td>
+</tr>
+<tr class="even">
+<td>ISO/TS 30432</td>
+<td>Verimlilik</td>
+<td>FTE başına ciro/EBIT, HCROI, kişi başı kâr</td>
+</tr>
+<tr class="odd">
+<td>ISO/TS 30421</td>
+<td>İşgücü devri, maliyetler</td>
+<td>Devir oranı, gönüllü/kritik devir, devir maliyeti, işe alım maliyeti</td>
+</tr>
+<tr class="even">
+<td>ISO/TS 30433</td>
+<td>Hareketlilik ve yedekleme</td>
+<td>Halef kapsam/etkinlik/derinlik oranı, içeriden doldurma yüzdesi</td>
+</tr>
+<tr class="odd">
+<td>ISO/TS 30428</td>
+<td>Beceri, yetkinlik ve gelişim</td>
+<td>Toplam L&amp;D maliyeti, kişi başı eğitim saati, yetkinlik oranı</td>
+</tr>
+<tr class="even">
+<td>ISO/TS 30431</td>
+<td>Liderlik, kültür, bağlılık</td>
+<td>Liderlik güveni, kontrol alanı, liderlerin eğitim katılımı</td>
+</tr>
+<tr class="odd">
+<td>ISO/TS 30423</td>
+<td>Uyum, etik, çalışma ilişkileri</td>
+<td>Şikâyet/disiplin sayıları, uyum eğitimi %, dış uyuşmazlıklar</td>
+</tr>
+<tr class="even">
+<td>ISO/TS 24178</td>
+<td>Liderlik, kültür, bağlılık</td>
+<td>Bağlılık-memnuniyet-taahhüt endeksi, elde tutma oranı</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Bu haritanın öğrettiği önemli bir ders, bazı metriklerin birden çok kümede kesiştiğidir. Örneğin devamsızlık hem bulunabilirlik (30425) hem sağlık-güvenlik bağlamında; işe alım ve devir maliyetleri hem maliyet (30427) hem devir (30421) kümelerinde geçer; elde tutma oranı hem devir (30421) hem kültür (24178) kümelerinde tanımlanır. Bu kesişimler, insan sermayesinin doğasının bütünsel olduğunu; bir alandaki değişimin diğerlerine yayıldığını hatırlatır. Raporlama uzmanı, aynı metriği iki kez, iki farklı yöntemle raporlamamaya dikkat etmeli; hangi küme tanımını kullandığını açıkça belirtmelidir.</p>
+<p>Ayrıca "TBD" (to be determined) etiketli metrikler dikkat gerektirir: ISO 30414:2025'in bazı gerekli metrikleri (ör. insan hakları başvuruları, toplu iş sözleşmesi kapsamı, işgücü devir oranı) henüz ayrı bir ISO belgesinde tam tanımlanmayı beklemektedir. Bu, standart ailesinin canlı ve gelişmekte olduğunu; raporlama uzmanının en güncel teknik spesifikasyonu izlemesi gerektiğini gösterir. Bir metriğin kaynak standardı henüz yayımlanmamışsa, örgüt kendi tanımını (own metric) şeffaf biçimde açıklamalı ve gerekçelendirmelidir.</p>
+<h2 id="15-veri-toplama-kalite-ve-yapay-zeka">15. Veri Toplama, Kalite ve Yapay Zekâ</h2>
+<p class="deck"><span class="smallcaps">Formülün altındaki altyapı</span></p>
+<p>Her formül, ancak beslendiği veri kadar iyidir. Metrik kümelerinin doğru uygulanması, sağlam bir veri toplama, saklama ve kalite kontrol altyapısını gerektirir. Bu altyapının merkezinde <strong>İK bilgi sistemi (HRIS)</strong> yer alır. Eksiksiz bir HRIS, hem dijital hem fiziksel veriyi uygun güvenlik ve gizlilikle yönetir; demografik veri, çalışma saatleri ve izinler, bordro (ücret, sosyal maliyetler, kesintiler), örgütsel veri (maliyet merkezleri, departmanlar, lokasyonlar) ve İK süreçleri (işgücü planlaması, işe alım metrikleri, yetenek yönetimi) için sistemler barındırır.</p>
+<p>Veri toplama, disiplinler arası bir iş birliği gerektirir: İK, BT, finans/muhasebe ve dış ortaklar (veri toplayıcılar, raporlayıcılar, güvence sağlayıcılar, analitik platformlar). Bu ekosistem büyüdükçe veri kontrolü karmaşıklaşır; bu yüzden ISO 30414, HCRD ekosistem kalite kontrolü için iç ve dış ortaklar üzerinde düzenli anket ve denetimler önerir: sağlık-güvenlik eğitimi ve uyumu, veri erişim kontrolleri, işe alım etiği, ücret ve yan hak kıyaslaması, temel insan haklarına uyum ve şikâyet çözüm sistemleri.</p>
+<p><strong>Yasal ve etik sınırlar.</strong> Metrik hesaplamak için toplanan verinin büyük bölümü kişisel veridir ve yerel ile sınır-ötesi veri koruma yasalarına tabidir. Bilgilendirilmiş onam, veri asgariliği, gizlilik ve güvenlik ilkeleri her ölçüm adımında gözetilmelidir. Özellikle çeşitlilik metrikleri (yaş, cinsiyet, engellilik) ile ücret eşitliği metrikleri, yargı yetkisine göre değişen hassas veri kategorileridir; bunların toplanması ve raporlanması, ilgili yasalara ve kültürel normlara uygun olmalıdır. Metrik üretim yönteminde bir değişiklik yapıldığında, karşılaştırılabilirliği korumak için bu değişiklik geriye dönük uygulanmalı ve niteliksel gerekçesiyle açıklanmalıdır.</p>
+<p><strong>Dijital taksonomi ve etiketleme.</strong> Dijital etiketleme (digital tagging), veriyi standart kategorilere yerleştirerek girişi hızlandırır, hataları azaltır ve eğilim analizini kolaylaştırır. XBRL gibi taksonomi protokolleriyle uyum, örgütler arası kıyaslamayı ve şeffaflığı artırır. Metrik üreticileri, verilerini bu protokollere göre etiketlemeye baştan hazırlanmalıdır; sonradan uyumlama hem maliyetli hem hataya açıktır.</p>
+<p><strong>Yapay zekânın çift yönlü rolü.</strong> Yapay zekâ (AI), metrik kümelerinin dünyasına iki yönden girer. Bir yandan, AI ve makine öğrenmesi büyük işgücü veri setlerinden örüntü çıkararak metrik analizini derinleştirir; devir tahmini, işe alım kalitesi öngörüsü ve anomali tespiti gibi ileri kullanımlar mümkün hale gelir. Öte yandan, AI'nin kendisi bir ölçüm konusu olur: algoritmalardaki önyargının işgücü çeşitliliği üzerindeki etkisi, insan işi ile AI'ye devredilen işlerin oranı, örgütsel verimlilikte AI'ye bağımlılık derecesi ve AI'nin maddi olmayan varlık yönetimine etkisi, HCRD'nin materiality açısından değerlendirmesi gereken yeni risk ve fırsatlardır. AI destekli metrik üretiminde, sonuçların açıklanabilirliği ve denetlenebilirliği; kararların bir risk/ödül sürekliliği ve etki analizi üzerinden verilmesi esastır.</p>
+<h2 id="16-butunlesik-okuma-dokuz-kumeden-tek-panoya">16. Bütünleşik Okuma: Dokuz Kümeden Tek Panoya</h2>
+<p class="deck"><span class="smallcaps">Metrikler birlikte konuşunca</span></p>
+<p>Bölüm 12'de dört çekirdek metriği tek bir senaryoda hesapladık. Şimdi bu senaryoyu genişleterek, dokuz kümeden gelen metriklerin birlikte nasıl bütünsel bir işgücü panosu oluşturduğunu görelim. Amaç, tek tek sayıları değil, bunların birbiriyle konuşarak anlattığı hikâyeyi okumaktır.</p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Küme</strong></td>
+<td><strong>Metrik</strong></td>
+<td><strong>Değer &amp; yorum</strong></td>
+</tr>
+<tr class="even">
+<td>Bulunabilirlik</td>
+<td>FTE / Headcount</td>
+<td>280 / 320 → yarı zamanlı yoğunluğu orta düzeyde</td>
+</tr>
+<tr class="odd">
+<td>Maliyet</td>
+<td>İşgücü maliyeti / toplam gider</td>
+<td>%38 → sektör bandında, sürdürülebilir</td>
+</tr>
+<tr class="even">
+<td>Verimlilik</td>
+<td>HCROI</td>
+<td>%40 → yatırım verimli kullanılıyor</td>
+</tr>
+<tr class="odd">
+<td>Devir</td>
+<td>Toplam / gönüllü kritik devir</td>
+<td>%12,5 / %18 → kritik segmentte alarm</td>
+</tr>
+<tr class="even">
+<td>Yedekleme</td>
+<td>Halef kapsam / "şimdi hazır"</td>
+<td>%180 / %35 → kapsam geniş, hazırlık zayıf</td>
+</tr>
+<tr class="odd">
+<td>Beceri</td>
+<td>Kişi başı eğitim saati</td>
+<td>18 saat → sektör ortalamasının altında</td>
+</tr>
+<tr class="even">
+<td>Liderlik</td>
+<td>Kontrol alanı / güven endeksi</td>
+<td>14 / 68 → yöneticiler yüklü, güven orta</td>
+</tr>
+<tr class="odd">
+<td>Uyum</td>
+<td>Uyum eğitimi tamamlama</td>
+<td>%94 → güçlü proaktif önlem</td>
+</tr>
+<tr class="even">
+<td>Kültür</td>
+<td>Bağlılık endeksi</td>
+<td>71 → düşüş eğiliminde (öncü uyarı)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Panoyu okumak.</strong> Tek tek bakıldığında metriklerin çoğu makul görünür: HCROI %40, maliyet oranı %38, uyum eğitimi %94. Ancak metrikleri birbirine bağladığımızda bir hikâye belirir. Bağlılık endeksinin düşüş eğiliminde olması (öncü gösterge), liderlik güven endeksinin orta düzeyde kalması ve geniş kontrol alanı (yönetici başına 14 kişi) bir araya geldiğinde, kritik segmentteki yüksek gönüllü devrin (%18) tesadüf olmadığını gösterir: yüklü yöneticiler, zayıf koçluk ve düşen bağlılık, en değerli çalışanları kapıya yönlendiriyor olabilir. Yedekleme kapsamının geniş ama hazırlığın zayıf olması (%180 kapsam, %35 "şimdi hazır"), bu kritik çıkışların yerini hızlıca dolduramayacağı anlamına gelir. Düşük eğitim saati ise gelecekteki yetkinlik boşluğunu derinleştirecektir.</p>
+<p>Bu bütünsel okuma, tam da ISO 30414'ün "nicelenmiş ama nitelenmiş" ilkesinin pratikteki karşılığıdır. Dokuz küme, ayrı ayrı ölçümler değil; birbirini açıklayan bir sistemin parçalarıdır. Bir öncü gösterge (bağlılık), bir gecikmeli sonucu (kritik devir) önceden haber verir; bir yapısal faktör (kontrol alanı) nedeni işaret eder; bir kapasite metriği (yedekleme hazırlığı) sonucun ne kadar maliyetli olacağını gösterir. Yönetsel eylem —bu örnekte kritik birimlere yönetici ekleyip kontrol alanını daraltmak, liderlik gelişimine ve eğitime yatırım yapmak, yedekleme hattını olgunlaştırmak— ancak bu bütünsel okumadan doğar.</p>
+<p>Raporlama açısından bu pano, Bölüm 10'da öğrendiğimiz dört alanlı formata (yönetişim–strateji–risk–metrik) doğrudan beslenir: metrikler ve hedefler alanına niceliksel değerler; risk ve fırsat alanına ise yukarıdaki niteliksel anlatı girer. Böylece metrik kümeleri (hesaplama katmanı) ile HCRD çerçevesi (raporlama katmanı) tek bir tutarlı belgede birleşir.</p>
+<h2 id="17-sektorel-kulturel-ve-uluslararasi-uyarlama">17. Sektörel, Kültürel ve Uluslararası Uyarlama</h2>
+<p class="deck"><span class="smallcaps">Aynı formül, farklı bağlam</span></p>
+<p>Metrik kümelerinin standart formülleri evrenseldir; ancak bunların yorumu ve uygun kıyas grubu bağlama göre değişir. Bu bölüm, öğrencinin metrikleri kendi örgütsel gerçekliğine uyarlarken dikkat etmesi gereken üç boyutu ele alır: sektör, kültür ve uluslararasılık.</p>
+<p><strong>Sektörel uyarlama.</strong> Kişi başı ciro, HCROI ve işgücü maliyeti oranı gibi metrikler sektöre son derece bağımlıdır. Emek-yoğun bir hizmet işletmesinde işgücü maliyeti toplam giderin %60'ını aşabilirken, sermaye-yoğun bir üretim tesisinde %20'nin altında kalabilir. Bu yüzden bir metriğin "iyi" ya da "kötü" olduğu, ancak aynı sektördeki benzer örgütlerle karşılaştırıldığında söylenebilir. Kâr amacı gütmeyen ve kamu sektörü için ISO 30414 ayrı eşdeğer metrikler tanımlar: gelir yerine bütçe, kâr yerine üretilen çıktı ve etki. Böylece kâr güdüsü olmayan örgütler de verimliliklerini standart bir dille raporlayabilir.</p>
+<p><strong>Kültürel uyarlama.</strong> Özellikle kültür ve liderlik kümelerinde, anket temelli metrikler kültürel bağlama duyarlıdır. Bağlılık, memnuniyet ve taahhüt kavramları farklı ülke ve kültürlerde farklı anlamlara gelir; bir kültürde doğrudan sorulabilen bir soru, başka bir kültürde anlamsız ya da rahatsız edici olabilir. Örgütsel amaca bağlılık soruları bazı kültürlerde daha az ilgili olabilir ve düşük ağırlıklandırılabilir. Bu nedenle çok kültürlü örgütler, anket terimlerinin tüm bağlamlarda aynı çağrışıma sahip olmasını sağlamalı; aksi hâlde toplulaştırılmış endeks uluslararası düzeyde karşılaştırılamaz hale gelir.</p>
+<p><strong>Uluslararası uyarlama.</strong> Çok uluslu örgütlerde en temel metrik olan FTE bile normalizasyon gerektirir: bir ülkede haftalık 35 saat tam zamanlıyken (%100), diğerinde 40 saat tam zamanlı sayılır. Ortak bir temel belirlenmeden FTE'ler toplanırsa, toplam iş yükü yanlış hesaplanır. Benzer biçimde ücret oranları, para birimi ve satın alma gücü farkları; devir oranları ise yerel işgücü piyasası dinamikleri dikkate alınarak yorumlanmalıdır. ISO 30414, bu farkları gizlememek için çok sektörlü/çok bölgeli örgütlerde her iş biriminin kendi HCRD'sini üretmesini (konsolide etmemesini) önerir; böylece maddi farklar şeffaf kalır.</p>
+<p><strong>Orantılılık (proportionality).</strong> Son olarak, tüm metrik uygulaması örgüt büyüklüğüne orantılı olmalıdır. Büyük bir örgütten beklenen ayrıntılı segmentasyon ve geniş metrik seti, bir KOBİ için ne gerçekçi ne de gereklidir. ISO 30414, KOBİ'ler için daha sınırlı bir iç kullanım metrik seti tanımlar ve program bazlı basitleştirilmiş hesaplamalara (ör. eğitim maliyetinin program düzeyinde toplanması) izin verir. Amaç, raporlamanın örgüte yük değil, değer katmasıdır.</p>
+<h2 id="18-uygulama-yol-haritasi">18. Uygulama Yol Haritası</h2>
+<p class="deck"><span class="smallcaps">Metrikten yönetsel eyleme</span></p>
+<p>Metrik kümelerini öğrenmek, onları bir örgütte hayata geçirmenin yalnızca ilk adımıdır. Bir insan sermayesi analistinin ya da İK liderinin, bu kümeleri sıfırdan işleyen bir ölçüm sistemine dönüştürürken izleyeceği yol, kabaca altı aşamada özetlenebilir. Bu aşamalar, ISO 30414'ün sürekli iyileştirme (plan–uygula–kontrol et–önlem al) mantığıyla da uyumludur.</p>
+<p><strong>1. Materiality ile başla.</strong> Tüm kümeleri aynı anda uygulamaya çalışmak, ne gerçekçi ne de gereklidir. İlk adım, örgütün stratejisi, sektörü ve paydaş beklentileri ışığında hangi insan sermayesi alanlarının material (önemli) olduğunu belirlemektir. Emek-yoğun bir hizmet işletmesi için devir ve bağlılık kümeleri öncelikliyken; Ar-Ge yoğun bir teknoloji şirketi için beceri, yetkinlik ve yedekleme kümeleri öne çıkabilir. Materiality, hangi metriklerin ilk dalgada raporlanacağını belirleyen süzgeçtir.</p>
+<p><strong>2. Veri altyapısını hazırla.</strong> Seçilen metriklerin her biri için veri kaynağı, sahiplik ve toplama sıklığı tanımlanmalıdır. Bu aşamada HRIS'in yetkinliği, finans ve BT ile entegrasyonu ve veri kalitesi kontrolleri kritiktir. Eksik ya da tutarsız veri, en zarif formülü bile anlamsız kılar. Veri toplama, gizlilik ve güvenlik ilkeleriyle (bilgilendirilmiş onam, veri asgariliği) uyumlu biçimde tasarlanmalıdır.</p>
+<p><strong>3. Bir temel çizgi (baseline) oluştur.</strong> İlk raporlama yılında, tek yıllık veri bir temel çizgi olarak yeterlidir. Bu temel çizgi, gelecekteki tüm karşılaştırmaların referans noktasıdır. Metrikler, örgütün mali yılıyla senkronize ölçülmeli ve tanımları belgelenmelidir ki sonraki yıllarda tutarlılık korunabilsin.</p>
+<p><strong>4. Segmentle ve bağlamlandır.</strong> Ham metrikler hesaplandıktan sonra, TML düzeyleri, işlev, coğrafya ve kritiklik boyutlarında ayrıştırılmalıdır. Her metriğe, sonucu açıklayan bir niteliksel anlatı (bağlamsal ve öngörücü faktörler) eşlik etmelidir. Bu adım, "nicelenmiş ama nitelenmiş" ilkesinin pratikteki uygulamasıdır.</p>
+<p><strong>5. Dört alanlı formatta raporla.</strong> Metrikler, Bölüm 10'da öğrenilen yönetişim–strateji–risk–metrik formatına yerleştirilir. Niceliksel değerler ve hedefler (KPI) metrikler alanına; bunların yorumu ve sapma açıklamaları risk ve fırsat alanına girer. Rapor, hem iç yönetsel karar hem de dış paydaş güveni için kullanılabilir hale gelir.</p>
+<p><strong>6. İzle, öğren, iyileştir.</strong> Metrikler tek seferlik bir egzersiz değil, sürekli bir izleme döngüsüdür. Gösterge panelleriyle daha sık takip, yıllar arası eğilim analizi ve kıyaslama, örgütün insan sermayesi yönetimini olgunlaştırır. Yöntem değişiklikleri şeffaf biçimde açıklanır ve geriye dönük uygulanır. Zamanla örgüt, ilk dalgadaki çekirdek metrik setinden, önerilen metrikleri de kapsayan bütünsel bir sisteme geçebilir.</p>
+<h2 id="tartisma-sorulari"><span class="smallcaps">Tartışma soruları</span></h2>
+<blockquote>
+<p><strong>•</strong> Kendi sektörünüzde hangi üç metrik kümesi en material'dir? Seçiminizi kitle, sürdürülebilirlik amacı ve yargı yetkisi ekseninde gerekçelendirin.</p>
+<p><strong>•</strong> Bir örgütün toplam devir oranı düşük ama kritik pozisyonlardaki gönüllü devri yüksekse, hangi kümeleri birlikte inceleyerek bir tanı kurarsınız?</p>
+<p><strong>•</strong> Kişi başı eğitim harcaması yüksek ama işgücü yetkinlik oranı yıllardır sabit olan bir örgütte sorun nerede olabilir? Hangi ek metriklere bakarsınız?</p>
+<p><strong>•</strong> Yapay zekânın yaygınlaşması, hangi kümelerin metriklerini ve yorumunu en çok değiştirir? Yeni hangi risk ve fırsatları izlemek gerekir?</p>
+<p><strong>•</strong> Bir KOBİ, büyük bir örgütten farklı olarak hangi metrikleri önceliklendirmelidir ve neden? Orantılılık ilkesini nasıl uygularsınız?</p>
+</blockquote>
+<h2 id="19-bolum-ozeti">19. Bölüm Özeti</h2>
+<p class="deck"><span class="smallcaps">Anahtar çıkarımlar</span></p>
+<p>Metrik kümeleri, ISO 30414 çerçevesinin soyut metrik adlarını ölçülebilir, karşılaştırılabilir ve yorumlanabilir hesaplamalara dönüştürür. Dokuz küme birlikte insan sermayesinin farklı yüzlerini ölçer: bulunabilirlik (30425) işgücünün büyüklüğünü, maliyet (30427) finansal yatırımı, verimlilik (30432) üretilen değeri, devir/elde tutma (30421) kırılganlık ve istikrarı, yedekleme (30433) sürekliliği, beceri/yetkinlik (30428) sağlamlığı, liderlik (30431) yönetsel kapasiteyi, uyum/etik (30423) yönetişim bütünlüğünü ve kültür (24178) bağlılığı. Her metrik yalnızca bir formül değil; bağlamsal ve öngörücü faktörlerle çevrelenmiş bir anlatıdır.</p>
+<p>Bu bölümde üç düzeyde çalıştık. Önce her kümenin ortak anatomisini (tanım, amaç, formül, kullanım, bağlamsal ve öngörücü faktörler) tanıdık. Ardından dokuz kümenin çekirdek metriklerini formülleri ve çözümlü örnekleriyle işledik: FTE (D = A + B/C), toplam işgücü maliyeti, kişi başı verimlilik oranları, HCROI, devir ve elde tutma oranı, yedekleme kapsam ve hazırlık oranları, eğitim yatırımı ve yetkinlik oranı, kontrol alanı ve liderlik güveni, şikâyet ve uyum eğitimi metrikleri, bağlılık endeksi. Son olarak bu metrikleri bütünleşik bir panoda birleştirerek, tek tek sağlıklı görünen sayıların birlikte nasıl bir risk hikâyesi anlatabildiğini gösterdik.</p>
+<p>Öğrenilmesi gereken en kalıcı ders, insan sermayesi ölçümünün bir "sayı üretme" değil, bir "anlam kurma" disiplini olduğudur. Bir metrik tek başına yalan söyleyebilir; ancak öncü ve gecikmeli göstergeler, girdi ve sonuç metrikleri, yapısal ve davranışsal ölçüler bir araya geldiğinde, örgütün işgücü gerçekliği kanıta dayalı biçimde görünür hale gelir. FTE, HCROI, devir oranı ve kişi başı işe alım maliyeti üzerine yaptığımız uygulamalar, bu metriklerin tek başına değil, birbirini tamamlayan bir tablo olarak okunması gerektiğini gösterdi. Bir sonraki adım, bu kümeleri Bölüm 10'daki dört alanlı açıklama formatında (yönetişim–strateji–risk–metrik) birleştirerek, hem içeride yönetsel karar için hem de dışarıda paydaş güveni için kullanılabilecek eksiksiz bir insan sermayesi raporu üretmektir.</p>
+<h2 id="kaynaklar">Kaynaklar</h2>
+<p>BS ISO 30414:2025, Annex A — <em>HCRD metric definitions, calculations and formulae.</em></p>
+<p>ISO/TS 30425:2021, <em>Workforce availability metrics cluster.</em></p>
+<p>ISO/TS 30427:2021, <em>Costs metrics cluster.</em></p>
+<p>ISO/TS 30432:2021, <em>Workforce productivity metrics cluster.</em></p>
+<p>ISO/TS 30421:2021, <em>Turnover and retention metrics.</em></p>
+<p>ISO/TS 30433:2021, <em>Succession planning metrics cluster.</em></p>
+<p>ISO/TS 30428:2021, <em>Skills and capabilities metrics cluster.</em></p>
+<p>ISO/TS 30431:2021, <em>Leadership metrics cluster.</em></p>
+<p>ISO/TS 30423:2021, <em>Compliance and ethics metrics cluster.</em></p>
+<p>ISO/TS 24178:2021, <em>Organizational culture metrics cluster.</em></p>
+<p>ISO/TS 30407:2017, <em>Cost per hire.</em></p>
+    <nav class="pager"><a class="pg prev" href="hafta-10.html"><span>← Önceki</span><strong>10. Hafta — İnsan Sermayesi Raporlaması I — ISO 30414:2025</strong></a><a class="pg next" href="hafta-12.html"><span>Sonraki →</span><strong>12. Hafta — Örgütten Ayrılma, Bağlılık ve İstihdam Edilebilirlik</strong></a></nav>
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="foot-in">
+    <p class="foot-title">İnsan Kaynakları Standartları</p>
+    <p class="foot-sub">BSI ve ISO/TC 260 İnsan Sermayesi Yönetimi ve Gelişimi (HCMD) Çerçevesi</p>
+    <div class="foot-links">
+      <a href="index.html">Ders İzlencesi</a>
+      <a href="hafta-01.html">1. Hafta</a>
+      <a href="hafta-10.html">10. Hafta</a>
+      <a href="donem-projesi.html">Dönem Projesi</a>
+    </div>
+    <p class="foot-note">Ders notları eğitim amaçlıdır. ISO ve BSI standart metinleri telife tabidir; burada yalnızca kavramsal çerçeve ve öğretim amaçlı özetler yer alır.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var t = document.getElementById('tocBox');
+  if (t && window.matchMedia('(min-width:961px)').matches) t.open = true;
+  var b = document.getElementById('wkToggle'), m = document.getElementById('wkMenu');
+  if (b && m) b.addEventListener('click', function () {
+    var open = !m.hasAttribute('hidden');
+    if (open) { m.setAttribute('hidden',''); b.setAttribute('aria-expanded','false'); }
+    else { m.removeAttribute('hidden'); b.setAttribute('aria-expanded','true'); }
+  });
+  var links = [].slice.call(document.querySelectorAll('.toc a'));
+  var heads = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+  if ('IntersectionObserver' in window && heads.length) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) { a.classList.remove('active'); });
+        var i = heads.indexOf(e.target);
+        if (i > -1) links[i].classList.add('active');
+      });
+    }, { rootMargin: '-72px 0px -70% 0px' });
+    heads.forEach(function (h) { if (h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10. Hafta — İnsan Sermayesi Raporlaması I — ISO 30414:2025 · İnsan Kaynakları Standartları</title>
+<meta name="description" content="HCRD süreci, yönetişim–strateji–risk–metrik formatı ve gerekli 14 metrik">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">İçeriğe geç</a>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">İKS</span>
+      <span class="brand-txt"><strong>İnsan Kaynakları Standartları</strong><em>Yüksek Lisans · Ders Notları</em></span>
+    </a>
+    <nav class="topnav">
+      <a href="index.html">İzlence</a>
+      <a href="donem-projesi.html">Dönem Projesi</a>
+      <button class="wk-toggle" id="wkToggle" aria-expanded="false" aria-controls="wkMenu">Haftalar ▾</button>
+    </nav>
+  </div>
+  <div class="wk-menu" id="wkMenu" hidden><a class="wk" href="hafta-01.html">1. Hafta</a><a class="wk" href="hafta-02.html">2. Hafta</a><a class="wk" href="hafta-03.html">3. Hafta</a><a class="wk" href="hafta-04.html">4. Hafta</a><a class="wk" href="hafta-05.html">5. Hafta</a><a class="wk" href="hafta-06.html">6. Hafta</a><span class="wk off">7. Hafta</span><a class="wk" href="hafta-08.html">8. Hafta</a><a class="wk" href="hafta-09.html">9. Hafta</a><a class="wk on" href="hafta-10.html">10. Hafta</a><a class="wk" href="hafta-11.html">11. Hafta</a><a class="wk" href="hafta-12.html">12. Hafta</a><a class="wk" href="hafta-13.html">13. Hafta</a><a class="wk" href="hafta-14.html">14. Hafta</a><a class="wk" href="donem-projesi.html">Dönem Projesi</a></div>
+</header>
+
+<section class="hero">
+  <div class="hero-in">
+    <p class="kicker">10. Hafta</p>
+    <h1>İnsan Sermayesi Raporlaması I — ISO 30414:2025</h1>
+    <p class="hero-sub">HCRD süreci, yönetişim–strateji–risk–metrik formatı ve gerekli 14 metrik</p>
+    <div class="tags"><span class="tag">ISO 30414:2025</span><span class="tag">GRI · ESRS S1 · TCFD</span></div>
+  </div>
+</section>
+
+
+
+<div class="shell">
+
+      <aside class="toc" aria-label="Sayfa içindekiler">
+        <details class="toc-inner" id="tocBox">
+          <summary class="toc-title">Bu sayfada</summary>
+          <ul><li class="t2"><a href="#1-giris-neden-insan-sermayesini-raporlariz">1. Giriş: Neden İnsan Sermayesini Raporlarız?</a></li>
+<li class="t2"><a href="#bolum-ogrenme-ciktilari">Bölüm Öğrenme Çıktıları</a></li>
+<li class="t2"><a href="#2-temel-kavramlar-ve-tanimlar">2. Temel Kavramlar ve Tanımlar</a></li>
+<li class="t3"><a href="#insan-sermayesi-human-capital">İnsan sermayesi (Human capital)</a></li>
+<li class="t3"><a href="#hcrd">HCRD</a></li>
+<li class="t3"><a href="#insan-sermayesi-alani-hca">İnsan sermayesi alanı (HCA)</a></li>
+<li class="t3"><a href="#materiality-onemlilik">Materiality (Önemlilik)</a></li>
+<li class="t3"><a href="#kritik-pozisyon-critical-position">Kritik pozisyon (Critical position)</a></li>
+<li class="t3"><a href="#kendi-metrikleri-own-metrics">Kendi metrikleri (Own metrics)</a></li>
+<li class="t3"><a href="#surdurulebilirlik-raporlamasi">Sürdürülebilirlik raporlaması</a></li>
+<li class="t3"><a href="#yonetici-executive-yonetisim">Yönetici (Executive) / Yönetişim</a></li>
+<li class="t2"><a href="#3-ikinci-baski-2018-den-2025-e-neler-degisti">3. İkinci Baskı: 2018&#x27;den 2025&#x27;e Neler Değişti?</a></li>
+<li class="t2"><a href="#4-hcrd-sureci-ve-rehber-ilkeler">4. HCRD Süreci ve Rehber İlkeler</a></li>
+<li class="t3"><a href="#4-1-rehber-ilkeler">4.1 Rehber İlkeler</a></li>
+<li class="t3"><a href="#4-2-paydaslar-ic-ve-dis">4.2 Paydaşlar: İç ve Dış</a></li>
+<li class="t2"><a href="#5-cerceve-sistemler-ve-is-yuku-birimi">5. Çerçeve, Sistemler ve İş Yükü Birimi</a></li>
+<li class="t3"><a href="#sonuc-temelli-sistem-outcomes">Sonuç temelli sistem (Outcomes)</a></li>
+<li class="t3"><a href="#faaliyet-temelli-sistem-activities">Faaliyet temelli sistem (Activities)</a></li>
+<li class="t3"><a href="#5-1-tml-duzeyleri">5.1 TML Düzeyleri</a></li>
+<li class="t3"><a href="#5-2-is-yuku-birimi-fte">5.2 İş Yükü Birimi: FTE</a></li>
+<li class="t2"><a href="#6-veri-toplama-araclar-surecler-ve-sorumluluklar">6. Veri Toplama: Araçlar, Süreçler ve Sorumluluklar</a></li>
+<li class="t2"><a href="#7-yapay-zeka-ve-hcrd">7. Yapay Zekâ ve HCRD</a></li>
+<li class="t2"><a href="#8-aciklama-formati-yonetisim-strateji-risk-metrik">8. Açıklama Formatı: Yönetişim–Strateji–Risk–Metrik</a></li>
+<li class="t2"><a href="#9-insan-sermayesi-alanlari-hca-ve-materiality">9. İnsan Sermayesi Alanları (HCA) ve Materiality</a></li>
+<li class="t2"><a href="#10-gerekli-14-metrik-tablo-3">10. Gerekli 14 Metrik (Tablo 3)</a></li>
+<li class="t3"><a href="#10-1-secilmis-formuller-ve-cozumlu-ornekler">10.1 Seçilmiş Formüller ve Çözümlü Örnekler</a></li>
+<li class="t3"><a href="#fte-tam-zaman-esdegeri-a-2">FTE — Tam zaman eşdeğeri (A.2)</a></li>
+<li class="t3"><a href="#toplam-isgucu-maliyeti-a-8">Toplam işgücü maliyeti (A.8)</a></li>
+<li class="t3"><a href="#verimlilik-fte-basina-ciro-ve-ebit-a-9-a-10">Verimlilik: FTE başına ciro ve EBIT (A.9, A.10)</a></li>
+<li class="t3"><a href="#hcroi-insan-sermayesi-yatirim-getirisi-a-12">HCROI — İnsan sermayesi yatırım getirisi (A.12)</a></li>
+<li class="t3"><a href="#isgucu-devir-orani-a-48">İşgücü devir oranı (A.48)</a></li>
+<li class="t2"><a href="#11-onerilen-metrikler-tablo-4">11. Önerilen Metrikler (Tablo 4)</a></li>
+<li class="t2"><a href="#12-surdurulebilirlik-raporlamasiyla-uyum">12. Sürdürülebilirlik Raporlamasıyla Uyum</a></li>
+<li class="t2"><a href="#13-ders-etkinligi-standart-metni-derin-okuma">13. Ders Etkinliği: Standart Metni Derin Okuma</a></li>
+<li class="t3"><a href="#grup-calismasi-hcrd-taslagi">Grup çalışması — HCRD taslağı</a></li>
+<li class="t3"><a href="#sayisal-alistirma">Sayısal alıştırma</a></li>
+<li class="t2"><a href="#14-bolum-ozeti">14. Bölüm Özeti</a></li>
+<li class="t2"><a href="#kaynaklar">Kaynaklar</a></li></ul>
+        </details>
+      </aside>
+  <main id="main" class="prose">
+    <div class="lead">İnsan sermayesi raporlaması ve açıklaması (HCRD): yönetişim–strateji–risk–metrik formatı, TML düzeyleri, materiality (önemlilik), yapay zekâ ile ilişki ve sürdürülebilirlik uyumu üzerine bir yüksek lisans ders notu. Temel kaynak: BS ISO 30414:2025 (İkinci baskı) · İlişkili çerçeveler: GRI · ESRS S1 · IFRS/ISSB S1 · TCFD · SASB · SEC · UN SDG</div>
+    <h2 id="1-giris-neden-insan-sermayesini-raporlariz">1. Giriş: Neden İnsan Sermayesini Raporlarız?</h2>
+<p class="deck"><span class="smallcaps">İnsan sermayesinin görünmez değeri</span></p>
+<p>İnsan sermayesi (human capital), bir örgütün çalışanlarının biriken bilgi, beceri ve yeteneklerini; bunların örgütün uzun dönemli performansına ve örgütsel çıktıları en iyileme yoluyla elde edilen rekabet üstünlüğüne etkisini kapsar. İnsanlar bir örgütün en kritik kaynaklarından biridir; bu kaynağın ölçülmesi ve raporlanması, örgütün bu kaynakla ilişkili risk ve fırsatları yönetme kapasitesini doğrudan artırır. Araştırmalar, örgüt değerinin giderek daha büyük bir bölümünün maddi olmayan (intangible) varlıklardan geldiğini; insan sermayesinin bu maddi olmayan varlıkların birincil sürükleyicisi olarak örgüt değerinin %90'ından fazlasını temsil edebildiğini göstermektedir. Aynı araştırmalar, insan sermayesini proaktif biçimde yönetmeyen örgütlerin uzun dönemli, sürdürülebilir değer üretme kapasitelerine zarar verdiğini de ortaya koymaktadır.</p>
+<p>Son yıllarda büyük yönetişim otoritelerinin örgütlere temel işgücü metriklerini açıklama yükümlülüğü getirmesi, insan sermayesinin muhasebe zihniyetindeki konumunu değiştirmiştir: İnsan sermayesi artık yalnızca bir "gider" değil, maddi olmayan bir "varlık yatırımı" olarak yeniden sınıflandırılmaktadır. Bu yatırımların etkin biçimde ölçülmesi, yönetilmesi ve raporlanması, örgütsel çıktılar ve sürdürülebilirlik üzerindeki maddi (material) etkilerini görebilmek için hayati hale gelmiştir. İşte bu ders notunun ele aldığı standart — ISO 30414:2025 — tam olarak bu ihtiyaca yanıt verir.</p>
+<p>ISO 30414:2025, insan sermayesi raporlaması ve açıklaması (Human Capital Reporting and Disclosure, kısaca <strong>HCRD</strong>) için gereklilikleri ve önerileri ortaya koyar. Standart, her büyüklükteki ve her sektördeki örgüte uygulanabilecek; örgütün kendi kontrolü altındaki faktörleri ölçmeye odaklanan; hem iç (internal) hem de dış (external) raporlama için kullanılabilecek küresel ve kapsamlı bir temel çizgi (baseline) sunar. İnsan sermayesi alanının yalnızca insan kaynaklarına (İK) ait olmadığını; İK'nın niteliksel işgücü ilişkilerinde, finansın ise paydaşlara yönelik niceliksel raporlamada uzmanlaştığını; etkili bir insan sermayesi analizi ve raporlaması için bu ikisinin iş birliği içinde, disiplinler arası bir yaklaşımla çalışması gerektiğini vurgular.</p>
+<h2 id="bolum-ogrenme-ciktilari"><span class="smallcaps">Bölüm Öğrenme Çıktıları</span></h2>
+<p>Bu bölümü tamamlayan öğrenci aşağıdakileri yapabilir:</p>
+<p>İnsan sermayesi ve HCRD kavramlarını tanımlamak</p>
+<p>HCRD sürecinin adımlarını ve rehber ilkelerini açıklamak</p>
+<p>Yönetişim–strateji–risk–metrik açıklama formatını uygulamak</p>
+<p>TML düzeylerini ve FTE iş yükü birimini kullanmak</p>
+<p>Materiality (önemlilik) ilkesiyle metrik seçimini gerekçelendirmek</p>
+<p>Gerekli 14 metriği tanıyıp temel hesaplamalarını yapmak</p>
+<p>Yapay zekânın HCRD üzerindeki etkilerini değerlendirmek</p>
+<p>GRI, ESRS S1 ve TCFD ile uyumu ilişkilendirmek</p>
+<h2 id="2-temel-kavramlar-ve-tanimlar">2. Temel Kavramlar ve Tanımlar</h2>
+<p class="deck"><span class="smallcaps">ISO 30414 ve ISO 30400 terimleri</span></p>
+<p>Standardın gücü, farklı ülke, sektör ve örgütlerin insan sermayesini ortak bir dille konuşabilmesini sağlamasında yatar. Aşağıdaki tanımlar bölümün tamamı boyunca kullanılacaktır; bir bölümü ISO 30400 (İK sözlüğü) standardından uyarlanmıştır.</p>
+<h3 id="insan-sermayesi-human-capital">İnsan sermayesi (Human capital)</h3>
+<p>Çalışanların biriken bilgi, beceri ve yetenekleri ile bunların örgütün uzun dönemli performansına ve rekabet üstünlüğüne etkisi.</p>
+<h3 id="hcrd">HCRD</h3>
+<p>İnsan sermayesine ilişkin metriklerin standartlaştırılmış biçimde raporlanması ve açıklanması (Human Capital Reporting and Disclosure) süreci.</p>
+<h3 id="insan-sermayesi-alani-hca">İnsan sermayesi alanı (HCA)</h3>
+<p>Örgütler arası standart karşılaştırmayı mümkün kılan, performans ve sürdürülebilirlik üzerinde önemli etkisi olan evrensel/sektörel iş konusu kategorisi (Human Capital Area).</p>
+<h3 id="materiality-onemlilik">Materiality (Önemlilik)</h3>
+<p>Bir unsurun örgütün sonuçları açısından taşıdığı anlamlılığın ölçüsü. Bir metriğin dışarıda bırakılması karar kalitesini bozacaksa, o metrik materialdir.</p>
+<h3 id="kritik-pozisyon-critical-position">Kritik pozisyon (Critical position)</h3>
+<p>Örgütsel sonuçlar üzerinde doğrudan ve önemli etkisi olan iş rolü; operasyonel süreklilik, stratejik yön ve finansal istikrar için elzemdir. Doldurulması zor olması onu tek başına kritik yapmaz.</p>
+<h3 id="kendi-metrikleri-own-metrics">Kendi metrikleri (Own metrics)</h3>
+<p>Örgütün oluşturup kullandığı, standartta yer almayan ya da yalnızca kendisine özgü metrikler. Kullanılırsa gerekçesiyle açıklanmalıdır.</p>
+<h3 id="surdurulebilirlik-raporlamasi">Sürdürülebilirlik raporlaması</h3>
+<p>Finansal olmayan hususları kısa, orta ve uzun vadede öne çıkaran açıklama biçimi. İnsan sermayesi, bunun kritik bir boyutu sayılır.</p>
+<h3 id="yonetici-executive-yonetisim">Yönetici (Executive) / Yönetişim</h3>
+<p>Örgütteki en üst düzey çalışan ya da yönetici; liderlik ve yönetişim rolüyle eşanlamlı kullanılır (kurulun icracı olmayan üyeleri hariç).</p>
+<p><strong>FTE</strong> (Full-Time Equivalent — tam zaman eşdeğeri), bir kişinin tam zamanlı çalışmasına karşılık gelen iş yükü birimidir. <strong>TML</strong> (Top–Mid–Lower), örgütün üç sistem düzeyini; <strong>HCROI</strong> ise insan sermayesi yatırım getirisini ifade eder. Bu kısaltmalar bölüm boyunca sık kullanılacaktır.</p>
+<h2 id="3-ikinci-baski-2018-den-2025-e-neler-degisti">3. İkinci Baskı: 2018'den 2025'e Neler Değişti?</h2>
+<p class="deck"><span class="smallcaps">Teknik revizyonun yönü</span></p>
+<p>ISO 30414:2025 (İkinci baskı, Ağustos 2025), 2018'de yayımlanan ilk baskıyı iptal edip yerine geçmiştir; ilk baskı teknik olarak revize edilmiştir. Değişikliklerin yönü, standardın giderek daha çok küresel sürdürülebilirlik raporlaması ekosistemine eklemlenmesi olmuştur. Öne çıkan başlıca değişiklikler şunlardır:</p>
+<blockquote>
+<p><strong>•</strong> Metriklerin iki kategoriye ayrılması: <strong>gerekli (required)</strong> ve <strong>önerilen (recommended)</strong>.</p>
+<p><strong>•</strong> Sürdürülebilirlik raporlamasıyla güçlendirilmiş uyum.</p>
+<p><strong>•</strong> Yapay zekâ ile ilişkili faktörler dâhil, materiality'nin daha açık ele alınması.</p>
+<p><strong>•</strong> Kâr amaçlı, kâr amacı gütmeyen ve kamu sektörleri için verimlilik ve performans açıklamalarına ilişkin rehberlik.</p>
+<p><strong>•</strong> İnsan sermayesi alanlarının (HCA) bağlamları hizalayacak, etkiyi ve iş akışını önceliklendirecek biçimde yeniden düzenlenmesi.</p>
+<p><strong>•</strong> TCFD'nin <em>yönetişim, strateji, risk ve fırsatlar, metrikler</em> çerçevesine dayalı, önerilen bir açıklama formatı.</p>
+<p><strong>•</strong> İnsan hakları, çalışma ilişkileri, verimlilik, etik ve iyi oluş (well-being) metriklerinin eklenmesi.</p>
+<p><strong>•</strong> Veri toplama, gizlilik ve güvenlik sorumluluklarına dair güçlendirilmiş rehberlik; KOBİ'lere yönelik genişletilmiş öneriler.</p>
+</blockquote>
+<p>Bu revizyonun ana mesajı nettir: İnsan sermayesi raporlaması, artık bağımsız bir İK egzersizi değil, örgütün genel sürdürülebilirlik ve finansal raporlama mimarisinin bütünleşik bir parçasıdır.</p>
+<h2 id="4-hcrd-sureci-ve-rehber-ilkeler">4. HCRD Süreci ve Rehber İlkeler</h2>
+<p class="deck"><span class="smallcaps">Standardın 4. maddesi</span></p>
+<p>Standardın 4. maddesi, örgütün stratejisi, değerleri, liderliği ve iş/işletme modeli bağlamında dikkate alınması gereken HCRD adımlarını ortaya koyar. Süreç yedi temel bileşenden oluşur: (a) niteliksel <strong>rehber ilkeler</strong>; (b) <strong>paydaş uygunluğu</strong> (iç/dış paydaşların ayrıştırılması); (c) <strong>HCRD çerçevesi, sistemler ve iş yükü birimi</strong>; (d) <strong>veri toplama araç, süreç ve sorumlulukları</strong> (yasal-etik hususlar, üretici-kullanıcı rolleri, karşılaştırılabilirlik, HRIS, dijital taksonomi, yapay zekâ); (e) <strong>açıklama formatı, sıklığı ve konumu</strong>; (f) <strong>açıklama konuları</strong> (HCA'lar); (g) <strong>metrik kategorileri ve adları</strong> (gerekli ve önerilen metrik tabloları).</p>
+<h3 id="4-1-rehber-ilkeler">4.1 Rehber İlkeler</h3>
+<p>HCRD alanları, metrikleri ve açıklamaları, standardın on iki temel ilkesine göre biçimlenmelidir. Bu ilkeler, hangi metriğin neden ve nasıl raporlanacağını disipline eden niteliksel bir çerçeve sunar:</p>
+<p><strong>Stratejik</strong> — örgüt stratejisi ve değerleriyle hizalı</p>
+<p><strong>Etik</strong> — adalet, şeffaflık, fırsat eşitliği (UN SDG)</p>
+<p><strong>Kanıta dayalı</strong> — geçerli, veri odaklı metrikler</p>
+<p><strong>Material (önemli)</strong> — kararı etkileyecek ölçüde ilgili</p>
+<p><strong>Nicelenmiş</strong> — nesnellik için sayısal değerler</p>
+<p><strong>Nitelenmiş</strong> — bağlama göre risk/fırsat anlatısı</p>
+<p><strong>Hizalı</strong> — işletme modeli ve dış bağlamla tutarlı</p>
+<p><strong>Pratik</strong> — gerçekçi beklentilere dayalı</p>
+<p><strong>Orantılı</strong> — KOBİ kaynak kısıtlarını gözetir</p>
+<p><strong>Karşılaştırılabilir</strong> — ortak ölçüt ve zaman serileri</p>
+<p><strong>Şeffaf</strong> — açık ve nesnel raporlama</p>
+<p><strong>Uyumlu</strong> — veri koruma ve insan hakları öncelikli</p>
+<h3 id="4-2-paydaslar-ic-ve-dis">4.2 Paydaşlar: İç ve Dış</h3>
+<p>HCRD'nin çok sayıda paydaş için değeri vardır: <strong>örgütler</strong> (insan sermayesi hem büyük bir gider hem de rekabet üstünlüğü sağlayan eşsiz bir maddi olmayan varlıktır), <strong>çalışanlar</strong> (iyi yönetilen insan sermayesi amaç, iş birliği, iyi oluş ve bağlılık getirir), <strong>yatırımcılar</strong> (karşılaştırılabilir metrikler yönetişim, strateji ve risk hakkında içgörü sağlar), <strong>hükümet ve düzenleyiciler</strong>, <strong>toplumlar</strong>, <strong>derecelendirme kuruluşları</strong> ve <strong>insan sermayesi liderleri</strong>. Standart, içgörülerin iç ve dış paydaş ayrımı yapıldığında derinleştiğini vurgular: iç paydaşlar işgücünü, temsilcilerini ve yönetişim organlarını; dış paydaşlar iş arayanları, tedarik zinciri topluluklarını, müşterileri, finansörleri, yatırımcıları ve düzenleyicileri kapsar. <strong>Gerekli metrikler</strong> her örgüt için evrenseldir; <strong>önerilen metrikler</strong> ise örgüt büyüklüğüne ve iç kullanım/dış açıklama ayrımına göre sınıflanır.</p>
+<h2 id="5-cerceve-sistemler-ve-is-yuku-birimi">5. Çerçeve, Sistemler ve İş Yükü Birimi</h2>
+<p class="deck"><span class="smallcaps">Plan–Uygula–Kontrol Et–Önlem Al</span></p>
+<p>HCRD çerçevesi, işgücünün sürdürülebilir değer yaratımına nasıl katkı sunduğunu; geleneksel finansal raporlamada değeri küçümsenen risk ve fırsatları geçerli, etki temelli metriklerle nasıl açığa çıkardığını gösterir. Çerçeve, sürekli iyileştirmeye dayalı bir <strong>plan–uygula–kontrol et–önlem al (PDCA)</strong> döngüsü üzerine kuruludur ve iki sistemi geri besleme döngüleriyle birbirine bağlar:</p>
+<h3 id="sonuc-temelli-sistem-outcomes">Sonuç temelli sistem (Outcomes)</h3>
+<p>Uzun dönemli etkiye ve nihai değere odaklanır. Üç unsuru vardır: <strong>örgütsel amaçlar</strong> (stratejik hedefler), <strong>kaynaklar</strong> (finansal, sosyal, entelektüel, insan sermayesi vb.) ve <strong>sonuçlar</strong> (çıktıların uzun dönemli etkileri; örn. HCROI).</p>
+<h3 id="faaliyet-temelli-sistem-activities">Faaliyet temelli sistem (Activities)</h3>
+<p>Girdi, süreç ve ani çıktılara odaklanır: <strong>girdiler</strong> (insan sermayesine yapılan yatırımlar/maliyetler), <strong>faaliyet/süreçler</strong> (işgücü yaşam döngüsü faaliyetleri) ve <strong>çıktılar</strong> (faaliyetlerin doğrudan sonuçları).</p>
+<h3 id="5-1-tml-duzeyleri">5.1 TML Düzeyleri</h3>
+<p>Standart, etki ve hesap verebilirliğe dayalı üç temel örgütsel sistem düzeyine atıfta bulunur. İşgücü verisinin bu düzeylere ayrıştırılması (segmentasyon), insan sermayesi girdi, faaliyet ve sonuçlarının her etki katmanında daha etkili çözümlenmesini sağlar.</p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Düzey</strong></td>
+<td><strong>Odak ve tipik roller</strong></td>
+</tr>
+<tr class="even">
+<td><strong>T — Liderlik ve yönetişim</strong>Üst düzey · stratejik</td>
+<td>En üst karar rolleri; CEO, CFO, CHRO gibi C-seviyesi yöneticiler ve kurullar. Büyük örgütlerde CEO'ya doğrudan bağlı roller de bu düzeye girebilir.</td>
+</tr>
+<tr class="odd">
+<td><strong>M — Yönetim ve denetim</strong>Orta düzey · taktik-yönetsel</td>
+<td>Departman başkanları, şube yöneticileri, süpervizörler. Üst düzey stratejik planları alt düzey operasyonel faaliyetlere bağlar.</td>
+</tr>
+<tr class="even">
+<td><strong>L — İdare ve destek</strong>Alt düzey · operasyonel</td>
+<td>Ön saf, giriş düzeyi ve destek rolleri; günlük rutin faaliyetleri yürütür. "Alt" nitelemesi daha az önemli anlamına gelmez; yalnızca hiyerarşik konumu belirtir.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Küçük örgütlerde bir birey bu üç düzeyin ikisine ya da tümüne yayılan roller üstlenebilir. Büyüklüğü ne olursa olsun her örgüt bu üç sistem faaliyetini —farklı önceliklendirme ve kaynak oranlarıyla da olsa— yürütür.</p>
+<h3 id="5-2-is-yuku-birimi-fte">5.2 İş Yükü Birimi: FTE</h3>
+<p>HCRD'de, baş sayısı (headcount) yerine <strong>tam zaman eşdeğeri (FTE)</strong> raporlaması önerilir; çünkü FTE, örgütün toplam insan sermayesine dair daha bütünsel bir görünüm sunar. Ayrıca "çalışan" (employee) yerine "işgücü" (workforce) terimi tercih edilir; zira işgücü, örgütün insan sermayesinin temel ölçüsünü oluşturan tüm çalışma ilişkisi türlerini kapsar. Bir örgüt FTE yerine baş sayısı ölçüsü kullanıyorsa, bu ayrım açıklanmalıdır.</p>
+<h2 id="6-veri-toplama-araclar-surecler-ve-sorumluluklar">6. Veri Toplama: Araçlar, Süreçler ve Sorumluluklar</h2>
+<p class="deck"><span class="smallcaps">Gizlilik, karşılaştırılabilirlik ve HRIS</span></p>
+<p><strong>Yasal ve etik hususlar.</strong> Örgütlerin işgücü verisi toplamadan önce yerel veri yönetimi yasalarına (ve sürdürülebilirliği etkileyebilecek sınır-ötesi yasalara) uyduğu varsayılır. Paydaş güveni için veri toplama amaçlarında şeffaflık ve tutarlılık sağlanmalı; <em>bilgilendirilmiş onam</em> ve <em>veri asgariliği</em> gibi gizlilik ilkeleri ile sağlam veri güvenliği ilkeleri uygulanmalıdır. Metrik üretim yönteminde önceki yıllara göre değişiklik yapıldıysa bu açıklanmalıdır.</p>
+<p><strong>Üreticiler ve kullanıcılar.</strong> HCRD çerçevesi, işgücü verisi üreticilerini (toplayan, raporlayan, uygunluk denetçisi) kullanıcılarla (birleştiren, karar verici, düzenleyici) buluşturur. İK, bu ekosistemde yasal ve etik veri uygulamalarını güvence altına alarak; veri gizliliği ve güvenliği, açıklanan verinin bütünlüğü, veri ortaklarının değer uyumu, materiality ilkesinin özgün temsili ve verinin sorumlu-etik yorumu konularında kritik rol oynar.</p>
+<p><strong>Karşılaştırılabilirlik.</strong> HCRD'lerin karşılaştırılabilir olması, özellikle yatırımcılar için, benzer örgütler arasında metrik kıyaslamasını mümkün kılar. Kalite için: zaman dönemlerinin senkronizasyonu (analiz için en az iki önceki dönemin verisi; ilk rapor için tek yıl bir temel çizgi olarak yeterlidir), işgücünün segmentasyonu (stratejik gruplar ve çeşitlilik boyutları) ve maddi değişikliklerin açıklanması (yöntem değişiklikleri en az iki yıl geriye dönük uygulanmalı ve niteliksel gerekçe sunulmalıdır) uygulanır.</p>
+<p><strong>Konsolidasyon, HRIS ve dijital taksonomi.</strong> Finansal raporlamayla tutarlılık için konsolide HCRD önerilir; ancak farklı sektörlere yayılan çok birimli örgütlerde her ayrı iş birimi kendi HCRD'sini üretmelidir — aksi hâlde konsolidasyon şeffaflığı azaltıp maddi farkları gizleyebilir. Bir <strong>HRIS</strong> (İK bilgi sistemi), işgücü verisinin (demografik ve zaman verisi), bordronun, örgütsel verinin ve işe alım/gelişim gibi İK süreçlerinin yönetimini kolaylaştırarak HCRD üretimini akıcılaştırır. <strong>Dijital etiketleme (digital tagging)</strong> taksonomileri veri düzenini ve kıyaslamayı iyileştirir (örn. XBRL). HCRD ekosistem kalite kontrolü için iç ve dış ortaklar üzerinde anket/denetimler yapılması önerilir.</p>
+<h2 id="7-yapay-zeka-ve-hcrd">7. Yapay Zekâ ve HCRD</h2>
+<p class="deck"><span class="smallcaps">Yeni bir materiality boyutu</span></p>
+<p>Yapay zekâ (AI) sistemleri iş dünyasında yaygınlaştıkça, HCRD'nin materiality açısından değerlendirmesi gereken kesişen risk ve fırsatlar doğar. Standart, üç düzeyde sorumluluk tanımlar: <strong>liderler ve yönetişim</strong> etik kullanımı sağlamak, işgücü üzerindeki etkileri yönetmek ve stratejileri sürekli uyarlamakla; <strong>yöneticiler</strong> ekiplerinin beceri artırımı (upskilling) ve yeniden becerilendirilmesiyle (reskilling), uyum sağlayan bir kültür geliştirmekle; <strong>çalışanlar</strong> ise yaşam boyu öğrenmeyi benimsemek ve AI ile uyumlu yeni beceriler geliştirmekle yükümlüdür.</p>
+<p>Değerlendirilmesi gereken kesişen AI risk/fırsatları arasında şunlar sayılır: AI algoritmalarındaki önyargının işgücü kapsayıcılığı ve çeşitliliği üzerindeki etkisi; AI'nin işgücü verimliliği ve iyi oluşu üzerindeki etkisi; beceri açıklarını kapatmak için insan sermayesinin proaktif geliştirilmesi; insan işi ile AI tarafından yapılan işlerin oranının analizi; örgütsel verimlilikte AI'ye bağımlılık derecesi; AI'nin maddi olmayan varlık yönetimine etkisi; ve AI'yi düzenlemeye yönelik farklı yargı yetkisi yaklaşımları. Kanıta ve veriye dayalı karar verme, bir risk/ödül sürekliliği ve etki analizi üzerinden yapılmalıdır.</p>
+<h2 id="8-aciklama-formati-yonetisim-strateji-risk-metrik">8. Açıklama Formatı: Yönetişim–Strateji–Risk–Metrik</h2>
+<p class="deck"><span class="smallcaps">TCFD temelli dört açıklama alanı</span></p>
+<p>HCRD, işgücüne ilişkin risk ve fırsatları açık ve tutarlı biçimde iletir. Standart, TCFD çerçevesinden uyarlanmış dört temel <strong>açıklama alanından</strong> (disclosure areas) oluşan bir format önerir. Tam bir HCRD raporu, hem niceliksel metrikleri hem de niteliksel (anlatısal) açıklamaları içermelidir.</p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Açıklama alanı</strong></td>
+<td><strong>Ne açıklanır?</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Yönetişim (Governance)</strong></td>
+<td>En üst liderliğin insan sermayesi risk/fırsatlarını yönetmedeki gözetim ve görevleri; yönetime devredilen belirli roller niteliksel olarak açıklanır.</td>
+</tr>
+<tr class="odd">
+<td><strong>Strateji (Strategy)</strong></td>
+<td>Kısa, orta ve uzun vadede belirlenen insan sermayesi risk/fırsatları; bunların operasyon, strateji ve planlamaya etkisi; stratejik dayanıklılık senaryoları.</td>
+</tr>
+<tr class="even">
+<td><strong>Risk ve fırsat yönetimi</strong></td>
+<td>İnsan sermayesi risk/fırsatlarını belirleme-değerlendirme süreçleri; bunların örgütün genel risk yönetimi çerçevesine nasıl entegre edildiği.</td>
+</tr>
+<tr class="odd">
+<td><strong>Metrikler ve hedefler</strong></td>
+<td>Kullanılan niceliksel metrikler, elde edilen sonuçlar ve belirlenen hedefler (KPI); her metriğe eşlik eden, hedef–sonuç sapmalarını açıklayan niteliksel anlatı. Uygun olduğunda TML düzeylerine göre ayrıştırılır.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Sıklık ve konum.</strong> HCRD, örgütün düzenli raporlama döngüsüyle (tipik olarak yıllık) hizalanmalıdır; sapmalar açıklanmalıdır. Metriklerin gösterge panelleriyle daha sık izlenmesi teşvik edilir. Raporlar; genel (finansal) raporlarda ya da ayrı konu-odaklı raporlarda (sürdürülebilirlik, ESG, insan sermayesi) yer alabilir. Asgari olarak veriler, finansal raporların yönetim yorumu bölümlerine (MD&amp;A / OFR) eklenmeli; örgütler şeffaflık için HCRD'lerini web sitelerinde yayımlamalıdır.</p>
+<h2 id="9-insan-sermayesi-alanlari-hca-ve-materiality">9. İnsan Sermayesi Alanları (HCA) ve Materiality</h2>
+<p class="deck"><span class="smallcaps">On bir çekirdek alan</span></p>
+<p>Standart, on bir çekirdek insan sermayesi alanı (HCA) üzerine gereklilik ve öneriler sunar. Her alan belirli, ölçülebilir metriklerle —hem içeride hem dışarıda— ölçülmelidir. Aşağıdaki tablo, alanları metrik odakları ve tipik risk/fırsatlarıyla özetler.</p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>İnsan sermayesi alanı (HCA)</strong></td>
+<td><strong>Metrik odağı — örnek risk/fırsat</strong></td>
+</tr>
+<tr class="even">
+<td>İşgücü kompozisyonu</td>
+<td>Katkı sunan çalışan sayı/türleri — erişilebilirlik, ölçeklenebilirlik, planlama uyumu</td>
+</tr>
+<tr class="odd">
+<td>Çeşitlilik</td>
+<td>Demografi ve kişisel nitelikler — yetenek çekme/kapsayıcılık, yasal-sosyal beklentiler</td>
+</tr>
+<tr class="even">
+<td>Maliyetler</td>
+<td>İşgücüne finansal tahsis verimliliği — yatırım, uygulamaların sürdürülebilirliği</td>
+</tr>
+<tr class="odd">
+<td>Verimlilik</td>
+<td>İşgücü etkinliği — performans, pazar ve toplumsal değere katkı</td>
+</tr>
+<tr class="even">
+<td>Sağlık, güvenlik ve iyi oluş</td>
+<td>Wellness — operasyonel risk yönetimi, değer-eylem uyumu</td>
+</tr>
+<tr class="odd">
+<td>Liderlik, bağlılık ve kültür</td>
+<td>İç paydaş sinerjileri — stratejik tutarlılık, elde tutma, liderlik kapasitesi</td>
+</tr>
+<tr class="even">
+<td>Uyum, etik ve çalışma ilişkileri</td>
+<td>Yönetişim ve sosyal taahhütler — yasal-etik uyum, şikâyet çözümü, itibar</td>
+</tr>
+<tr class="odd">
+<td>İşe alım</td>
+<td>Yetenek yönetim sistemi etkinliği — çekme stratejileri, işveren markası</td>
+</tr>
+<tr class="even">
+<td>Hareketlilik ve yedekleme planlaması</td>
+<td>İşgücü dayanıklılığı — değişime hazırlık, kritik rollerde süreklilik</td>
+</tr>
+<tr class="odd">
+<td>İşgücü devri (turnover)</td>
+<td>İşgücü kırılganlığı — strateji-sonuç uyumsuzluğu, yetenek kaybı</td>
+</tr>
+<tr class="even">
+<td>Beceri, yetkinlik ve gelişim</td>
+<td>İşgücü sağlamlığı — kapasite inşası, gelecek zorluk ve teknoloji kaymalarına hazırlık</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Materiality (önemlilik) nasıl belirlenir?</strong> Standart, materiality'nin sabit bir yorumunu dayatmaz; bunun yerine HCRD üreticilerine önemliliği nasıl belirleyecekleri konusunda rehberlik eder. En az üç eksen dikkate alınmalıdır: raporun hedeflenen kitlesi, örgütün sürdürülebilirlik amaçları ve uygulamanın yargı yetkisi (jurisdiction). Materiality boyutları tipik olarak finansal, çevresel, sosyal, yönetişimsel, hukuki ve etik olabilir. Bir metriğin materialliğinin işareti nettir: o metriğin dışarıda bırakılması, karar vericilerin kararlarının kalitesini bozacaksa, metrik materialdir.</p>
+<h2 id="10-gerekli-14-metrik-tablo-3">10. Gerekli 14 Metrik (Tablo 3)</h2>
+<p class="deck"><span class="smallcaps">Her örgütün zorunlu çekirdeği</span></p>
+<p>Standardın en somut çıktısı, <strong>her örgütün büyüklük ve sektör ayrımı olmaksızın raporlaması gereken</strong> on dört gerekli metriktir. Bu metrikler yedi HCA'ya dağılmıştır ve TML düzeylerine göre segmentasyonla zenginleştirilebilir.</p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>#</strong></td>
+<td><strong>HCA</strong></td>
+<td><strong>Metrik</strong></td>
+<td><strong>Referans</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>İşgücü kompozisyonu</td>
+<td>Toplam çalışan sayısı</td>
+<td>ISO/TS 30425</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>İşgücü kompozisyonu</td>
+<td>FTE (tam zaman eşdeğeri) çalışan</td>
+<td>ISO/TS 30425</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Çeşitlilik</td>
+<td>Yaş</td>
+<td>ISO 30415</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Çeşitlilik</td>
+<td>Cinsiyet</td>
+<td>ISO 30415</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Maliyetler</td>
+<td>Toplam öğrenme ve gelişim (L&amp;D) maliyeti</td>
+<td>ISO/TS 30428</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Maliyetler</td>
+<td>Toplam işgücü maliyeti</td>
+<td>ISO/TS 30427</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Verimlilik</td>
+<td>FTE başına finansal ciro (veya bütçe)</td>
+<td>ISO/TS 30432</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>Verimlilik</td>
+<td>FTE başına EBIT (faiz-vergi öncesi kâr) / fazla</td>
+<td>ISO/TS 30432</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>Verimlilik</td>
+<td>İnsan sermayesi yatırım getirisi (HCROI)</td>
+<td>ISO/TS 30432</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>Sağlık, güvenlik, iyi oluş</td>
+<td>İş kazalarının sayısı ve oranı</td>
+<td>ISO/TS 24179</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>Sağlık, güvenlik, iyi oluş</td>
+<td>İş kaynaklı ölümlerin sayısı ve oranı</td>
+<td>ISO/TS 24179</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>Uyum, etik, ilişkiler</td>
+<td>Açılan insan hakları başvurularının sayı, tür ve sonucu</td>
+<td>TBD</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>Uyum, etik, ilişkiler</td>
+<td>Toplu iş sözleşmesi kapsamındaki çalışan yüzdesi</td>
+<td>TBD</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td>İşgücü devri</td>
+<td>İşgücü devir oranı (turnover rate)</td>
+<td>TBD</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>TBD</strong> (to be determined), ilgili metriğin ayrı bir ISO belgesinde henüz tanımlanmayı beklediğini gösterir. Kâr amacı gütmeyen/kamu sektörü için verimlilik eşdeğerleri (örn. FTE başına bütçe) standardın A.17 tablosunda verilmiştir.</p>
+<h3 id="10-1-secilmis-formuller-ve-cozumlu-ornekler">10.1 Seçilmiş Formüller ve Çözümlü Örnekler</h3>
+<h3 id="fte-tam-zaman-esdegeri-a-2">FTE — Tam zaman eşdeğeri (A.2)</h3>
+<p>FTE, bir kişinin tam zamanlı çalışmasına karşılık gelen iş yükünü ifade eder ve farklı bağlamlardaki iş yüklerini karşılaştırılabilir kılar.</p>
+<p><em>N</em><sub>FTE</sub> <em>= (H</em><sub>FT</sub> <em>+ H</em><sub>PT</sub><em>) / H</em><sub>ST</sub></p>
+<p>H<sub>FT</sub>: tam zamanlı toplam saat · H<sub>PT</sub>: yarı zamanlı toplam saat · H<sub>ST</sub>: standart tam zamanlı saat. <em>Örnek:</em> Yıllık standart 2.080 saat; 10 tam zamanlı (20.800 s) + 10 yarı zamanlı (10.400 s) → N<sub>FTE</sub> = 31.200 / 2.080 = <strong>15 FTE</strong>. Uluslararası bağlamda çalışma süreleri ortak bir temelde normalize edilmelidir (bir ülkede 35 saat %100 iken diğerinde 40 saat %100 olabilir).</p>
+<h3 id="toplam-isgucu-maliyeti-a-8">Toplam işgücü maliyeti (A.8)</h3>
+<p><em>TCOW = TCC + TBC + TXC + TRC + TLC + TOC</em></p>
+<p>TCC: tazminat/ücret · TBC: yan haklar · TXC: dış (contingent) işgücü · TRC: işe alım · TLC: L&amp;D · TOC: diğer doğrudan insan sermayesi maliyetleri. Bu metrik, örgütün işgücünü yönetme, sürdürme ve geliştirmeye ayırdığı finansal değeri özetler.</p>
+<h3 id="verimlilik-fte-basina-ciro-ve-ebit-a-9-a-10">Verimlilik: FTE başına ciro ve EBIT (A.9, A.10)</h3>
+<p><em>R</em><sub>PFTE</sub> <em>= R</em><sub>T</sub> <em>/ N</em><sub>TFTE</sub> <em>· E</em><sub>PFTE</sub> <em>= (R</em><sub>T</sub> <em>− T</em><sub>E</sub><em>) / N</em><sub>TFTE</sub></p>
+<p>R<sub>T</sub>: toplam gelir · T<sub>E</sub>: toplam gider · N<sub>TFTE</sub>: toplam FTE sayısı. Bu metrikler sektöre göre büyük ölçüde değişir; en anlamlı kıyas aynı sektördeki örgütler arasındadır. Yüksek FTE başına ciro yüksek verimliliğe, düşük değerler ise eğitim/teknoloji yatırımı ihtiyacına işaret edebilir.</p>
+<h3 id="hcroi-insan-sermayesi-yatirim-getirisi-a-12">HCROI — İnsan sermayesi yatırım getirisi (A.12)</h3>
+<p>HCROI, örgütün işgücüne yaptığı yatırımdan elde ettiği değeri niceler; insan sermayesi verimliliğini raporlamak için tercih edilen metriktir.</p>
+<p><em>HCROI = [ ( R</em><sub>T</sub> <em>− ( T</em><sub>E</sub> <em>− T</em><sub>COW</sub> <em>) ) / T</em><sub>COW</sub> <em>] − 1</em></p>
+<p>R<sub>T</sub>: toplam gelir · T<sub>E</sub>: toplam gider · T<sub>COW</sub>: toplam işgücü maliyeti. <em>Örnek:</em> Gelir 4,5 milyon $, gider 3,75 milyon $, işgücü maliyeti 1,5 milyon $ → [(4.500.000 − (3.750.000 − 1.500.000)) / 1.500.000] − 1 = 0,5 → <strong>%50</strong>. Yani yatırılan her 1 dolar, orijinal doları artı 50 sent vergi öncesi kârla geri döner. İşgücü maliyetleri tipik olarak toplam maliyetlerin %25–60'ını oluşturduğundan, bu ölçü yatırımın ne kadar iyi kullanıldığını değerlendirmeye yardımcı olur. Veri kısıtlıysa alternatif olarak <em>faaliyet geliri / toplam işgücü maliyeti</em> oranı kullanılabilir; hangi metriğin kullanıldığı HCRD'de belirtilmelidir.</p>
+<h3 id="isgucu-devir-orani-a-48">İşgücü devir oranı (A.48)</h3>
+<p><em>WTOR = ( L</em><sub>T</sub> <em>/ N</em><sub>AVG</sub> <em>) × 100</em></p>
+<p>L<sub>T</sub>: dönem boyunca (nedeni ne olursa olsun) toplam ayrılma sayısı · N<sub>AVG</sub>: dönemdeki ortalama çalışan sayısı. <em>Örnek:</em> Yıl boyunca 45 ayrılma, ortalama 500 çalışan → (45 / 500) × 100 = <strong>%9</strong>. Yalnızca gönüllü ve pişmanlık verici kayıplara odaklanan gönüllü devir oranı (A.49) ise ayrı bir önerilen metriktir.</p>
+<h2 id="11-onerilen-metrikler-tablo-4">11. Önerilen Metrikler (Tablo 4)</h2>
+<p class="deck"><span class="smallcaps">Büyük örgüt / KOBİ ve iç / dış ayrımı</span></p>
+<p>Gerekli 14 metriğe ek olarak standart, daha kapsamlı içgörü için 55 <strong>önerilen metrik</strong> listeler. Bu metrikler örgüt büyüklüğüne ve kullanım amacına göre farklılaşır: <strong>büyük örgütler</strong> Tablo 4'te "x" işaretli tüm metrikleri içeride raporlamalı, "büyük dış raporlama" sütununda işaretli olanları dışarıda açıklamalı; <strong>KOBİ'ler</strong> ise "KOBİ iç kullanım" sütununda işaretli metrikleri içeride raporlamalıdır. İç kullanım, metriğin işgücüne açıklanması gerektiği anlamına gelmez; örgütün işgücüne bağlılığına dair daha derin içgörü sağladığı anlamına gelir.</p>
+<p class="fig-num">55</p>
+<p>önerilen metrik (toplam)</p>
+<p class="fig-num">23</p>
+<p>büyük — dış raporlama</p>
+<p class="fig-num">30</p>
+<p>KOBİ — iç kullanım</p>
+<p>Önerilen metrikler, gerekli metriklerin dağıldığı yedi HCA'ya ek olarak <strong>liderlik-kültür-bağlılık</strong> (bağlılık, ortalama kıdem, eNPS, liderlik güveni, kontrol alanı), <strong>hareketlilik ve yedekleme</strong> (içeriden doldurulan pozisyon yüzdesi, kritik pozisyon yüzdesi, halef kapsam ve derinlik oranları), <strong>işe alım</strong> (aday dönüşüm oranı, boş/kritik pozisyon doldurma süresi, teklif kabul oranı, işe alım kalitesi) ve <strong>beceri-yetkinlik-gelişim</strong> (kişi başı ortalama eğitim saati, eğitime katılım oranı, yetkinlik oranı) alanlarını da kapsar. Böylece gerekli çekirdek, önerilenlerle birlikte on bir HCA'nın tümünü kaplayan bütünsel bir tabloya dönüşür.</p>
+<h2 id="12-surdurulebilirlik-raporlamasiyla-uyum">12. Sürdürülebilirlik Raporlamasıyla Uyum</h2>
+<p class="deck"><span class="smallcaps">GRI · ESRS S1 · IFRS/ISSB · TCFD · SEC</span></p>
+<p>ISO 30414:2025'in belki de en önemli konumsal özelliği, kendini yükselen küresel sürdürülebilirlik raporlaması ekosistemine bilinçli biçimde eklemlemesidir. Standart; metrik ve açıklama formatını oluştururken araştırma kuruluşları, uzman bilgisi, danışma grupları, sektör koalisyonları ve ilişkili çerçevelerden yararlanmıştır. İnsan sermayesini, bütünleşik raporlamanın "altı sermaye" anlayışındaki gibi, daha geniş sürdürülebilirlik raporlamasının kritik bir boyutu olarak konumlar.</p>
+<p><strong>GRI</strong> — Global Reporting Initiative; işgücü ve sosyal açıklamalarda yaygın referans.</p>
+<p><strong>ESRS S1</strong> — Avrupa Sürdürülebilirlik Raporlama Standardı, "Kendi işgücü" konusu.</p>
+<p><strong>IFRS/ISSB S1</strong> — Sürdürülebilirlikle ilgili finansal bilgi açıklama temeli.</p>
+<p><strong>TCFD</strong> — Açıklama formatının (yönetişim–strateji–risk–metrik) çıkış çerçevesi.</p>
+<p><strong>SASB / SEC</strong> — Sektör-özel sürdürülebilirlik muhasebesi ve zorunlu işgücü açıklamaları.</p>
+<p><strong>UN SDG · ISO 30408</strong> — Etik ilkeler ve insan yönetişimi temeli.</p>
+<p>Standart, düzenlemelerle uyumlanmayı amaçlar; ancak yerel, bölgesel veya sektör-özel bağlamlarda paydaş ve düzenleyici ihtiyaçlarına göre farklılıklar olabileceğini kabul eder. Bu nedenle materiality'nin belirlenmesini örgüte bırakır: nihai amaç, işgücü yatırımlarının örgütün finansal ve finansal olmayan başarısı üzerindeki etkisini karşılaştırılabilir, tutarlı ve şeffaf biçimde görünür kılmaktır.</p>
+<h2 id="13-ders-etkinligi-standart-metni-derin-okuma">13. Ders Etkinliği: Standart Metni Derin Okuma</h2>
+<p class="deck"><span class="smallcaps">Uygulama ve tartışma</span></p>
+<h3 id="grup-calismasi-hcrd-taslagi"><span class="smallcaps">Grup çalışması — HCRD taslağı</span></h3>
+<p>Seçtiğiniz halka açık bir şirketin faaliyet/sürdürülebilirlik raporunu inceleyerek aşağıdakileri yapın:</p>
+<blockquote>
+<p><strong>•</strong> Gerekli 14 metriğin kaçının rapor edildiğini tespit edin; eksikleri listeleyin.</p>
+<p><strong>•</strong> Raporu yönetişim–strateji–risk–metrik dört alanına göre haritalayın; hangi alanların zayıf kaldığını değerlendirin.</p>
+<p><strong>•</strong> Örgüt için üç adet material HCA seçin ve seçiminizi (kitle, sürdürülebilirlik amacı, yargı yetkisi ekseninde) gerekçelendirin.</p>
+<p><strong>•</strong> Verilen değerlerle FTE, HCROI ve işgücü devir oranını hesaplayın; sonuçları TML düzeylerine göre nasıl ayrıştırırdınız, tartışın.</p>
+<p><strong>•</strong> Yapay zekânın örgütün işgücü verimliliği ve çeşitliliği üzerindeki etkisini bir risk/fırsat olarak nasıl açıklardınız, kısa bir anlatı yazın.</p>
+</blockquote>
+<h3 id="sayisal-alistirma">Sayısal alıştırma</h3>
+<p>Bir örgütün yıllık geliri 60 milyon $, toplam gideri 52 milyon $, toplam işgücü maliyeti 18 milyon $'dır. Ortalama çalışan sayısı 400, dönemdeki toplam ayrılma 52'dir. Toplam FTE 380'dir. Hesaplayın: (a) HCROI, (b) FTE başına ciro, (c) FTE başına EBIT, (d) işgücü devir oranı. <em>Yanıt anahtarı:</em> HCROI = [(60M − (52M − 18M)) / 18M] − 1 ≈ <strong>%44,4</strong>; ciro/FTE = 60M / 380 ≈ <strong>157.895 $</strong>; EBIT/FTE = (60M − 52M) / 380 ≈ <strong>21.053 $</strong>; devir = (52 / 400) × 100 = <strong>%13</strong>.</p>
+<h2 id="14-bolum-ozeti">14. Bölüm Özeti</h2>
+<p class="deck"><span class="smallcaps">Anahtar çıkarımlar</span></p>
+<p>ISO 30414:2025, insan sermayesini bir gider değil maddi olmayan bir varlık yatırımı olarak konumlayan; bu yatırımın örgüt değeri üzerindeki etkisini karşılaştırılabilir metriklerle görünür kılan küresel bir raporlama çerçevesidir. İkinci baskı, metrikleri gerekli ve önerilen olarak ayırmış; TCFD temelli yönetişim–strateji–risk–metrik formatını benimsemiş; materiality, yapay zekâ ve sürdürülebilirlik uyumunu (GRI, ESRS S1, IFRS/ISSB, SEC) merkeze taşımıştır. Çerçevenin omurgasını üç unsur oluşturur: TML düzeylerinde segmentasyon, iş yükü birimi olarak FTE ve karar kalitesini belirleyen materiality ilkesi. Her örgüt, büyüklük ve sektör ayrımı olmaksızın on dört gerekli metriği raporlamak; daha derin içgörü için önerilen 55 metrikten uygun olanları eklemekle sorumludur. Bir sonraki bölümde bu çerçevenin metriklerini uçtan uca bir insan sermayesi açıklama raporunda birleştireceğiz.</p>
+<h2 id="kaynaklar">Kaynaklar</h2>
+<p>BS ISO 30414:2025, <em>Human resource management — Requirements and recommendations for human capital reporting and disclosure</em>, İkinci baskı, BSI/ISO, 2025.</p>
+<p>ISO 30400:2022, <em>Human resource management — Vocabulary.</em></p>
+<p>ISO 30408:2016, <em>Human resource management — Guidelines on human governance.</em></p>
+<p>ISO/TS 30425, 30427, 30428, 30432; ISO/TS 24179 — ilgili metrik kümesi teknik spesifikasyonları.</p>
+<p>ISO 30415, <em>Human resource management — Diversity and inclusion.</em></p>
+<p>TCFD, <em>Recommendations of the Task Force on Climate-Related Financial Disclosures.</em></p>
+<p>GRI Standards; ESRS S1 (Own Workforce); IFRS/ISSB S1; SASB; SEC işgücü açıklama düzenlemeleri.</p>
+    <nav class="pager"><a class="pg prev" href="hafta-09.html"><span>← Önceki</span><strong>9. Hafta — İş Sağlığı ve Güvenliği Yönetimi</strong></a><a class="pg next" href="hafta-11.html"><span>Sonraki →</span><strong>11. Hafta — İnsan Sermayesi Raporlaması II — Metrik Kümeleri</strong></a></nav>
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="foot-in">
+    <p class="foot-title">İnsan Kaynakları Standartları</p>
+    <p class="foot-sub">BSI ve ISO/TC 260 İnsan Sermayesi Yönetimi ve Gelişimi (HCMD) Çerçevesi</p>
+    <div class="foot-links">
+      <a href="index.html">Ders İzlencesi</a>
+      <a href="hafta-01.html">1. Hafta</a>
+      <a href="hafta-10.html">10. Hafta</a>
+      <a href="donem-projesi.html">Dönem Projesi</a>
+    </div>
+    <p class="foot-note">Ders notları eğitim amaçlıdır. ISO ve BSI standart metinleri telife tabidir; burada yalnızca kavramsal çerçeve ve öğretim amaçlı özetler yer alır.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var t = document.getElementById('tocBox');
+  if (t && window.matchMedia('(min-width:961px)').matches) t.open = true;
+  var b = document.getElementById('wkToggle'), m = document.getElementById('wkMenu');
+  if (b && m) b.addEventListener('click', function () {
+    var open = !m.hasAttribute('hidden');
+    if (open) { m.setAttribute('hidden',''); b.setAttribute('aria-expanded','false'); }
+    else { m.removeAttribute('hidden'); b.setAttribute('aria-expanded','true'); }
+  });
+  var links = [].slice.call(document.querySelectorAll('.toc a'));
+  var heads = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+  if ('IntersectionObserver' in window && heads.length) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) { a.classList.remove('active'); });
+        var i = heads.indexOf(e.target);
+        if (i > -1) links[i].classList.add('active');
+      });
+    }, { rootMargin: '-72px 0px -70% 0px' });
+    heads.forEach(function (h) { if (h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

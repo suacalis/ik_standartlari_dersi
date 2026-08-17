@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5. Hafta — İşe Alım ve Yetenek Kazanımı · İnsan Kaynakları Standartları</title>
+<meta name="description" content="İşe alım süreci ve işe alım metriklerinin hesaplanması">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">İçeriğe geç</a>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">İKS</span>
+      <span class="brand-txt"><strong>İnsan Kaynakları Standartları</strong><em>Yüksek Lisans · Ders Notları</em></span>
+    </a>
+    <nav class="topnav">
+      <a href="index.html">İzlence</a>
+      <a href="donem-projesi.html">Dönem Projesi</a>
+      <button class="wk-toggle" id="wkToggle" aria-expanded="false" aria-controls="wkMenu">Haftalar ▾</button>
+    </nav>
+  </div>
+  <div class="wk-menu" id="wkMenu" hidden><a class="wk" href="hafta-01.html">1. Hafta</a><a class="wk" href="hafta-02.html">2. Hafta</a><a class="wk" href="hafta-03.html">3. Hafta</a><a class="wk" href="hafta-04.html">4. Hafta</a><a class="wk on" href="hafta-05.html">5. Hafta</a><a class="wk" href="hafta-06.html">6. Hafta</a><span class="wk off">7. Hafta</span><a class="wk" href="hafta-08.html">8. Hafta</a><a class="wk" href="hafta-09.html">9. Hafta</a><a class="wk" href="hafta-10.html">10. Hafta</a><a class="wk" href="hafta-11.html">11. Hafta</a><a class="wk" href="hafta-12.html">12. Hafta</a><a class="wk" href="hafta-13.html">13. Hafta</a><a class="wk" href="hafta-14.html">14. Hafta</a><a class="wk" href="donem-projesi.html">Dönem Projesi</a></div>
+</header>
+
+<section class="hero">
+  <div class="hero-in">
+    <p class="kicker">5. Hafta</p>
+    <h1>İşe Alım ve Yetenek Kazanımı</h1>
+    <p class="hero-sub">İşe alım süreci ve işe alım metriklerinin hesaplanması</p>
+    <div class="tags"><span class="tag">Böl. 4 — Miles</span><span class="tag">ISO 30405</span><span class="tag">ISO/TS 30407-30411</span></div>
+  </div>
+</section>
+
+
+
+<div class="shell">
+
+      <aside class="toc" aria-label="Sayfa içindekiler">
+        <details class="toc-inner" id="tocBox">
+          <summary class="toc-title">Bu sayfada</summary>
+          <ul><li class="t2"><a href="#1-giris-ise-alimin-stratejik-onemi">1. Giriş: İşe Alımın Stratejik Önemi</a></li>
+<li class="t2"><a href="#2-temel-kavramlar-ve-iso-tanimlari">2. Temel Kavramlar ve ISO Tanımları</a></li>
+<li class="t2"><a href="#3-ise-alim-standartlari-ailesi">3. İşe Alım Standartları Ailesi</a></li>
+<li class="t3"><a href="#3-1-iso-30405-2016-ise-alim-rehberi">3.1. ISO 30405:2016 — İşe Alım Rehberi</a></li>
+<li class="t3"><a href="#3-2-iso-ts-30407-2017-ise-alim-basina-maliyet-cost-per-hire">3.2. ISO/TS 30407:2017 — İşe Alım Başına Maliyet (Cost per Hire)</a></li>
+<li class="t3"><a href="#3-3-iso-ts-30410-2018-ise-alimin-etkisi-impact-of-hire">3.3. ISO/TS 30410:2018 — İşe Alımın Etkisi (Impact of Hire)</a></li>
+<li class="t3"><a href="#3-4-iso-ts-30411-2018-ise-alim-kalitesi-quality-of-hire">3.4. ISO/TS 30411:2018 — İşe Alım Kalitesi (Quality of Hire)</a></li>
+<li class="t3"><a href="#3-5-tamamlayici-standartlar-iso-10667-ve-iso-awi-30419">3.5. Tamamlayıcı standartlar: ISO 10667 ve ISO/AWI 30419</a></li>
+<li class="t2"><a href="#4-ise-alim-sureci-ve-yetenek-akisi">4. İşe Alım Süreci ve Yetenek Akışı</a></li>
+<li class="t3"><a href="#4-1-potansiyel-yetenek-havuzu">4.1. Potansiyel yetenek havuzu</a></li>
+<li class="t3"><a href="#4-2-yetenek-havuzu">4.2. Yetenek havuzu</a></li>
+<li class="t3"><a href="#4-3-basvuru-havuzu">4.3. Başvuru havuzu</a></li>
+<li class="t3"><a href="#4-4-daha-ileri-degerlendirme-icin-adaylar">4.4. Daha ileri değerlendirme için adaylar</a></li>
+<li class="t3"><a href="#4-5-teklif">4.5. Teklif</a></li>
+<li class="t3"><a href="#4-6-istihdam">4.6. İstihdam</a></li>
+<li class="t3"><a href="#4-7-aday-deneyimi-ve-isveren-markasi">4.7. Aday Deneyimi ve İşveren Markası</a></li>
+<li class="t2"><a href="#5-sonuclar-olcum-ve-analiz">5. Sonuçlar, Ölçüm ve Analiz</a></li>
+<li class="t2"><a href="#6-metrik-hesaplama-uygulamasi">6. Metrik Hesaplama Uygulaması</a></li>
+<li class="t3"><a href="#6-1-ise-alim-basina-maliyet-iso-ts-30407">6.1. İşe Alım Başına Maliyet — ISO/TS 30407</a></li>
+<li class="t3"><a href="#6-2-ise-alim-kalitesi-iso-ts-30411">6.2. İşe Alım Kalitesi — ISO/TS 30411</a></li>
+<li class="t3"><a href="#6-3-ise-alimin-etkisi-iso-ts-30410">6.3. İşe Alımın Etkisi — ISO/TS 30410</a></li>
+<li class="t3"><a href="#6-4-metriklerin-butunlesik-kullanimi-ve-sinirliliklari">6.4. Metriklerin Bütünleşik Kullanımı ve Sınırlılıkları</a></li>
+<li class="t2"><a href="#7-degisen-ise-alim-ortami">7. Değişen İşe Alım Ortamı</a></li>
+<li class="t2"><a href="#8-ozet">8. Özet</a></li>
+<li class="t2"><a href="#9-ogrenme-ciktilari-ve-tartisma-sorulari">9. Öğrenme Çıktıları ve Tartışma Soruları</a></li>
+<li class="t3"><a href="#soru-1-kritik-pozisyon-nedir-ve-neden-her-zaman-ust-duzey-bi">Soru 1 — Kritik pozisyon nedir ve neden her zaman üst düzey bir pozisyon değildir?</a></li>
+<li class="t3"><a href="#soru-2-ise-alim-metriklerinde-verimlilik-etkinlik-ve-etki-na">Soru 2 — İşe alım metriklerinde verimlilik, etkinlik ve etki nasıl ayrışır ve neden birlikte okunmalıdır?</a></li>
+<li class="t3"><a href="#soru-3-standartlar-neden-hem-organizasyonel-sureci-hem-de-ad">Soru 3 — Standartlar neden hem organizasyonel süreci hem de aday deneyimini birlikte ele alır?</a></li>
+<li class="t2"><a href="#kaynaklar">Kaynaklar</a></li></ul>
+        </details>
+      </aside>
+  <main id="main" class="prose">
+    <div class="lead">Ders Notu · ISO 30405, ISO/TS 30407, ISO/TS 30410, ISO/TS 30411 ve ISO 10667 standartları çerçevesinde işe alım süreci ve işe alım metriklerinin hesaplanması Temel kaynak: Miles, S. J. (Böl. 4) &quot;Recruitment&quot;, ISO Human Resource Management Standards. Bu ders notu, standartların kavramsal çerçevesini ve ölçüm yaklaşımını Türkçe olarak sistemleştirir ve bir metrik hesaplama uygulaması içerir.</div>
+    <h2 id="1-giris-ise-alimin-stratejik-onemi">1. Giriş: İşe Alımın Stratejik Önemi</h2>
+<p>Yeteneği çekmek ve istihdam etmek yalnızca insan kaynakları yönetiminin (İKY) temel taşlarından biri değil, aynı zamanda örgütsel başarının da belirleyicisidir. Bir firmanın üst düzey yeteneği çekme ve işe alma becerisi; strateji uygulaması, operasyonel mükemmellik ve işletme değeri ile ayrılmaz biçimde bağlıdır. Karmaşık işlerde yüksek performans gösterenlerin, ortalama performans gösterenlere kıyasla yüzde 800 daha üretken olabildiği belirtilmektedir (Keller ve Schaninger). Bu tablo, doğru yeteneği bulmanın örgüt için neden bu denli kritik olduğunu tek başına özetler.</p>
+<p>ISO 30405:2016 standardı işe alımı (<strong>recruitment</strong>) "mevcut veya yeni bir pozisyon için yeteneği kaynaklama (sourcing), çekme (attracting), değerlendirme (assessing) ve istihdam etme (employing) süreci" olarak tanımlar. Bu dört işlevin bütünlüğü, kaliteli yeteneğin örgüte kazandırılmasının çerçevesini oluşturur. İşe alım süreci boyunca örgütün markası, çalışanların bu süreci yürütme biçimi aracılığıyla olumlu ya da olumsuz yönde etkilenir. Etkili işe alım yalnızca açık pozisyonları doldurmakla kalmaz; yetenek havuzları oluşturur ve aday konumundaki paydaşlarla kurulan ilişkileri güçlendirir ya da korur.</p>
+<p>İşe alımın örgüt için taşıdığı önem, işveren markası (<strong>employer brand</strong>) üzerindeki etkisi ve etkisiz bir sürecin ya da kötü bir itibarın yol açtığı maliyetler düşünüldüğünde daha da belirginleşir. Örneğin İngiliz televizyon, telefon ve internet hizmet sağlayıcısı Virgin Media, işe alım sürecindeki "kötü" bir aday deneyiminin markasına yıllık 6 milyon dolarlık gelir kaybına mal olduğunu ölçümlemiştir (Adams, 2016). Bu örnek, işe alımın yalnızca bir İK işlevi değil, doğrudan finansal sonuçları olan stratejik bir süreç olduğunu göstermektedir.</p>
+<p>Bu ders notu, örgütlere insanları işe alma ve ilk istihdam süreçlerinde yardımcı olan standartlar bütününe odaklanır. Amaç; işe alımın önemini, ISO tanımını ve sürecini, değişen işe alım ortamını, küresel standartların faydalarını kavramak; işe alımın kritik unsurlarını ve aday ilişkisi yönetimini birbirine bağlamak; ve işe alım sürecinin ile işe alınan yeteneğin başarısını ölçüp analiz edebilmektir.</p>
+<p>İşe alımın stratejik değeri, yalnızca boş pozisyonların doldurulmasıyla sınırlı değildir. Doğru kaynaklanan, doğru mesajlarla çekilen ve geçerli-güvenilir değerlendirmelerle işe uygunluğu (fit to role) belirlenen yetenek; iş gücünün kalitesini yükseltir ve performansı, elde tutmayı (retention), devamlılığı, memnuniyeti ve bağlılığı olumlu etkiler. Yetenek işe ve örgüte uygun olduğunda firma, daha yüksek üretkenlik ve daha düşük operasyonel maliyet biçiminde verimlilik artışı elde ederken; yetenek de gereken düzeyde yenilik yaparak işletme değeri yaratma kapasitesine kavuşur (Miles ve Van Clieaf, 2017). Etkisiz bir işe alım süreci ise hem doğrudan maliyetler hem de kaybedilen fırsatlar biçiminde firmaya pahalıya mal olur. Bu nedenle etkili işe alım, çoğu zaman "her örgütün can damarı" olarak nitelenir.</p>
+<p>Standartlar bütünü, işe alım sürecini iyileştirirken yalnızca örgütün uyguladığı süreç ve pratikleri değil, aynı zamanda kararın çift yönlü doğasını da tanır: örgüt adayları seçerken, adaylar da süreci sürdürüp sürdürmeyeceğine ve nihayetinde bir iş teklifini kabul edip etmeyeceğine karar verir. Böylece işe alım süreci (ISO 30405) yeteneği örgütsel bir bakışla değer zincirinde ilerletirken, olumlu bir aday deneyimine ilişkin yönergeler (ISO 30419) ve değerlendirme sürecine özgü rehberlik (ISO 10667) süreci bütünler.</p>
+<h2 id="2-temel-kavramlar-ve-iso-tanimlari">2. Temel Kavramlar ve ISO Tanımları</h2>
+<p>Standartlar bütününün en önemli katkılarından biri, işe alım alanında ortak bir terim ve tanım dili sunmasıdır. Aşağıdaki kavramlar, ders boyunca kullanılacak kavramsal zeminin temelini oluşturur.</p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Kavram</strong></th>
+<th><strong>ISO tanımı / açıklama</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Değerlendirme (Assessment)</strong></td>
+<td>İnsanların ya da bir grubun işle ilgili bilgi, beceri, yetenek veya diğer özelliklerini; ya da performansını belirlemeye yönelik sistematik yöntem ve prosedür (ISO 30405).</td>
+</tr>
+<tr class="even">
+<td><strong>Kritik pozisyon (Critical position)</strong></td>
+<td>Örgütsel sonuçlar üzerinde doğrudan ve anlamlı etkisi olan iş rolü. Kritik pozisyonlar örgütsel stratejinin parçası olarak belirlenir; sektöre, alana ve örgüt türüne göre değişir. Her zaman üst düzey pozisyonlar değildir.</td>
+</tr>
+<tr class="odd">
+<td><strong>İstihdam etmek (Employ)</strong></td>
+<td>Bir kişinin hizmetlerinden yararlanmak ya da kişiyi işe koşmak.</td>
+</tr>
+<tr class="even">
+<td><strong>İşe alım (Recruitment)</strong></td>
+<td>Örgüt içindeki mevcut ya da yeni bir pozisyon için yeteneğin kaynaklanması, çekilmesi, değerlendirilmesi ve istihdam edilmesi süreci (ISO 30405).</td>
+</tr>
+<tr class="odd">
+<td><strong>Kaynaklama (Source)</strong></td>
+<td>Potansiyel başvuru sahiplerinden oluşan bir havuzu belirlemek.</td>
+</tr>
+<tr class="even">
+<td><strong>Yetenek havuzu (Talent pool)</strong></td>
+<td>Belirli bir işi yürütmek için gereken bilgi, beceri, yetenek ve diğer özelliklere sahip insanlardan oluşan grup.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Bu tanımlar arasında <strong>kritik pozisyon</strong> kavramı, ders notunun ilerleyen bölümlerinde ele alınacak "işe alımın etkisi" (impact of hire) ölçümünün de çıkış noktasıdır. Kritik pozisyonların yüksek hiyerarşik konumlarla eş anlamlı olmadığının altını çizmek önemlidir: örgütsel değeri belirleyen kritik pozisyon, bir üretim hattındaki uzman bir teknisyen de olabilir.</p>
+<h2 id="3-ise-alim-standartlari-ailesi">3. İşe Alım Standartları Ailesi</h2>
+<p>İşe alım şemsiyesi altındaki standartlar, süreci uçtan uca kapsayacak biçimde birbirini tamamlar. Aşağıda her standardın kapsamı özetlenmiştir.</p>
+<h3 id="3-1-iso-30405-2016-ise-alim-rehberi">3.1. ISO 30405:2016 — İşe Alım Rehberi</h3>
+<p>Bu standart, örgütlere gerekli işi yapabilecek insanları işe alma süreci ve etkili uygulamaları konusunda rehberlik eder. İşe alım süreci, yeteneğin değer zinciri boyunca hareketiyle resmedilir ve tüm işe alım işlevlerini (çekme, kaynaklama, değerlendirme, istihdam) kapsar. Bir iş talebinin (requisition) açılmasından, pozisyonun doldurulup sürecin tamamlanmış sayıldığı ana kadar geçen tüm uygulamaları içerir. Standart, kalite yönetimindeki <strong>planla–uygula–kontrol et–önlem al (PUKÖ)</strong> döngüsü örnek alınarak tasarlanmıştır; bu sayede sürecin etkinliğini, verimliliğini ve etkisini kontrol ederek sürekli iyileştirmeye zemin hazırlar.</p>
+<h3 id="3-2-iso-ts-30407-2017-ise-alim-basina-maliyet-cost-per-hire">3.2. ISO/TS 30407:2017 — İşe Alım Başına Maliyet (Cost per Hire)</h3>
+<p>İşe alım başına maliyet, işe alım sürecine atfedilen ekonomik değeri hesaplayan standart bir verimlilik metriğidir. Bu teknik spesifikasyon, açık bir pozisyonu doldurmayla ilişkili maliyetleri hesaplamak için küresel kabul görmüş formülü içerir. Standart hem iç raporlama için hem de örgüt içi ve örgüt dışı karşılaştırmalara olanak tanıyan karşılaştırılabilir raporlama için bilgi sağlar.</p>
+<h3 id="3-3-iso-ts-30410-2018-ise-alimin-etkisi-impact-of-hire">3.3. ISO/TS 30410:2018 — İşe Alımın Etkisi (Impact of Hire)</h3>
+<p>Her örgütte, örgütsel performansı doğrudan etkileyen en az bir pozisyon bulunur. Bu kritik pozisyonlar için işe alım sonuçlarını değerlendirmek, verimlilik ve etkinlik ölçümünden <strong>etki</strong> ölçümüne geçmeyi gerektirir. Etki ölçümü, kritik pozisyonların belirli bir dönem boyunca örgütün başarısına katkısını değerlendirir. Bu teknik spesifikasyon; iş gücü segmentasyonu yaklaşımlarıyla kritik pozisyonların belirlenmesine ilişkin ilkeleri, kritik pozisyonların etkisini ölçmeye yönelik ölçütleri ve bu pozisyonlara alınan kişilerin performansını tanımlar.</p>
+<h3 id="3-4-iso-ts-30411-2018-ise-alim-kalitesi-quality-of-hire">3.4. ISO/TS 30411:2018 — İşe Alım Kalitesi (Quality of Hire)</h3>
+<p>İşe alım kalitesi metriği, işe alınan yeteneğin kalitesini ve işe başladıklarında yapmaları beklenen işteki ilk etkinliğini ölçme konusunda rehberlik eder. İnsanlar işlerini ne kadar etkili yaparsa, birim ve örgüt sonuçlarını olumlu etkileyen verimlilik düzeyi o kadar yükselir. Bu metriğin formülü, yeni işe alınan kişinin performansına ilişkin paydaş memnuniyetine dayanır; kaliteyi, gerçekleşen ile beklenen parametrelerin oranı ya da karşılaştırması olarak ele alır. Spesifikasyon, işe alım kalitesini çok boyutlu olarak tanımlar ve tüm boyutların belirli bir dönemde ölçülebilir olduğunu kabul eder.</p>
+<h3 id="3-5-tamamlayici-standartlar-iso-10667-ve-iso-awi-30419">3.5. Tamamlayıcı standartlar: ISO 10667 ve ISO/AWI 30419</h3>
+<p><strong>ISO 10667:2011</strong> çalışma ve örgütsel ortamlarda insanların değerlendirilmesine ilişkin hizmet sunumu (değerlendirme) prosedür ve yöntemlerini kapsar. İki bölümden oluşur: müşteri için gereklilikler ve hizmet sağlayıcılar için gereklilikler. Değerlendirme araçlarının seçimi ve uygulanış biçimi hem işveren markasını yansıtır hem de doğru yürütülmediğinde örgüte gereksiz yasal risk yükleyebilir. Standart; değerlendirme prosedür ve yöntemleri için iyi uygulamayı tanımlar, uygulamada eşitliği güvence altına alır ve değerlendirme hizmetinin kalitesinin uygun biçimde değerlendirilmesini sağlar.</p>
+<p><strong>ISO/AWI 30419</strong> (geliştirilme aşamasında), işe alım süreci boyunca olumlu bir aday deneyimini güvence altına almaya yönelik yönergelere odaklanır. Örgütler çoğunlukla yalnızca ilgilendikleri adaylara odaklanır ve ilgilenmedikleri adaylarla iletişim kurmaz; bu da olumsuz bir aday deneyimine yol açar. Kötü bir aday deneyimi işveren markasına zarar verir ve nitelikli yeteneği çekmeyi zorlaştırır.</p>
+<p>Bu standartlar bütünü, işe alım sürecinin nasıl yapılandırılacağına dair küresel bir kılavuz sunmanın yanında ortak terim ve tanımlar da sağlar. Kaliteyi ve (kritik pozisyonlar için) etkiyi değerlendiren işe alım metrikleri, örgütün doğru yeteneği işe almasını güvence altına almada belirleyici araçlardır.</p>
+<h2 id="4-ise-alim-sureci-ve-yetenek-akisi">4. İşe Alım Süreci ve Yetenek Akışı</h2>
+<p>ISO 30405, örgütün işe alım sürecinin hem çevresel hem de örgütsel faktörlerden etkilendiğini kabul eder. Bazı ülke ya da sektörler belirli kaynaklama kanallarına dayanabilir veya yasayla sınırlanabilir. Bu faktörler yerel uygulamaları etkilese de çekme, kaynaklama, değerlendirme ve istihdam sürecinin özü değişmez. Standart, süreci etkileyen unsurları sürecin kendisinden ayırdığı için küçük, orta ve büyük örgütler tarafından, profesyonel bir işe alım uzmanı bulunsun bulunmasın uygulanabilir.</p>
+<p>Sürecin ne ölçüde etkili yönetildiği; yetenek kalitesini/miktarını, işe alım sonuçlarını (metrikler) ve İK çıktılarını etkiler. Bu sonuçlar, sürecin iyileştirilmesi için birer girdi olarak sürece geri beslenir. Sürecin dört anahtar işlevi (çekme, kaynaklama, değerlendirme, istihdam) yeteneğin iş akışına (talent flow) uygun biçimde yürütülürken, işveren markasının süreç boyunca deneyimlenmesi güvence altına alınır.</p>
+<p>Yetenek tedarik zinciri (talent supply chain), yeteneğin işe alım süreci boyunca hareketini tanımlar. Aşağıda bu zincirin aşamaları sırayla ele alınmaktadır.</p>
+<h3 id="4-1-potansiyel-yetenek-havuzu">4.1. Potansiyel yetenek havuzu</h3>
+<p>Yetenek akışının sıklıkla göz ardı edilen bir yönü, örgüt açık pozisyonlar için yetenek aramaya başlamadan önce yeteneğin kendi arayışına başlamış olmasıdır — üstelik henüz gerekli becerilere sahip olmadan. Bu aşamada oluşan algılar, gelecekteki kariyer kararlarını ve işveren tercihlerini etkileyebilir. Dolayısıyla adayları, henüz başvuru için gereken yeteneğe sahip olmadan çekmek, firmanın gelecekteki yeteneği çekme ve istihdam etme becerisini güçlendirir.</p>
+<p>Örneğin, uzun vadeli stratejisinin mühendislerinin buluş ve yeniliklerine bağlı olduğunu bilen bir örgütü düşünelim. Mühendislik burada kritik bir pozisyondur ve bu ihtiyaç geleceğe uzanır. Firma; bilim şenlikleri veya yarışmalar düzenleyerek ve kendi mühendislerinin gençlerle etkileşimini sağlayarak, ileride mühendis olabilecek kişileri etkileyebilir ve tercih edilen işveren konumuna gelebilir. Kritik pozisyonlar için potansiyel yetenek havuzuna yatırım yapmak, gelecek yıllarda yetenek ve başvuru havuzları oluşturmaya yardımcı olur.</p>
+<h3 id="4-2-yetenek-havuzu">4.2. Yetenek havuzu</h3>
+<p>Yetenek havuzu, işi yapacak bilgi, beceri, yetenek ve diğer özelliklere (KSAO) sahip adaylardan oluşur. Örgüt bu havuzdaki insanlara; basılı, dijital ya da ağ kurma temelli kaynaklama teknikleriyle ulaşır ve onları bir açık pozisyona başvurmaya motive etmeyi amaçlar. Çoğu iş için işe alım süreci, doldurulması gereken açık bir pozisyonu gösteren iş talebiyle tetiklenir ve pozisyon doldurulup yeni kişi istihdam edildiğinde kapanır.</p>
+<p>Örgütün kaynaklama teknikleri aracılığıyla adaylarla kurduğu etkileşim, aday deneyimine katkı sağlar. Bilginin, süreç açıklığının ve soru sorma olanağının niteliği, adayın örgüte ilişkin algısını etkiler. Yakın tarihli bir çalışma, olumsuz aday deneyiminin ilk beş nedenini "belirsiz başvuru talimatları, aşırı uzun başvurular, yetersiz iş tanımı ve başvuruya bağlantı bulunmaması" olarak sıralamaktadır (Slezak). Bu aşamada başvuru sürecini tamamlayan yetenek, başvuru havuzuna geçerek örgüt için kaynaklama sürecini sonlandırır.</p>
+<h3 id="4-3-basvuru-havuzu">4.3. Başvuru havuzu</h3>
+<p>Belirli bir istihdam durumu için resmen başvuran yetenek, başvuru havuzunu oluşturur. Adayın başvurusu, istihdam ilgisini örgüte işaret eder. Örgüt açısından adayla iletişim; zaman çizelgesinin, sürecin, başvuru materyalinin alındığının ve durum güncellemelerinin paylaşılmasıyla olumlu bir deneyimi güvence altına alır. Örgütün burada iki hedefi vardır: olumlu aday deneyimi ve pozisyona uygun yeteneği bulmak.</p>
+<p>Başvuru havuzu genellikle üç kategoriye ayrılır: <strong>niteliksiz</strong>; <strong>nitelikli ancak takip edilmeyen</strong>; ve <strong>nitelikli ve takip edilen</strong>. En iyi uyumu bulmak için, nitelikli olan ve örgütün takip etmek istediği adaylar bir sonraki değerlendirme aşamasına taşınır. Pozisyona uygun olmayan adayları bilgilendirmek bir kapanış sağlar ve aday deneyiminin olumlu bir özelliğidir; adayın başka bir pozisyona uygun olması ve o havuza yönlendirilmesi ilişkiyi güçlendirir.</p>
+<h3 id="4-4-daha-ileri-degerlendirme-icin-adaylar">4.4. Daha ileri değerlendirme için adaylar</h3>
+<p>Hem ilgili hem de belirli bir istihdam durumu için nitelikli adaylar, daha ileri değerlendirmeye alınacak adaylardır. Bu noktaya kadar oluşan aday deneyiminin kalitesi önemlidir; süreç fazla uzarsa adaylar ilgilerini yitirip süreçten çıkabilir. İşe alım sürecinde kullanılacak değerlendirmeler pozisyona uygun olarak seçilir ve etkili iş performansı için gerekli görülen özellikleri ölçecek biçimde tasarlanır. Seçilen adaylar; bilişsel testler, iş simülasyonları ya da kilit kişilerle görüşmeler gibi bir dizi değerlendirmeden geçebilir.</p>
+<p>Değerlendirmelere ilişkin bir uyarı yerinde olur: kaliteyi belirlemede ne kadar önemli olsalar da, çok uzun sürdüklerinde, eğlenceli olmadıklarında, birçok teknoloji platformu kullandıklarında ya da işle ilgili görünmediklerinde aday deneyimini zayıflatabilirler. Kaliteli işe alım ihtiyacı ile aday deneyimini dengeleyen <strong>ISO 10667</strong>, katılımcılara standartlaştırılmış, uygun ve adil bir değerlendirme hizmeti sunumunu teşvik ederek değerlendirme sürecine olan güveni pekiştirir. Örgüt için değerlendirmeler; etkili ve daha az etkili yeteneği ayırt eden bilimsel bir süreç sağlarken, adaya adil ve saygılı bir muameleyle olumlu bir deneyim sunmalıdır.</p>
+<h3 id="4-5-teklif">4.5. Teklif</h3>
+<p>Teklif aşaması, ilgili ve nitelikli adaylara ilişkin nihai kararları tamamlarken, kalan adaylarla ilişkiyi yönetmeyi amaçlar. Teklif genellikle üç biçimde sunulur: <strong>rekabetçi teklif</strong>, <strong>düşük teklif (low-ball)</strong> ve <strong>en iyi teklif (best-shot)</strong>. Teklifin kendisi adayın örgüte ilişkin algısını etkiler: en iyi teklifi alan aday değerli ve istenen biri gibi hisseder; düşük bir teklif ise tam tersi etki yaratır ve özellikle başka seçenekler varken adayın teklifi reddetmesine yol açabilir. Teklif almayan adayları bilgilendirmek, işe alım ve aday deneyimi sürecini yönetmede kritik bir adımdır.</p>
+<h3 id="4-6-istihdam">4.6. İstihdam</h3>
+<p>İşe alımın son aşaması, teklifi kabul eden adayların istihdamın ilk gününe geçişine odaklanır. Adayın ilgisini korumak ve kritik belgelerin tamamlanması bu aşamanın hedefidir. İletişim, istihdam geçişi boyunca (yer değişikliği içerebilir) önemli bir rol oynamaya devam eder. Bu aşama iyi yönetildiğinde aday bağlılığı ve heyecanı işyerine taşınır; kötü yönetildiğinde aday deneyimi olumsuza dönebilir ve psikolojik sözleşmenin bir parçası hâline gelerek çalışan markası ile ses davranışlarını etkileyebilir.</p>
+<p>Başarı için, işe yeni alınan kişinin ilk gününden önce ve ilk günü için planlamalar yapılmalıdır. İlk günden önce önerilen bazı adımlar şunlardır:</p>
+<ul>
+<li>Birimi yeni işe alınan kişi hakkında bilgilendirmek ve tebrik etmeye teşvik etmek.</li>
+<li>İlk iş gününü ilgi çekici görevlerle planlamak.</li>
+<li>İş tanımını, performans beklentilerini, organizasyon şemasını ve çalışan el kitabını sağlamak.</li>
+<li>Uygunsa eğitim programlarını planlamak; bir yan haklar bilgi paketi hazırlamak.</li>
+<li>İlk hafta için bir akranı mentor olarak görevlendirmek ve tanışılacak kilit kişileri planlamak.</li>
+<li>Otopark/bina giriş kartı ve iş ekipmanlarını hazırlamak; oryantasyon ve sürekli eğitim planı düzenlemek.</li>
+</ul>
+<p>Yeni kişi işe gelip ücret karşılığı çalışmaya başladığında işe alım süreci teknik olarak sona erer (iş talebi kapanır). İşe alım sürecinin, örgütün işveren markasını inşa etme ve çalışan bağlılığına zemin hazırlama fırsatı olduğu unutulmamalıdır.</p>
+<p>İşe başlamanın ilk gününün de iyi planlanması, aday deneyiminin işyerine olumlu biçimde taşınmasını sağlar. İlk gün için asgari düzeyde önerilen etkinlikler şunlardır:</p>
+<ul>
+<li>Yeni çalışanı karşılamak ve günün planını birlikte gözden geçirmek.</li>
+<li>Tesisi gezdirmek; tuvalet, dinlenme alanı gibi yerleri göstermek.</li>
+<li>Yeni çalışanı kilit kişilerle, mentoruyla ve ilk gün için bir "öğle yemeği arkadaşı" ile tanıştırmak.</li>
+<li>Gerekli araç ve belgeleri (bina kartı, telefon, iş tanımı, yan haklar, politikalar) sağlamak ve gözden geçirmek.</li>
+</ul>
+<p>Bu adımlar önemsiz görünse de, işe alım sürecinde oluşturulan olumlu izlenimin istihdama sağlıklı biçimde aktarılmasını sağlar; iyi yönetilen bir geçiş, çalışan bağlılığının ve heyecanının işyerinde sürmesine zemin hazırlar.</p>
+<h3 id="4-7-aday-deneyimi-ve-isveren-markasi">4.7. Aday Deneyimi ve İşveren Markası</h3>
+<p>İşe alım sürecinin her temas noktası (touchpoint), adayın örgüte ilişkin algısını biçimlendiren bir deneyim üretir. Aday, başvuru arayüzünden mülakat davetine, değerlendirme araçlarından teklif biçimine kadar her etkileşimde örgüt hakkında olumlu ya da olumsuz bir izlenim edinir. Bu izlenimlerin toplamı <strong>aday deneyimini</strong> oluşturur ve adayın süreçte kalma, arkadaşına tavsiye etme, sosyal medyada paylaşım yapma ve gelecekte yeniden başvurma kararlarını etkiler. Örneğin planlanan saatin 30 dakika sonrasına kadar bekletilen bir aday kendini değersiz hissedebilir; işle ilgisiz görünen ya da aşırı uzun bir değerlendirme, güçlü bir adayın süreçten çekilmesine yol açabilir.</p>
+<p>Aday deneyimi doğrudan <strong>işveren markasına</strong> bağlıdır. İşveren markası, firmanın işveren olarak pazardaki itibarıdır ve yalnızca resmî işe alım süreci başlamadan çok önce, potansiyel havuzla kurulan ilk temaslarda şekillenmeye başlar. Firma etkin bir marka çalışması yürütsün ya da yürütmesin, her örgütün bir itibarı vardır; Glassdoor gibi siteler, potansiyel yeteneğe o örgütte çalışmanın nasıl bir şey olduğuna dair içeriden bir bakış sunar. Bu nedenle "çekme" boyutunun ölçülmesi ve izlenmesi kritik önemdedir.</p>
+<p>Adayları sınıflandırırken ve süreçte ilerletirken (ya da ilerletmezken) kurulan iletişimin biçimi, deneyimin belirleyicisidir. Teklif almayan ya da nitelikli bulunmayan adaylara bir kapanış sağlamak, onları uygun oldukları başka pozisyonlara yönlendirmek ve süreç boyunca zaman çizelgesi ile durum güncellemelerini paylaşmak; olumsuz etkileri azaltır ve paydaş ilişkisini korur. Kötü yönetilen bir kapanış ise, adayın psikolojik sözleşmesinin bir parçası hâline gelerek çalışan markasına ve gelecekteki başvuru havuzuna zarar verebilir.</p>
+<p>Aday deneyimini ölçmek için örgüt, tüm başvuru sahiplerini ve deneyimlerini anketle izleyebilir ya da bu hizmeti bir üçüncü tarafa devredebilir. Kapsamlı ölçüm ve sektör kıyaslaması (benchmarking) sunan kuruluşlardan biri Talent Board'dır; bu kuruluş, en iyi aday deneyimini sunan örgütleri öne çıkaran uluslararası <strong>CandE Ödülleri</strong>'ni de düzenler. Pazar, işveren-odaklı bir yapıdan aday-odaklı (candidate-driven) bir yapıya evrildikçe, aday deneyimine odaklanmak yetenek kazanımının ayrılmaz bir parçası hâline gelmiştir.</p>
+<h2 id="5-sonuclar-olcum-ve-analiz">5. Sonuçlar, Ölçüm ve Analiz</h2>
+<p>İşe alım sürecinin sonuçları hem iç hem dış örgütsel etkiler doğurur. İçeride süreç; istihdam edilen yeteneğin kalitesini, miktarını ve verimliliğini (maliyet ve süre) belirler. Dışarıda ise süreç, uygulamalar ve işe alım uzmanları çeşitli paydaşlarla etkileşerek firmanın işveren olarak itibarını etkiler; bu da gelecekteki işe alım verimliliğini ve etkinliğini etkiler. Bu nedenle işe alım sonuçları çok yönlüdür ve hem iç hem dış sonuçların ölçülmesi kritiktir.</p>
+<p>İşe alım etkinliğinin yaygın bir ölçüm yöntemi, adayların tedarik zinciri boyunca hareketinin izlenmesidir. Bu izleme; verimliliği (süre ve maliyet), etkinliği (nitelikli başvuru sayısı, süreçten kendi isteğiyle çıkan nitelikli aday sayısı) ve etkiyi (işe alım verimi ve yüksek nitelikli başvurular) belirlemeye olanak tanır. Aşağıdaki tablo, 25 pozisyon için yürütülen bir işe alım sisteminin ölçümünü örneklemektedir.</p>
+<div class="table-wrap">
+<table style="width:100%;">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 13%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>İşe alım kaynağı / gösterge</strong></th>
+<th><strong>Yetenek havuzu</strong></th>
+<th><strong>Başvuru havuzu</strong></th>
+<th><strong>Değerlendirme</strong></th>
+<th><strong>Teklif</strong></th>
+<th><strong>İstihdam</strong></th>
+<th><strong>İlk gün</strong></th>
+<th><strong>6. ay</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Şirket kariyer portalı</td>
+<td>800</td>
+<td>150</td>
+<td>25</td>
+<td>22</td>
+<td>22</td>
+<td>22</td>
+<td>19</td>
+</tr>
+<tr class="even">
+<td>LinkedIn</td>
+<td>500</td>
+<td>53</td>
+<td>5</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>Toplam kişi sayısı</td>
+<td>1.000</td>
+<td>200</td>
+<td>30</td>
+<td>25</td>
+<td>25</td>
+<td>25</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>İlerleme oranı</td>
+<td>—</td>
+<td>20%</td>
+<td>15%</td>
+<td>—</td>
+<td>100%</td>
+<td>100%</td>
+<td>80%</td>
+</tr>
+<tr class="odd">
+<td>Süre (gün)</td>
+<td>—</td>
+<td>14</td>
+<td>21</td>
+<td>30</td>
+<td>—</td>
+<td>44</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Tablo 4.1: İşe alım sistemi ölçümü (25 pozisyon için işe alım). Kaynak: Henemann, Judge ve Mueller (2018)'den uyarlanmıştır. Örnekte 25 açık pozisyona karşılık 1.000 başvuru gelmiştir; tablo, yetenek havuzunun başvuru havuzuna dönüşümünü ve her aşamadaki ilerlemeyi gösterir. Bu örnekte kariyer portalı LinkedIn'e kıyasla açıkça daha iyi yetenek getirmektedir; dolayısıyla enerji ve kaynaklar portalın yönetimine yönlendirilmelidir.</p>
+<p>ISO 30405 ayrıca verimlilik, etkinlik ve etki sonuçlarına dayanan bir ölçüm çerçevesi sunar. Dört ana işlev bazında ölçüm aşağıda ele alınmaktadır.</p>
+<p><strong>Çekme (Attract):</strong> Firmanın yüksek nitelikli yeteneği kolayca çekme becerisi, örgütsel itibarına ve işveren markasına dayanır. ISO 30405; başvuru sayısı, talep edilmemiş (spontane) başvuru sayısı, başvuru havuzuna geçen aday yüzdesi, yetenek kalitesi, pozisyon doldurma süresi, her açık pozisyon için teklif–kabul oranı ve ilk gün işe gelen aday sayısı gibi ölçütler önerir. Ayrıca süreçten çıkan adayların, bunun örgütsel uygulamalardan mı yoksa kişisel durumlardan mı kaynaklandığını belirlemek için anketle taranmasını salık verir.</p>
+<p><strong>Kaynaklama (Source):</strong> Amaç, adayları yetenek havuzundan başvuru havuzuna taşımaktır. Dış kaynaklama kanalları arasında aday kaynaklı başvuru (kariyer portalı), istihdam siteleri, çalışan referansları, sosyal medya, mesleki dernekler ve üniversite/kariyer ofisleri yer alır. Her kaynağın verimliliğini, etkinliğini ve etkisini izlemek, kaliteli yeteneğin en verimli biçimde bulunmasını sağlar.</p>
+<p><strong>Değerlendirme (Assess):</strong> En iyi uyumu belirlemek için değerlendirmeler kullanılır: testler (iş bilgisi, genel yetenek, durumsal muhakeme, kişilik), iş simülasyonları (değerlendirme merkezi etkinlikleri, vaka çalışmaları, rol yapma, iş örnekleri) ve diğer araçlar (geçmiş kontrolü, mülakat, tıbbi muayene, aday sunumları). Kullanılan aracın hem güvenilir hem de geçerli olması ve en uygun adayları açıkça göstermesi kritiktir. ISO 10667 bu süreçte kapsamlı rehberlik sunar.</p>
+<p><strong>İstihdam (Employ):</strong> Teklif kabul edildiğinde başlar ve kişinin işe başlamasından önce atılması gereken tüm adımları kapsar. Bu aşamadaki temel metrik, istihdam teklifini kabul eden yeteneğin gerçekte işe gelme yüzdesi ve bu sonucun kabul edilebilir sınırlar içinde olup olmadığıdır.</p>
+<h2 id="6-metrik-hesaplama-uygulamasi">6. Metrik Hesaplama Uygulaması</h2>
+<p>Bu bölüm, üç temel işe alım metriğinin ISO teknik spesifikasyonlarına dayalı formüllerini tanıtır ve her biri için sayısal bir çalışma örneği sunar. Amaç, standartların ölçüm mantığını uygulamalı olarak kavratmaktır.</p>
+<h3 id="6-1-ise-alim-basina-maliyet-iso-ts-30407">6.1. İşe Alım Başına Maliyet — ISO/TS 30407</h3>
+<p>İşe alım başına maliyet (Cost per Hire, CPH), bir dönemde açık pozisyonların doldurulmasıyla ilişkili toplam maliyetin, aynı dönemde işe alınan kişi sayısına bölünmesiyle bulunur. ISO/TS 30407 maliyetleri iki grupta toplar:</p>
+<p>CPH = ( Toplam Dış Maliyetler + Toplam İç Maliyetler ) / Dönemdeki Toplam İşe Alım Sayısı</p>
+<p><strong>Dış maliyetler:</strong> ilan/reklam giderleri, iş ilanı siteleri ve ajans/aracı ücretleri, değerlendirme araçları lisansları, geçmiş kontrolü, aday seyahat ve yer değiştirme (relocation) giderleri, işe alım etkinlikleri, işe başlama primleri. <strong>İç maliyetler:</strong> işe alım uzmanı ve mülakatçıların zaman/ücret maliyeti, çalışan referans primleri, aday takip sistemi (ATS) ve altyapı, genel yönetim payı.</p>
+<p>Çalışma örneği: Bir örgüt bir çeyrekte 25 pozisyon doldurmuştur. Maliyetler aşağıdaki gibidir.</p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 46%" />
+<col style="width: 20%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Maliyet kalemi</strong></th>
+<th><strong>Tür</strong></th>
+<th><strong>Tutar (TL)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>İlan ve iş sitesi abonelikleri</td>
+<td>Dış</td>
+<td>120.000</td>
+</tr>
+<tr class="even">
+<td>Ajans / aracı ücretleri</td>
+<td>Dış</td>
+<td>300.000</td>
+</tr>
+<tr class="odd">
+<td>Değerlendirme araçları ve geçmiş kontrolü</td>
+<td>Dış</td>
+<td>60.000</td>
+</tr>
+<tr class="even">
+<td>Aday seyahat ve yer değiştirme</td>
+<td>Dış</td>
+<td>90.000</td>
+</tr>
+<tr class="odd">
+<td>İşe alım ekibi ücret/zaman maliyeti</td>
+<td>İç</td>
+<td>420.000</td>
+</tr>
+<tr class="even">
+<td>Çalışan referans primleri</td>
+<td>İç</td>
+<td>75.000</td>
+</tr>
+<tr class="odd">
+<td>ATS ve altyapı payı</td>
+<td>İç</td>
+<td>135.000</td>
+</tr>
+<tr class="even">
+<td><strong>Toplam dış maliyet</strong></td>
+<td>—</td>
+<td><strong>570.000</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Toplam iç maliyet</strong></td>
+<td>—</td>
+<td><strong>630.000</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Hesap: CPH = (570.000 + 630.000) / 25 = 1.200.000 / 25 = <strong>48.000 TL</strong>. Buna göre bu örgütte işe alım başına ortalama maliyet 48.000 TL'dir. ISO/TS 30407, formülün kapsamına hangi kalemlerin dâhil edildiğinin açıkça raporlanmasını ister; ancak bu şeffaflıkla firma içi dönemler ve firma dışı kıyaslamalar anlamlı olur. Metrik tek başına "düşükse iyi" biçiminde okunmamalıdır: aşırı düşük bir CPH, kaliteden ödün verildiğine de işaret edebilir. Bu nedenle CPH, kalite ve etki metrikleriyle birlikte yorumlanmalıdır.</p>
+<h3 id="6-2-ise-alim-kalitesi-iso-ts-30411">6.2. İşe Alım Kalitesi — ISO/TS 30411</h3>
+<p>İşe alım kalitesi (Quality of Hire, QoH) çok boyutlu bir metriktir ve kaliteyi, her boyutta <strong>gerçekleşen</strong> performansın <strong>beklenen</strong> performansa oranı olarak ele alır. Boyutlar ağırlıklandırılarak tek bir endeks (%) elde edilir:</p>
+<p>QoH (%) = Σ [ agirlik(i) × ( gerceklesen(i) / beklenen(i) ) ] × 100</p>
+<p>Yaygın kullanılan boyutlar: yeni kişinin performans değerlendirme puanı, yetkinliğe ulaşma (ramp-up) süresi, kültürel/örgütsel uyum, belirli bir dönemde işte kalma (retention) ve yönetici/paydaş memnuniyeti. Ağırlıklar örgütün önceliklerine göre belirlenir ve toplamı 1,00'dir.</p>
+<p>Çalışma örneği: Yeni bir satış temsilcisi için ilk 6 ayın verileri aşağıdaki gibidir.</p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 11%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 11%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Boyut</strong></th>
+<th><strong>Ağırlık</strong></th>
+<th><strong>Beklenen</strong></th>
+<th><strong>Gerçekleşen</strong></th>
+<th><strong>Oran</strong></th>
+<th><strong>Ağırlıklı katkı</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Performans puanı (100 üzerinden)</td>
+<td>0,35</td>
+<td>85</td>
+<td>80</td>
+<td>0,941</td>
+<td>0,329</td>
+</tr>
+<tr class="even">
+<td>Yetkinliğe ulaşma (gün, düşük iyi)*</td>
+<td>0,20</td>
+<td>60</td>
+<td>72</td>
+<td>0,833</td>
+<td>0,167</td>
+</tr>
+<tr class="odd">
+<td>Kültürel/örgütsel uyum (5 üzerinden)</td>
+<td>0,15</td>
+<td>4,5</td>
+<td>4,2</td>
+<td>0,933</td>
+<td>0,140</td>
+</tr>
+<tr class="even">
+<td>6. ayda işte kalma (0/1)</td>
+<td>0,15</td>
+<td>1,0</td>
+<td>1,0</td>
+<td>1,000</td>
+<td>0,150</td>
+</tr>
+<tr class="odd">
+<td>Yönetici memnuniyeti (5 üzerinden)</td>
+<td>0,15</td>
+<td>4,5</td>
+<td>4,0</td>
+<td>0,889</td>
+<td>0,133</td>
+</tr>
+<tr class="even">
+<td><strong>Toplam</strong></td>
+<td><strong>1,00</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>0,919</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>*Ramp-up gibi "düşük değer daha iyidir" boyutlarında oran, beklenen/gerçekleşen biçiminde ters çevrilerek hesaplanır (60/72 = 0,833). Hesap: QoH = 0,919 × 100 ≈ <strong>%91,9</strong>. Bu, yeni kişinin ilk dönemde beklentilerin yaklaşık %92'sini karşıladığını gösterir. ISO/TS 30411, kalitenin tek bir "doğru" formülü olmadığını; boyutların, ağırlıkların ve dönemin örgüt bağlamına göre seçilmesi ve yorum ile bağlamsal faktörlerin rapora eklenmesi gerektiğini vurgular. Endeks, tek bir işe alım için olduğu gibi bir kaynak (ör. kariyer portalı vs. ajans) ya da bir dönemin tüm işe alımları için ortalama alınarak da izlenebilir.</p>
+<h3 id="6-3-ise-alimin-etkisi-iso-ts-30410">6.3. İşe Alımın Etkisi — ISO/TS 30410</h3>
+<p>İşe alımın etkisi (Impact of Hire, IoH), yalnızca <strong>kritik pozisyonlar</strong> için anlamlıdır ve verimlilik/etkinlikten farklı olarak pozisyonun örgüt değerine katkısını ölçer. İki aşamalıdır: önce iş gücü segmentasyonuyla kritik pozisyonların belirlenmesi, sonra bu pozisyonlara alınan kişilerin yarattığı etkinin ölçülmesi.</p>
+<p>Kritik pozisyon belirleme — iki eksen: (1) pozisyonun örgütsel değere/stratejiye katkısı, (2) performans farkının (en iyi ile ortalama performans arası) yarattığı değer değişkenliği. Her iki eksende de yüksek olan pozisyonlar kritiktir.</p>
+<p>IoH = Kritik pozisyondaki kişinin performans düzeyi (%) × Pozisyonun örgüte yıllık değer katkısı</p>
+<p>Çalışma örneği: Bir Ar-Ge örgütünde iki pozisyon karşılaştırılmaktadır.</p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 32%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Gösterge</strong></th>
+<th><strong>Kıdemli Ar-Ge Mühendisi</strong></th>
+<th><strong>Genel İdari Uzman</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Stratejiye katkı (5 üzerinden)</td>
+<td>5</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Performans değişkenliği (5 üzerinden)</td>
+<td>5</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Kritik pozisyon mu?</td>
+<td><strong>Evet</strong></td>
+<td>Hayır</td>
+</tr>
+<tr class="even">
+<td>Pozisyonun yıllık değer katkısı</td>
+<td>12.000.000 TL</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>İşe alınan kişinin performans düzeyi</td>
+<td>%110 (beklentinin üzerinde)</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><strong>İşe alımın etkisi (IoH)</strong></td>
+<td><strong>13.200.000 TL</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Hesap: IoH = 1,10 × 12.000.000 = <strong>13.200.000 TL</strong>. Kıdemli mühendis hem stratejiye katkı hem de performans değişkenliği ekseninde yüksek olduğu için kritik pozisyondur; bu pozisyona beklentinin üzerinde performans gösteren birinin alınması, örgüte yıllık değer katkısını beklenenin %10 üzerine taşımıştır. Genel idari uzman pozisyonu her iki eksende de düşük olduğundan kritik sayılmaz ve etki ölçümüne tabi tutulmaz; bu pozisyon için verimlilik (CPH) ve kalite (QoH) metrikleri yeterlidir. ISO/TS 30410'un temel dersi budur: <strong>etki ölçümü seçici biçimde, yalnızca kritik pozisyonlara uygulanır.</strong></p>
+<p>Üç metriğin birlikte okunması: CPH sürecin <strong>verimliliğini</strong>, QoH işe alınan kişinin <strong>kalitesini/etkinliğini</strong>, IoH ise kritik pozisyonların örgüte <strong>etkisini</strong> ölçer. Üçü birlikte, "ucuz mu, iyi mi, değerli mi?" sorularına bütüncül yanıt verir ve tek bir metriğe dayalı yanıltıcı kararların önüne geçer.</p>
+<h3 id="6-4-metriklerin-butunlesik-kullanimi-ve-sinirliliklari">6.4. Metriklerin Bütünleşik Kullanımı ve Sınırlılıkları</h3>
+<p>Metriklerin değeri, ancak veri kalitesi ve karşılaştırılabilirlik güvence altına alındığında ortaya çıkar. ISO teknik spesifikasyonlarının ortak vurgusu şeffaflıktır: hangi maliyet kalemlerinin dâhil edildiği (CPH), hangi boyut ve ağırlıkların seçildiği (QoH) ve kritik pozisyonun değer katkısının nasıl tahmin edildiği (IoH) açıkça raporlanmalıdır. Aksi hâlde dönemler arası ve kurumlar arası kıyaslamalar yanıltıcı olur. Karşılaştırmalar, benzer segmentler (aynı iş ailesi, kıdem düzeyi, coğrafya) arasında yapıldığında anlam kazanır; farklı segmentlerin metriklerini doğrudan kıyaslamak hatalı sonuçlara yol açar.</p>
+<p>Metriklerin bilinen tuzakları da vardır. En yaygın olanı, ölçütün hedefe dönüşmesi ve davranışı çarpıtmasıdır (örneğin süreyi kısaltmak uğruna kaliteden ödün vermek). İkincisi, kısa dönem ile uzun dönem arasındaki gerilimdir: ilk altı ayda güçlü görünen bir işe alım, iki yıllık elde tutma açısından başarısız olabilir; bu nedenle işe alım kalitesi ve etkisi, tanımlı ve yeterince uzun bir dönem boyunca izlenmelidir. Üçüncüsü, bağlamsal faktörlerin göz ardı edilmesidir; ISO/TS 30411 bu nedenle yorum ve bağlamsal notların rapora eklenmesini ister.</p>
+<p>Doğru kurgulandığında bu metrikler, ISO 30405'in temel aldığı planla–uygula–kontrol et–önlem al döngüsünü besler: ölçüm sonuçları (mevcut durum), arzu edilen durumla karşılaştırılır ve gereken yerlerde bir iyileştirme planına dönüştürülür. Böylece işe alım, tek seferlik bir işlem değil, verilerle sürekli iyileştirilen bir sistem hâline gelir. Bir işe alım gösterge panosu (dashboard); verimlilik, etkinlik ve etki metriklerini yan yana getirerek yöneticilere bütüncül ve eyleme dönüştürülebilir bir görünüm sunar.</p>
+<h2 id="7-degisen-ise-alim-ortami">7. Değişen İşe Alım Ortamı</h2>
+<p>Yetenek, her örgüt için kilit unsurdur. Örgütler bugün kapsam ve hız bakımından benzeri görülmemiş değişimlerle karşı karşıyadır; bu ortam çoğu zaman Değişken, Belirsiz, Karmaşık ve Muğlak (VUCA) olarak adlandırılır. Bu dünyada gelişebilmek için örgütler süreçlerini, ürünlerini, pazarlarını ve iş modellerini yeniden düşünmek zorundadır. Örneğin sıfır emisyon için 2050 stratejik planlarını açıklayan Toyota liderliği; bazıları henüz var olmayan kritik pozisyonları haritalamak ve planı hayata geçirecek yeteneği edinme ya da geliştirme sürecini tasarlamak durumundadır.</p>
+<p>Bu, örgütlerin yetenek ihtiyacına bakışındaki bir değişimin işaretidir: yalnızca yeteneğin mevcut becerilerine değil, VUCA dünyasında başarıyı getirecek gelecekteki potansiyeline de odaklanılmaktadır. Dolayısıyla örgütler yalnızca ne tür yeteneğe ihtiyaç duyduklarını değil; yüksek potansiyelli adayları belirleyip doğru biçimde değerlendirme, istihdam etme, geliştirme ve elde tutma becerisini de gözetmek zorundadır.</p>
+<p><strong>Veri temelli işe alım (data-driven recruitment)</strong>, büyük veriden yararlanarak daha çok veri noktası ve dolayısıyla süreçler ile insanlar hakkında daha fazla bilgi sunar; kararları optimize eder ve işe alımdaki tahmin payını azaltır. Örneğin Google, adayların öğrenme, terfi, liderlik ve yenilik gibi kritik alanlardaki kariyer ilerleme hızını (üst, ortalama, ortalama altı) veriyle öngörebilmektedir. <strong>İşe alımın dijitalleşmesi (digitization)</strong> ise sürece gömülü çok katmanlı teknoloji, araç, ortak ve hizmetleri ifade eder; bu da işe alımın karmaşıklığını ve incelmişliğini artırır ve Yetenek Kazanımı Profesyonelleri Derneği (ATAP) gibi yapıların doğmasına yol açmıştır.</p>
+<p>Aday temelli (candidate-driven) işe alım dönemi, işveren–aday ilişkisine uzun vadeli bir perspektiften bakmayı ve ilişkileri özenle beslemeyi gerektirir. İşe alım şemsiyesi altındaki ISO standartları, tam da yeteneği bir değer zinciri perspektifinden görecek ve aday ilişkisinin yönetimini öne çıkaracak biçimde tasarlanmıştır.</p>
+<p>Veri temelli ve dijital işe alımın getirdiği güç, beraberinde sorumluluk da getirir. Algoritmik değerlendirme ve büyük veri kullanımı; önyargı (bias), veri gizliliği ve şeffaflık açısından dikkatle yönetilmelidir. Adayların verilerinin adil, açık ve iş ile ilgili biçimde kullanılması hem yasal risklerin azaltılması hem de işveren markasının korunması bakımından kritiktir. ISO 10667'nin adil değerlendirme ilkeleri, bu yeni araçlar için de bir pusula işlevi görür.</p>
+<p>Aday-odaklı dönemde başarı, ilişkileri kısa vadeli bir işlem olarak değil, yıllara yayılan bir bağ olarak görmekten geçer. Potansiyel yetenek havuzuyla erken kurulan temaslar, aday deneyiminin özenle yönetilmesi ve süreç boyunca saygılı iletişim; kurumu bugünün ve geleceğin yeteneği için tercih edilen bir işveren hâline getirir. İşe alım standartları ailesi, tam da bu uzun vadeli ve değer-zinciri temelli bakışı kurumsallaştırmak için tasarlanmıştır.</p>
+<h2 id="8-ozet">8. Özet</h2>
+<p>İşe alım, örgütsel başarının ayrılmaz bir bileşenidir. Dünyanın dört bir yanından uzmanlar, herhangi bir örgütün izleyebileceği genel bir işe alım süreç modelini — yerel yasa ve gelenekleri de gözeterek ve sürekli değişen bir ortamda — ortaya koymak için bir araya gelmiştir. ISO 30405 ve ilgili standartlar ailesi, işe alım sürecini ve aday deneyimini (ISO 30419) etkili biçimde yönetmek için asgari yönergeler sağlamak üzere geliştirilmiştir.</p>
+<p>Bu ders notu; ISO 30405'te tanımlanan yetenek akışını (potansiyel havuz → yetenek havuzu → başvuru havuzu → ileri değerlendirme → teklif → istihdam), çekme–kaynaklama–değerlendirme–istihdam işlevlerini ve bunların ölçümünü ele almıştır. İşe alım başına maliyet (ISO/TS 30407), işe alım kalitesi (ISO/TS 30411) ve işe alımın etkisi (ISO/TS 30410) metrikleri; formülleri ve sayısal örnekleriyle uygulamalı olarak gösterilmiştir. Bu metrikler birlikte kullanıldığında örgüte hem verimlilik hem kalite hem de kritik pozisyonlarda etki açısından bütüncül bir bakış sunar. Doğru yeteneği doğru zamanda doğru yerde bulmak, ölçülebilir ve sürekli iyileştirilebilir bir süreç hâline geldiğinde işe alım, stratejik bir rekabet avantajına dönüşür.</p>
+<h2 id="9-ogrenme-ciktilari-ve-tartisma-sorulari">9. Öğrenme Çıktıları ve Tartışma Soruları</h2>
+<p>Aşağıdaki sorular, bu haftanın öğrenme çıktılarını pekiştirmek ve standartların kavramsal çerçevesini uygulamalı biçimde tartışmak için tasarlanmıştır. Her sorunun ardından kısa bir çözümleyici yanıt sunulmuştur.</p>
+<h3 id="soru-1-kritik-pozisyon-nedir-ve-neden-her-zaman-ust-duzey-bi">Soru 1 — Kritik pozisyon nedir ve neden her zaman üst düzey bir pozisyon değildir?</h3>
+<p>Kritik pozisyon, örgütsel sonuçlar üzerinde doğrudan ve anlamlı etkisi olan iş rolüdür ve örgütsel stratejinin bir parçası olarak belirlenir. Bir pozisyonun kritik sayılması iki eksene bağlıdır: pozisyonun stratejiye/değere katkısı ve o roldeki performans farkının (en iyi ile ortalama arasında) yarattığı değer değişkenliği. Bu ölçütler hiyerarşik konumdan bağımsızdır; bu nedenle bir üretim hattındaki uzman bir teknisyen, bir bölge müdüründen daha kritik olabilir. Kritik pozisyon kavramı, işe alımın etkisi (ISO/TS 30410) ölçümünün de çıkış noktasıdır: etki ölçümü seçici biçimde yalnızca bu pozisyonlara uygulanır.</p>
+<h3 id="soru-2-ise-alim-metriklerinde-verimlilik-etkinlik-ve-etki-na">Soru 2 — İşe alım metriklerinde verimlilik, etkinlik ve etki nasıl ayrışır ve neden birlikte okunmalıdır?</h3>
+<p>Verimlilik, süreci ne kadar ekonomik yürüttüğümüzü gösterir ve en tipik ölçütü işe alım başına maliyettir (ISO/TS 30407). Etkinlik, sürecin doğru sonucu ne kadar ürettiğini (nitelikli aday sayısı, işe alım kalitesi — ISO/TS 30411) ölçer. Etki ise kritik pozisyonların örgüt değerine katkısını (ISO/TS 30410) ele alır. Bu üçünün birlikte okunması şarttır; çünkü tek bir metriğe dayanmak yanıltıcıdır. Örneğin çok düşük bir maliyet, kaliteden ödün verildiğinin işareti olabilir; yüksek bir kalite endeksi ise kritik bir pozisyonda beklenen değer katkısını yaratmıyorsa yeterli değildir. Verimli (ucuz), etkili (kaliteli) ve etkili-değer yaratan (kritik pozisyonlarda etkili) bir işe alım, ancak üç boyut birlikte değerlendirildiğinde doğrulanabilir.</p>
+<h3 id="soru-3-standartlar-neden-hem-organizasyonel-sureci-hem-de-ad">Soru 3 — Standartlar neden hem organizasyonel süreci hem de aday deneyimini birlikte ele alır?</h3>
+<p>İşe alım kararı çift yönlüdür: örgüt yeteneği seçerken, yetenek de örgütü değerlendirir ve süreçte kalıp kalmayacağına karar verir. Bu nedenle ISO 30405 süreci örgütsel bir değer zinciri olarak modellerken, ISO 30419 olumlu bir aday deneyimini ve ISO 10667 adil bir değerlendirme sürecini güvence altına alır. Aday deneyimi doğrudan işveren markasını, işveren markası da firmanın nitelikli yeteneği çekme kapasitesini ve gelecekteki işe alım verimliliğini belirler. Aday-odaklı pazarda, süreci yalnızca örgütün ihtiyaçları üzerinden kurgulamak yeteneği kaybettirir; bu yüzden standartlar iki perspektifi bütünleştirir.</p>
+<p>Uygulama alıştırması: Kendi kurumunuz (ya da örnek bir kurum) için bir çeyreklik dönemde dış ve iç işe alım maliyetlerini tablolaştırıp işe alım başına maliyeti hesaplayınız; ardından tek bir kilit işe alım için beş boyutlu bir işe alım kalitesi endeksi kurup ağırlıklandırınız. Son olarak kurumunuzda bir kritik pozisyon belirleyip, o pozisyona yapılacak bir işe alımın olası etkisini (IoH) senaryolaştırınız. Üç metriği birlikte yorumlayarak işe alım sürecinize ilişkin bir iyileştirme önerisi geliştiriniz.</p>
+<h2 id="kaynaklar">Kaynaklar</h2>
+<p>Adams, B. (2016) 6 simple steps to revitalizing your candidate experience, ERE Media.</p>
+<p>Fernandez-Araoz, C. (2014) It's Not the How Or the What But the Who, Harvard Business Review Press, Boston.</p>
+<p>Henemann, H. G., Judge, T. A. ve Kammeyer-Mueller, J. K. (2018) Staffing Organizations, 9. baskı, McGraw Hill, New York.</p>
+<p>ISO (2011) ISO 10667:2011 Assessment service delivery — procedures and methods to assess people in work and organizational settings (Bölüm 1 ve 2).</p>
+<p>ISO (2016) ISO 30405:2016 Human resource management — Guidelines on recruitment.</p>
+<p>ISO (2017) ISO/TS 30407:2017 Human resource management — Cost per Hire.</p>
+<p>ISO (2018) ISO/TS 30410:2018 Human resource management — Impact of hire.</p>
+<p>ISO (2018) ISO/TS 30411:2018 Human resource management — Quality of hire.</p>
+<p>Miles, S. J. ve McCamey, R. (2018) The candidate experience: Is it damaging your employer brand?, Business Horizons.</p>
+<p>Miles, S. J. ve Van Clieaf, M. (2017) Strategic human capital and enterprise value, Business Horizons.</p>
+<p>Sahay, P. (2015) Recruiting in a candidate-driven market, Strategic HR Review.</p>
+    <nav class="pager"><a class="pg prev" href="hafta-04.html"><span>← Önceki</span><strong>4. Hafta — İş Gücü Planlama</strong></a><a class="pg next" href="hafta-06.html"><span>Sonraki →</span><strong>6. Hafta — Öğrenme ve Gelişim</strong></a></nav>
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="foot-in">
+    <p class="foot-title">İnsan Kaynakları Standartları</p>
+    <p class="foot-sub">BSI ve ISO/TC 260 İnsan Sermayesi Yönetimi ve Gelişimi (HCMD) Çerçevesi</p>
+    <div class="foot-links">
+      <a href="index.html">Ders İzlencesi</a>
+      <a href="hafta-01.html">1. Hafta</a>
+      <a href="hafta-10.html">10. Hafta</a>
+      <a href="donem-projesi.html">Dönem Projesi</a>
+    </div>
+    <p class="foot-note">Ders notları eğitim amaçlıdır. ISO ve BSI standart metinleri telife tabidir; burada yalnızca kavramsal çerçeve ve öğretim amaçlı özetler yer alır.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var t = document.getElementById('tocBox');
+  if (t && window.matchMedia('(min-width:961px)').matches) t.open = true;
+  var b = document.getElementById('wkToggle'), m = document.getElementById('wkMenu');
+  if (b && m) b.addEventListener('click', function () {
+    var open = !m.hasAttribute('hidden');
+    if (open) { m.setAttribute('hidden',''); b.setAttribute('aria-expanded','false'); }
+    else { m.removeAttribute('hidden'); b.setAttribute('aria-expanded','true'); }
+  });
+  var links = [].slice.call(document.querySelectorAll('.toc a'));
+  var heads = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+  if ('IntersectionObserver' in window && heads.length) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) { a.classList.remove('active'); });
+        var i = heads.indexOf(e.target);
+        if (i > -1) links[i].classList.add('active');
+      });
+    }, { rootMargin: '-72px 0px -70% 0px' });
+    heads.forEach(function (h) { if (h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>
