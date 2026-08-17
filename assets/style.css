@@ -1,1 +1,217 @@
+/* İnsan Kaynakları Standartları — ders notları
+   Tasarım yönü: "Scholarly Curator" (tonal katmanlama, çizgisiz bölümleme) */
 
+:root{
+  --primary:#00375f;
+  --primary-container:#094e82;
+  --on-primary:#ffffff;
+  --surface:#f9f9f9;
+  --surface-low:#f3f3f3;
+  --surface-lowest:#ffffff;
+  --surface-high:#ececec;
+  --tertiary:#353535;
+  --on-surface:#1b1c1e;
+  --on-surface-var:#5b6067;
+  --outline:rgba(0,55,95,.15);
+  --accent:#b4622a;
+  --r:.375rem;
+  --shadow:0 12px 32px rgba(0,55,95,.06);
+  --maxw:1180px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5.5rem}
+body{
+  margin:0;background:var(--surface);color:var(--on-surface);
+  font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:1.0625rem;line-height:1.75;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+h1,h2,h3,h4,.brand-txt strong,.sec-title,.c-title{
+  font-family:"Public Sans",Inter,-apple-system,sans-serif;
+  letter-spacing:-.018em;
+}
+a{color:var(--primary-container);text-decoration:none}
+a:hover{text-decoration:underline}
+[hidden]{display:none !important}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;z-index:99;background:#fff;padding:.6rem 1rem;border-radius:var(--r)}
+
+/* ---------- üst çubuk ---------- */
+.topbar{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.topbar-in{max-width:var(--maxw);margin:0 auto;padding:.7rem 1.5rem;display:flex;align-items:center;gap:1.5rem;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:.7rem;color:inherit}
+.brand:hover{text-decoration:none}
+.brand-mark{
+  display:grid;place-items:center;width:2.25rem;height:2.25rem;border-radius:var(--r);
+  background:linear-gradient(135deg,var(--primary),var(--primary-container));
+  color:#fff;font-weight:800;font-size:.78rem;letter-spacing:.02em;font-family:"Public Sans",sans-serif;
+}
+.brand-txt{display:flex;flex-direction:column;line-height:1.2}
+.brand-txt strong{font-size:.95rem;font-weight:700}
+.brand-txt em{font-style:normal;font-size:.72rem;color:var(--on-surface-var);letter-spacing:.02em}
+.topnav{display:flex;align-items:center;gap:1rem;font-size:.85rem;font-weight:500}
+.topnav a{color:var(--on-surface-var)}
+.topnav a.on{color:var(--primary);font-weight:600}
+.wk-toggle{
+  font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;color:var(--on-surface);
+  background:var(--surface-high);border:0;border-radius:var(--r);padding:.4rem .8rem;
+}
+.wk-toggle:hover{background:#e2e4e6}
+.wk-menu{
+  background:rgba(255,255,255,.94);backdrop-filter:blur(20px);box-shadow:var(--shadow);
+  padding:1rem 1.5rem 1.25rem;display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;
+}
+.wk{font-size:.8rem;padding:.35rem .7rem;border-radius:var(--r);background:var(--surface-low);color:var(--on-surface-var)}
+.wk:hover{background:var(--surface-high);text-decoration:none;color:var(--primary)}
+.wk.on{background:var(--primary);color:#fff}
+.wk.off{opacity:.45}
+
+/* ---------- hero ---------- */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-container) 100%);color:#fff}
+.hero-in{max-width:var(--maxw);margin:0 auto;padding:3.5rem 1.5rem 3rem}
+.home .hero-in{padding:5rem 1.5rem 4.5rem;max-width:900px;margin-left:auto}
+.kicker{margin:0 0 .9rem;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72);font-weight:600}
+.hero h1{margin:0;font-size:clamp(1.8rem,3.6vw,3rem);line-height:1.15;font-weight:800;max-width:24ch}
+.home .hero h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:16ch}
+.hero-sub{margin:1.1rem 0 0;font-size:1.05rem;color:rgba(255,255,255,.82);max-width:62ch}
+.hero-meta{display:flex;gap:2.5rem;margin-top:2.2rem;font-size:.85rem;color:rgba(255,255,255,.75)}
+.hero-meta strong{display:block;font-size:1.6rem;color:#fff;font-family:"Public Sans",sans-serif;font-weight:800}
+.hero-cta{display:flex;gap:.7rem;margin-top:2.2rem;flex-wrap:wrap}
+.btn{background:#fff;color:var(--primary);padding:.7rem 1.3rem;border-radius:var(--r);font-weight:600;font-size:.9rem}
+.btn:hover{text-decoration:none;background:#eef2f6}
+.btn.ghost{background:rgba(255,255,255,.14);color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.24)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.6rem}
+.hero .tag{background:rgba(255,255,255,.14);color:rgba(255,255,255,.92)}
+.tag{font-size:.73rem;padding:.28rem .65rem;border-radius:99px;background:var(--surface-high);color:var(--on-surface-var);letter-spacing:.01em}
+
+/* ---------- hafta kartları ---------- */
+.weeks{background:var(--surface-low)}
+.weeks-in{max-width:var(--maxw);margin:0 auto;padding:5rem 1.5rem}
+.sec-kicker{margin:0 0 .5rem;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.sec-title{margin:0 0 2.5rem;font-size:1.9rem;font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:1.25rem}
+.card,.proj{
+  display:flex;flex-direction:column;background:var(--surface-lowest);border-radius:.6rem;
+  padding:1.4rem 1.4rem 1.25rem;color:inherit;transition:transform .18s ease,box-shadow .18s ease;
+}
+.card:hover{text-decoration:none;transform:translateY(-3px);box-shadow:var(--shadow)}
+.card.muted{background:transparent;box-shadow:inset 0 0 0 1px var(--outline)}
+.c-no{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.c-title{margin-top:.55rem;font-size:1.05rem;font-weight:700;line-height:1.35}
+.c-sub{margin-top:.5rem;font-size:.87rem;color:var(--on-surface-var);line-height:1.55;flex:1}
+.card .tags{margin-top:.9rem}
+.c-go{margin-top:1.1rem;font-size:.82rem;font-weight:600;color:var(--primary-container)}
+.card.muted .c-go{color:var(--on-surface-var)}
+.proj{margin-top:1.25rem;background:linear-gradient(135deg,var(--primary),var(--primary-container));color:#fff}
+.proj:hover{text-decoration:none;transform:translateY(-3px);box-shadow:var(--shadow)}
+.proj .c-no{color:rgba(255,255,255,.72)}
+.proj .c-sub{color:rgba(255,255,255,.8)}
+.proj .c-go{color:#fff}
+.proj .c-title{font-size:1.25rem;max-width:60ch}
+
+/* ---------- gövde + içindekiler ---------- */
+.shell{max-width:var(--maxw);margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:16.5rem minmax(0,1fr);gap:3.5rem;align-items:start}
+.toc{position:sticky;top:5rem;padding:3.25rem 0 2rem;max-height:calc(100vh - 6rem);overflow:auto}
+.toc-title{margin:0 0 .8rem;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--on-surface-var);font-weight:700}
+.toc ul{list-style:none;margin:0;padding:0;font-size:.83rem;line-height:1.45}
+.toc li{margin:.1rem 0}
+.toc a{display:block;padding:.32rem .6rem;border-radius:var(--r);color:var(--on-surface-var)}
+.toc a:hover{background:var(--surface-low);text-decoration:none;color:var(--primary)}
+.toc a.active{background:var(--surface-high);color:var(--primary);font-weight:600}
+.toc .t3 a{padding-left:1.4rem;font-size:.79rem;opacity:.9}
+
+.prose{padding:3.25rem 0 4rem;max-width:74ch;font-size:1.0625rem}
+.lead{
+  background:var(--surface-lowest);border-radius:.6rem;padding:1.35rem 1.5rem;margin-bottom:2.5rem;
+  font-size:.95rem;color:var(--on-surface-var);line-height:1.65;box-shadow:inset 0 0 0 1px var(--outline);
+}
+.prose h2{margin:3.2rem 0 .5rem;font-size:1.55rem;font-weight:800;line-height:1.25;scroll-margin-top:5.5rem}
+.prose h3{margin:2.4rem 0 .4rem;font-size:1.15rem;font-weight:700;scroll-margin-top:5.5rem}
+.prose h4{margin:1.8rem 0 .3rem;font-size:1rem;font-weight:700;color:var(--primary);scroll-margin-top:5.5rem}
+.prose h2:first-child{margin-top:0}
+.deck{margin:.15rem 0 1.4rem;font-size:.92rem;color:var(--accent);font-weight:600;letter-spacing:.01em}
+.prose p{margin:0 0 1.15rem}
+.prose ul,.prose ol{margin:0 0 1.35rem;padding-left:1.25rem}
+.prose li{margin:.4rem 0}
+.prose li::marker{color:var(--on-surface-var)}
+.prose strong{font-weight:650;color:#12283a}
+.prose em{color:inherit}
+.fig-num{
+  display:inline-grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:99px;
+  background:var(--primary);color:#fff;font-weight:700;font-size:.85rem;margin:.6rem .5rem 0 0;
+}
+blockquote{
+  margin:1.5rem 0;padding:.15rem 0 .15rem 1.4rem;
+  border-left:3px solid var(--outline);color:var(--on-surface-var);
+}
+blockquote p{margin:.55rem 0}
+.table-wrap{overflow-x:auto;margin:1.75rem 0;background:var(--surface-lowest);border-radius:.6rem;box-shadow:inset 0 0 0 1px var(--outline)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;line-height:1.55}
+th,td{padding:.75rem .95rem;vertical-align:top;text-align:left}
+thead th,tr.header td,tr.header th{background:var(--primary);color:#fff;font-weight:600;font-size:.82rem;letter-spacing:.01em}
+tbody tr.odd td,tbody tr:nth-child(odd) td{background:rgba(0,55,95,.028)}
+td>p{margin:.25rem 0}
+td>ul{margin:.35rem 0;padding-left:1.1rem}
+code{background:var(--surface-high);padding:.1rem .35rem;border-radius:.25rem;font-size:.9em}
+hr{border:0;height:1px;background:var(--outline);margin:2.5rem 0}
+
+.syllabus{margin-top:0}
+
+/* ---------- önceki / sonraki ---------- */
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:4rem}
+.pg{background:var(--surface-lowest);border-radius:.6rem;padding:1.05rem 1.25rem;display:flex;flex-direction:column;gap:.25rem;color:inherit;box-shadow:inset 0 0 0 1px var(--outline)}
+.pg:hover{text-decoration:none;box-shadow:var(--shadow)}
+.pg span{font-size:.75rem;color:var(--on-surface-var);letter-spacing:.04em}
+.pg strong{font-size:.92rem;font-weight:600;line-height:1.35;color:var(--primary)}
+.pg.next{text-align:right}
+
+/* ---------- alt bilgi ---------- */
+.foot{background:var(--tertiary);color:rgba(255,255,255,.72);margin-top:0}
+.foot-in{max-width:var(--maxw);margin:0 auto;padding:3.5rem 1.5rem}
+.foot-title{margin:0;font-family:"Public Sans",sans-serif;font-weight:700;color:#fff;font-size:1.05rem}
+.foot-sub{margin:.35rem 0 0;font-size:.88rem}
+.foot-links{display:flex;flex-wrap:wrap;gap:1.5rem;margin:1.8rem 0 0;font-size:.85rem}
+.foot-links a{color:rgba(255,255,255,.82)}
+.foot-note{margin:2rem 0 0;font-size:.76rem;color:rgba(255,255,255,.45);max-width:70ch;line-height:1.6}
+
+/* ---------- duyarlı ---------- */
+@media (max-width:960px){
+  .shell{grid-template-columns:1fr;gap:0}
+  .toc{position:static;max-height:none;padding:2rem 0 0;order:-1}
+  .toc-inner{background:var(--surface-lowest);border-radius:.6rem;padding:1.1rem 1.25rem;box-shadow:inset 0 0 0 1px var(--outline)}
+  .toc ul{columns:2;column-gap:1.5rem}
+  .prose{padding-top:2rem}
+  .home .hero-in{padding:3.5rem 1.5rem}
+  .weeks-in{padding:3.5rem 1.5rem}
+}
+@media (max-width:620px){
+  body{font-size:1rem}
+  .brand-txt em{display:none}
+  .topnav a{display:none}
+  .toc ul{columns:1}
+  .pager{grid-template-columns:1fr}
+  .pg.next{text-align:left}
+  .hero-meta{gap:1.5rem}
+}
+
+@media print{
+  .topbar,.toc,.pager,.foot,.hero-cta,.wk-menu{display:none!important}
+  .hero{background:none;color:#000}
+  .hero h1,.kicker,.hero-sub{color:#000}
+  .shell{display:block;max-width:none}
+  body{font-size:11pt}
+}
+
+/* haftalık plan tablosundaki hafta bağlantıları */
+.wlink{display:inline-grid;place-items:center;min-width:1.75rem;height:1.75rem;border-radius:99px;background:var(--primary);color:#fff;font-size:.82rem;font-weight:700}
+.wlink:hover{background:var(--primary-container);text-decoration:none}
+
+/* içindekiler kutusu (details/summary) */
+.toc-inner>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.toc-inner>summary::-webkit-details-marker{display:none}
+.toc-inner>summary::after{content:"▾";font-size:.7rem;color:var(--on-surface-var);transition:transform .2s}
+.toc-inner[open]>summary::after{transform:rotate(180deg)}
+@media (min-width:961px){.toc-inner>summary::after{display:none}.toc-inner>summary{cursor:default}}
+.smallcaps{font-variant:normal}
