@@ -8,7 +8,7 @@ yüksek lisans dersinin izlencesi ve haftalık ders notlarının statik web sür
 | Dosya | İçerik |
 |---|---|
 | `index.html` | Ders izlencesi (syllabus) + tüm haftalara bağlantı veren giriş sayfası |
-| `hafta-01.html` … `hafta-14.html` | Haftalık ders notları (7. hafta ara değerlendirme olduğu için ders notu yoktur) |
+| `hafta-01.html` … `hafta-14.html` | Haftalık ders notları; `hafta-07.html` ara değerlendirme haftasıdır (vize kapsamı, 1.–6. hafta tekrar rehberi ve proje ara raporu yönergesi) |
 | `donem-projesi.html` | Dönem projesi örneği — Marmara Lojistik A.Ş. (ISO 30414:2025 uyumlu HCRD taslağı) |
 | `assets/style.css` | Tek stil dosyası |
 | `.nojekyll` | GitHub Pages'in dosyaları olduğu gibi yayımlaması için |
